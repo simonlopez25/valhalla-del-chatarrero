@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from "./components/Header/Header";
+import Header from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 import './style/App.css';
 
 // Páginas de ejemplo temporales
@@ -23,10 +24,8 @@ function App() {
   return (
     <Router>
       <div className="appLayout">
-        {/* Tu nuevo Header profesional integrado */}
         <Header />
 
-        {/* Contenido principal que cambiará según la ruta del Navbar */}
         <main className="mainContent">
           <Routes>
             <Route path="/" element={<PortalPage />} />
@@ -36,6 +35,8 @@ function App() {
             <Route path="/users" element={<UsersPage />} />
           </Routes>
         </main>
+
+        <Footer />
       </div>
     </Router>
   );
