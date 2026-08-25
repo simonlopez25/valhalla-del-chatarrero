@@ -1,5 +1,12 @@
+import "./style/App.css";
+import HistoryComp from "./components/history/HistoryComp";
+
 function App() {
-  return <div>El mejor equipo</div>;
+  return (
+    <div>
+      <HistoryComp />
+    </div>
+  );
 }
 
 export default App;

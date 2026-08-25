@@ -29,7 +29,28 @@ function HistoryComp() {
         <figcaption>SECTOR 4: LAS PRIMERAS RUTAS DE RECOLECCIÓN (AÑO 12)</figcaption>
       </figure>
 
-     
+      <blockquote className="cita-destacada">
+        <p>
+          "No confiamos en lo nuevo. Lo nuevo se rompe. Confiamos en lo que
+          ya ha sobrevivido al fin del mundo."
+        </p>
+        — EL FUNDADOR, AÑO 05
+      </blockquote>
+
+      <p className="history-texto">
+        Detrás de cada artículo en nuestra vitrina hay una historia forjada
+        en la crudeza del páramo. El cuero endurecido lleva la memoria de
+        mil pasos por tierra agrietada. Los filtros de carbono aún guardan
+        el polvo de las Grandes Tormentas. Aquí, en el Valhalla, creemos que
+        lo que está roto puede ser letalmente hermoso de nuevo. Somos los
+        custodios del remanente.
+      </p>
+
+      <p className="history-texto">
+        Nuestros usuarios no son clientes; son supervivientes. Únete a la
+        cadena de recuperación. Porque mientras haya chatarra, habrá
+        esperanza.
+      </p>
     </section>
   );
 }
