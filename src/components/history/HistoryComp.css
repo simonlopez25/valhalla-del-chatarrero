@@ -1,0 +1,83 @@
+.history-comp {
+  background-color: #DFCDAD;
+  color: #2A1F16;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.history-comp h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  color: #1A120C;
+  font-size: 64px;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.history-fecha {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #4A3625;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #8B6F4E;
+}
+
+.history-texto {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #2A1F16;
+  text-align: center;
+}
+
+.archivo-imagen {
+  position: relative;
+  margin: 2.5rem 0;
+  border: 1px solid #8B6F4E;
+  border-radius: 2px;
+  padding: 0.75rem;
+  background-color: #C9B896; /* un tono más oscuro que el fondo, para dar profundidad */
+}
+
+.archivo-imagen img {
+  width: 100%;
+  display: block;
+  filter: sepia(30%) contrast(95%);
+}
+
+.archivo-imagen figcaption {
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #4A3625;
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+}
+
+.cita-destacada {
+  border-left: 3px solid #8B3A1D;
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+  font-family: 'Work Sans', sans-serif;
+  font-style: italic;
+  background-color: #C9B896;
+  color: #2A1F16;
+}
+
+.cita-destacada p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
