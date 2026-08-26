@@ -1,0 +1,56 @@
+.sectionHeader {
+  margin-bottom: 2.5rem;
+}
+
+.sectionCategoryWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionCategoryIndicator {
+  width: 8px;
+  height: 12px;
+  background-color: var(--colorAccent);
+}
+
+.sectionCategoryText {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--colorAccent, #e07a5f);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  font-family: var(--fontHeading);
+}
+.sectionTitle {
+  font-family: var(--fontHeading);
+  font-size: 2.8rem;
+  color: var(--colorText, #ffffff);
+  text-transform: uppercase;
+  margin: 0 0 0.8rem 0;
+  letter-spacing: 0.02em;
+}
+
+.sectionDescription {
+  color: var(--colorTextMuted, #a3998e);
+  font-size: 0.95rem;
+  max-width: 900px;
+  line-height: 1.6;
+}
+.sectionHeaderWithAccent {
+  position: relative;
+  padding-left: 1.5rem; /* Espacio para que la línea no se monte en el texto */
+  margin-bottom: 2.5rem;
+}
+/* Creamos la línea vertical naranja óxido con absoluta precisión */
+.sectionHeaderWithAccent::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--colorAccent, #e07a5f); /* Color naranja óxido industrial */
+}
