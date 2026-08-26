@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import SellersPage from './pages/SellersPage/SellersPage';
 import './style/App.css';
+import Users from './pages/users/Users'; // 
 
 // Páginas de ejemplo temporales
 function PortalPage() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/showcase" element={<ShowcasePage />} />
             <Route path="/users" element={<UsersPage />} />
+            <Route path="/user" element={<Users />} />
           </Routes>
         </main>
 
