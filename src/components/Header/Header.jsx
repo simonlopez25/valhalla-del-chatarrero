@@ -1,12 +1,13 @@
 import { Navbar } from '../Navbar/Navbar';
 import { WeatherWidget } from '../WeatherWidget/WeatherWidget';
+import logoType from '../../assets/img/logoType.png';
 import './Header.css';
 
 export function Header() {
   return (
     <header className="headerContainer">
       <div className="brandSection">
-        <img src="/logoType.png" alt="Valhalla Logo" className="brandLogo" />
+        <img src={logoType} alt="Valhalla Logo" className="brandLogo" />
         <span className="brandTitle">VALHALLA DEL CHATARRERO</span>
       </div>
 
