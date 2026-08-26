@@ -1,10 +1,10 @@
 import "./style/App.css";
-import HistoryComp from "./components/history/HistoryComp";
+import History from "./pages/history/History";
 
 function App() {
   return (
     <div>
-      <HistoryComp />
+      <History />
     </div>
   );
 }
