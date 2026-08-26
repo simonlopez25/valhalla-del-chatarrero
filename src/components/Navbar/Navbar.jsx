@@ -3,7 +3,7 @@ import './Navbar.css';
 
 const navItems = [
   { path: '/', label: 'PORTAL' },
-  { path: '/team', label: 'EQUIPO' },
+  { path: '/sellersPage', label: 'EQUIPO' },
   { path: '/history', label: 'HISTORIA' },
   { path: '/showcase', label: 'VITRINA' },
   { path: '/users', label: 'USUARIOS' },
