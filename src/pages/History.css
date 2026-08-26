@@ -1,0 +1,8 @@
+.pagina-historia {
+  background-color: rgba(23, 19, 15, 0.8);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
+}
