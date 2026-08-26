@@ -22,7 +22,7 @@ export function WeatherWidget() {
             setIsLoading(false);
           }
         },
-        () => setIsLoading(false), // Fallback silently if location is denied
+        () => setIsLoading(false), 
       );
     }
   }, []);
