@@ -1,16 +1,18 @@
 .history-comp {
-  background-color: #DFCDAD;
-  color: #2A1F16;
+  background-color: var(--colorPergamino);
+  color: var(--colorMarronOscuro);
   padding: 3rem 2rem;
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
   font-family: 'Work Sans', sans-serif;
+  border-radius: 2px;
 }
 
 .history-comp h1 {
   font-family: 'Anton', sans-serif;
   font-weight: 400;
-  color: #1A120C;
+  color: var(--colorFondoOscuro);
   font-size: 64px;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
@@ -24,12 +26,12 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.7px;
-  color: #4A3625;
+  color: var(--colorCuero);
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #8B6F4E;
+  border-bottom: 1px solid var(--colorKhaki);
 }
 
 .history-texto {
@@ -38,17 +40,17 @@
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  color: #2A1F16;
+  color: var(--colorMarronOscuro);
   text-align: center;
 }
 
 .archivo-imagen {
   position: relative;
   margin: 2.5rem 0;
-  border: 1px solid #8B6F4E;
+  border: 1px solid var(--colorKhaki);
   border-radius: 2px;
   padding: 0.75rem;
-  background-color: #C9B896; /* un tono más oscuro que el fondo, para dar profundidad */
+  background-color: var(--colorPergaminoOscuro);
 }
 
 .archivo-imagen img {
@@ -62,19 +64,19 @@
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 2px;
-  color: #4A3625;
+  color: var(--colorCuero);
   margin-top: 0.75rem;
   text-transform: uppercase;
 }
 
 .cita-destacada {
-  border-left: 3px solid #8B3A1D;
+  border-left: 3px solid var(--colorOxido);
   padding: 1.5rem 2rem;
   margin: 2.5rem 0;
   font-family: 'Work Sans', sans-serif;
   font-style: italic;
-  background-color: #C9B896;
-  color: #2A1F16;
+  background-color: var(--colorPergaminoOscuro);
+  color: var(--colorMarronOscuro);
 }
 
 .cita-destacada p {
