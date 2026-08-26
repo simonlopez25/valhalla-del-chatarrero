@@ -10,7 +10,7 @@ export default function ProductsView() {
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
   const [categories, setCategories] = useState([]);
-  const [categoryId, setCategoryId] = useState('2');
+  const [categoryId, setCategoryId] = useState('');
   const [validCategoryImageMap, setValidCategoryImageMap] = useState({});
   const [sort, setSort] = useState('price-asc');
   const [page, setPage] = useState(1);
