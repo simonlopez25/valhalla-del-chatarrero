@@ -2,12 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import SellersPage from './pages/SellersPage/SellersPage';
+import HomePage from './pages/homePage/homePage';
 import './style/App.css';
-
-// Páginas de ejemplo temporales
-function PortalPage() {
-  return <h2>Sección Portal</h2>;
-}
 
 function HistoryPage() {
   return <h2>Sección Historia</h2>;
@@ -27,7 +23,7 @@ function App() {
 
         <main className="mainContent">
           <Routes>
-            <Route path="/" element={<PortalPage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/sellersPage" element={<SellersPage />} />
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/showcase" element={<ShowcasePage />} />
