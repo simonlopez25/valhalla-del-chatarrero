@@ -1,0 +1,55 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #171413;
+  padding: 16px 32px;
+  border-bottom: 1px solid #2a2220;
+  width: 100%;
+}
+
+.brandSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.brandLogo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  margin-left: 0;
+}
+
+.brandTitle {
+  color: #e59880;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.actionsSection {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+}
+
+.userButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #e59880;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.userIcon {
+  width: 24px;
+  height: 24px;
+}
