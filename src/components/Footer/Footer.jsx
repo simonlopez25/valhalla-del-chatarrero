@@ -18,7 +18,7 @@ export function Footer() {
       </a>
 
       <div className="footerCopyright">
-        © 2024 Valhalla del Chatarrero - Built from the Wreckage
+        © 2026 Valhalla del Chatarrero - Built from the Wreckage
       </div>
 
       <div className="footerSections">
