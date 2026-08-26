@@ -1,5 +1,6 @@
 import './HistoryComp.css';
 import wasteland from '../../assets/img/Wasteland.webp'; 
+import seal from '../../assets/img/seal.webp';  
 function HistoryComp() {
   return (
     <section className="history-comp">
@@ -9,7 +10,7 @@ function HistoryComp() {
       <p className="history-texto">
         El colapso no fue un evento único, fue un desgarro lento y doloroso.
         Las fábricas se silenciaron, los cielos se tiñeron del color de la
-        sangre seca, y la producción, tal como la conocíamos, cesó. En el
+        sangre seca, y la producción, tal como la conocíamos, cesó. En elS
         Valhalla del Chatarrero, no lloramos por el mundo perdido;
         reconstruimos sobre sus cadáveres de acero. Hace cinco décadas, los
         primeros Recolectores entendieron una verdad fundamental: la
@@ -51,6 +52,7 @@ function HistoryComp() {
         cadena de recuperación. Porque mientras haya chatarra, habrá
         esperanza.
       </p>
+       <img src={seal} alt="Sello aprobado" className="sello-aprobado" />
     </section>
   );
 }
