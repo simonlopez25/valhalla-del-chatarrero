@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;700&family=Work+Sans:wght@400;500&display=swap');
+:root {
+  --historyColorFondoOscuro: #1A120C;
+  --historyColorMarronBase: #3B2F21;
+  --historyColorMarronOscuro: #2A1F16;
+  --historyColorOxido: #8B3A1D;
+  --historyColorCuero: #4A3625;
+  --historyColorCueroClaro: #5C4033;
+  --historyColorKhaki: #8B6F4E;
+  --historyColorPergamino: #DFCDAD;
+  --historyColorPergaminoOscuro: #C9B896;
+}
+
 .history-comp {
   position: relative;
-  background-color: var(--colorPergamino);
-  color: var(--colorMarronOscuro);
+  background-color: var(--historyColorPergamino);
+  color: var(--historyColorMarronOscuro);
   padding: 3rem 2rem;
   max-width: 900px;
   width: 100%;
@@ -9,18 +22,11 @@
   font-family: 'Work Sans', sans-serif;
   border-radius: 2px;
 }
-.sello-aprobado {
-  position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  width: 80px;
-  height: auto;
-  opacity: 0.9;
-}
+
 .history-comp h1 {
   font-family: 'Anton', sans-serif;
   font-weight: 400;
-  color: var(--colorFondoOscuro);
+  color: var(--historyColorFondoOscuro);
   font-size: 64px;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
@@ -34,12 +40,12 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.7px;
-  color: var(--colorCuero);
+  color: var(--historyColorCuero);
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--colorKhaki);
+  border-bottom: 1px solid var(--historyColorKhaki);
 }
 
 .history-texto {
@@ -48,17 +54,17 @@
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  color: var(--colorMarronOscuro);
+  color: var(--historyColorMarronOscuro);
   text-align: center;
 }
 
 .archivo-imagen {
   position: relative;
   margin: 2.5rem 0;
-  border: 1px solid var(--colorKhaki);
+  border: 1px solid var(--historyColorKhaki);
   border-radius: 2px;
   padding: 0.75rem;
-  background-color: var(--colorPergaminoOscuro);
+  background-color: var(--historyColorPergaminoOscuro);
 }
 
 .archivo-imagen img {
@@ -72,22 +78,80 @@
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 2px;
-  color: var(--colorCuero);
+  color: var(--historyColorCuero);
   margin-top: 0.75rem;
   text-transform: uppercase;
 }
 
 .cita-destacada {
-  border-left: 3px solid var(--colorOxido);
+  border-left: 3px solid var(--historyColorOxido);
   padding: 1.5rem 2rem;
   margin: 2.5rem 0;
   font-family: 'Work Sans', sans-serif;
   font-style: italic;
-  background-color: var(--colorPergaminoOscuro);
-  color: var(--colorMarronOscuro);
+  background-color: var(--historyColorPergaminoOscuro);
+  color: var(--historyColorMarronOscuro);
 }
 
 .cita-destacada p {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+}
+
+.sello-aprobado {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 80px;
+  height: auto;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .history-comp {
+    padding: 2rem 1.25rem;
+  }
+
+  .history-comp h1 {
+    font-size: 36px;
+  }
+
+  .history-fecha {
+    font-size: 12px;
+  }
+
+  .history-texto {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .cita-destacada {
+    padding: 1rem 1.25rem;
+  }
+
+  .cita-destacada p {
+    font-size: 1rem;
+  }
+
+  .sello-aprobado {
+    width: 55px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-comp h1 {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  .history-fecha {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .history-texto {
+    font-size: 13px;
+  }
 }
