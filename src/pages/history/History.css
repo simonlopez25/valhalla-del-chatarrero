@@ -6,3 +6,8 @@
   align-items: flex-start;
   padding: 3rem 1rem;
 }
+@media (max-width: 480px) {
+  .pagina-historia {
+    padding: 1.5rem 0.5rem;
+  }
+}
