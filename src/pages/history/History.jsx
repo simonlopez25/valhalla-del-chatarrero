@@ -3,7 +3,7 @@ import './History.css';
 
 function History() {
   return (
-    <div className="pagina-historia">
+    <div className="history-page">
       <HistoryComp />
     </div>
   );
