@@ -1,8 +1,14 @@
 import "./Pagination.css";
 
-function Pagination({ currentPage, totalPages, onPrevious, onNext }) {
+function Pagination({ currentPage, totalPages, currentCount, totalCount, onPrevious, onNext }) {
   return (
     <div className="paginationContainer">
+      
+      <span className="paginationInfo">
+        Mostrando {currentCount} de {totalCount} registros
+      </span>
+
+      
       <div className="paginationButtons">
         <button 
           className="pageButton" 
