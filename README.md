@@ -23,7 +23,7 @@ Bienvenido a **Valhalla del Chatarrero**, una plataforma de comercio online inme
 *   **Integración de APIs:**
     *   **API de Productos:** Muestra dinámicamente artículos únicos con sus precios.
     *   **API de Usuarios:** Permite visualizar y administrar la base de datos de habitantes del páramo.
-
+    *   **API del Tiempo :** "Open-Meteo" . Permite visualizar el clima y sus cambios.
 ---
 ## 📸 Galería de Páginas
 
