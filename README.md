@@ -31,12 +31,12 @@ A continuación, se muestra un recorrido visual por las secciones de la aplicaci
 
 | **1. Portal (Inicio)** | **2. Equipo** |
 | :---: | :---: |
-| ![Portal de Inicio](public/page 1.png) | ![Sección Equipo](public/page 2.png) |
+| ![Portal de Inicio](public/page1.png) | ![Sección Equipo](public/page2.png) |
 | *Vista principal con el llamado a la acción y los objetos destacados.* | *Perfil detallado de los colaboradores del Valhalla.* |
 
 | **3. Nuestra Historia** | **4. Registro de Sobrevivientes** |
 | :---: | :---: |
-| ![Sección Historia](public/page 3.png) | ![Sección Usuarios](public/page 4.png) |
+| ![Sección Historia](public/page3.png) | ![Sección Usuarios](public/page4.png) |
 | *Narrativa inmersiva sobre el colapso y los primeros recolectores.* | *Tabla interactiva de los usuarios registrados en el sector.* |
 
 ---
@@ -54,6 +54,37 @@ Este proyecto ha sido posible gracias al uso de un conjunto moderno y profesiona
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+
+---
+
+## 👥 Equipo de Valhalla (Colaboradores)
+
+Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con ellos a través de sus perfiles!
+
+* **Simon Lopez** - *Frontend Developer*  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/simon-lopez-a478bb235 Linkedin)
+
+* **Beatriz Iñiguez** - *Frontend Developer*  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
+
+* **Jhojann Sossa** - *Frontend Developer*  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhojann-sossa-009b25121/)
+
+* **Patricia Diaz** - *Frontend Developer*  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/patriciaapariciodiaz/)
+
+* **Jose Loero NieleZ** - *Frontend Developer*  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
+
+* **Margarita Bellido** - *Frontend Developer*  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
+
+* **Wilfredy Salcedo** - *Frontend Developer*  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
+
+* **Maria Jose Rodriguez** - *Frontend Developer*  
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-jose-rodriguez-ramos)
 
 ---
 
@@ -75,31 +106,3 @@ valhalla-del-chatarrero/
 ├── package.json       # Dependencias y scripts del proyecto
 ├── README.md          # Documentación del proyecto
 └── vite.config.js     # Configuración de Vite
-
-## 👥 Equipo de Valhalla (Colaboradores)
-
-Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con ellos a través de sus perfiles de LinkedIn!
-
-* **[Simon Lopez]** - *Frontend Developer*
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/simon-lopez-a478bb235 Linkedin)
-
-* **[Beatriz Iñiguez]** - *Frontend Developer*
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
-
-* **[jhojann Sossa]** - *Frontend Developer*
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhojann-sossa-009b25121)
-
-* **[Patricia Diaz]** - *Frontend Developer*
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/patriciaapariciodiaz/)
-
-* **[Jose Loero NieleZ]** - *Frontend Developer*
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
-
-* **[Margarita Bellido]** - *Frontend Developer*
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
-
-* **[Wilfredy Salcedo]** - *Frontend Developer*
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://github.com/Willfredy742)
-
-* **[Maria Jose Rodriguez]** - *Frontend Developer*
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-jose-rodriguez-ramos)
