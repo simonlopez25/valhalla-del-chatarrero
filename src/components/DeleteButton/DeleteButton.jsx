@@ -1,8 +1,13 @@
-import "./DeleteAndEdit.css";
+import "./DeleteButton.css";
 
 function DeleteButton({ onClick }) {
   return (
-    <button className="actionButton deleteButton" onClick={onClick} title="Eliminar">
+    <button
+      className="actionButton deleteButton"
+      onClick={onClick}
+      title="Eliminar"
+      type="button"
+    >
       <svg
         className="actionIcon"
         width="16"
@@ -11,8 +16,8 @@ function DeleteButton({ onClick }) {
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLineCap="round"
+        strokeLineJoin="round"
       >
         <polyline points="3 6 5 6 21 6" />
         <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />

@@ -1,10 +1,10 @@
-import HistoryComp from '../../components/History/HistoryComp';
+import HistorySection from '../../components/HistorySection/HistorySection';
 import './History.css';
 
 function History() {
   return (
     <div className="history-page">
-      <HistoryComp />
+      <HistorySection />
     </div>
   );
 }

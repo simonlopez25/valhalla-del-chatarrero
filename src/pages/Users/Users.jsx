@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
+import NewSurvivorButton from "../../components/NewSurvivorButton/NewSurvivorButton";
+import EditButton from "../../components/EditButton/EditButton";
+import DeleteButton from "../../components/DeleteButton/DeleteButton";
+import ViewButton from "../../components/ViewButton/ViewButton";
 import Pagination from "../../components/Pagination/Pagination";
 import { fetchUsers } from "../../services/userService";
-
-import NewSurvivorButton from "../../components/NewSurvivorButton/NewSurvivorButton";
-import EditButton from "../../components/NewSurvivorButton/EditButton";
-import DeleteButton from "../../components/NewSurvivorButton/DeleteButton";
-import ViewButton from "../../components/NewSurvivorButton/ViewButton";
 import "./Users.css";
 
 function Users() {
@@ -33,7 +32,6 @@ function Users() {
     return <div className="loadingScreen">Cargando registros del páramo...</div>;
   }
 
-  
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
   const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);

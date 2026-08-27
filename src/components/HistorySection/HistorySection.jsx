@@ -1,7 +1,8 @@
-import './HistoryComp.css';
-import wasteland from '../../assets/img/Wasteland.webp'; 
-import seal from '../../assets/img/seal.webp';  
-function HistoryComp() {
+import './HistorySection.css';
+import wasteland from '../../assets/img/Wasteland.webp';
+import seal from '../../assets/img/seal.webp';
+
+function HistorySection() {
   return (
     <section className="history-comp">
       <h1>NUESTRA HISTORIA</h1>
@@ -10,7 +11,7 @@ function HistoryComp() {
       <p className="history-text">
         El colapso no fue un evento único, fue un desgarro lento y doloroso.
         Las fábricas se silenciaron, los cielos se tiñeron del color de la
-        sangre seca, y la producción, tal como la conocíamos, cesó. En elS
+        sangre seca, y la producción, tal como la conocíamos, cesó. En el
         Valhalla del Chatarrero, no lloramos por el mundo perdido;
         reconstruimos sobre sus cadáveres de acero. Hace cinco décadas, los
         primeros Recolectores entendieron una verdad fundamental: la
@@ -57,4 +58,4 @@ function HistoryComp() {
   );
 }
 
-export default HistoryComp;
+export default HistorySection;

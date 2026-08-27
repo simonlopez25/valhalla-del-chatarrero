@@ -53,3 +53,19 @@
   width: 24px;
   height: 24px;
 }
+
+@media (max-width: 640px) {
+  .headerContainer {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding: 12px 16px;
+  }
+
+  .brandTitle {
+    font-size: 0.95rem;
+  }
+
+  .actionsSection {
+    gap: 12px;
+  }
+}

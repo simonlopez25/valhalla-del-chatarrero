@@ -1,4 +1,4 @@
-import "./DeleteAndEdit.css";
+import "./ViewButton.css";
 
 function ViewButton() {
   const handleClick = () => {
@@ -6,10 +6,11 @@ function ViewButton() {
   };
 
   return (
-    <button 
-      className="actionButton viewButton" 
-      onClick={handleClick} 
+    <button
+      className="actionButton viewButton"
+      onClick={handleClick}
       title="Sujeto no identificado"
+      type="button"
     >
       <svg
         className="actionIcon"
@@ -19,8 +20,8 @@ function ViewButton() {
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLineCap="round"
+        strokeLineJoin="round"
       >
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
         <circle cx="12" cy="12" r="3" />
