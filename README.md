@@ -69,8 +69,41 @@ Accede a los recursos clave, despliegues y tableros de gestión de **Valhalla de
 [![Jira](https://img.shields.io/badge/Jira-%230052CC.svg?style=for-the-badge&logo=jira&logoColor=white)](https://simonlopezsaldarroaga.atlassian.net/jira/software/projects/VDC/boards/34/backlog)
 
 ---
+---
 
+## ⚙️ Instalación y Puesta en Marcha
+
+> *¿Listo para ensamblar componentes en el páramo? Sigue estos pasos para clonar y levantar el entorno de desarrollo local en tu máquina en cuestión de segundos.*
+
+### Prerrequisitos del Búnker
+Asegúrate de contar con las herramientas básicas en tu terminal:
+* **Node.js** (Versión 18 o superior recomendada) 
+* **Git** para la gestión y control de versiones de código.
+
+---
+
+### Pasos de Despliegue Local
+
+**1. Clonar el repositorio:**
+```bash
+git clone [https://github.com/simonlopez25/valhalla-del-chatarrero.git](https://github.com/simonlopez25/valhalla-del-chatarrero.git)
+````
+
+```bash
+cd valhalla-del-chatarrero
+
+
+npm install
+
+
+npm run dev
+
+🚀 ¡Listo! La terminal te otorgará un enlace local (generalmente http://localhost:5173/) para abrir el portal y comenzar a explorar la interfaz de componentes restaurados directamente en tu navegador.
+
+````
 ## 👥 Equipo de Valhalla (Colaboradores)
+
+
 
 Este proyecto fue forjado por un equipo de 8 supervivientes. ¡Conéctate con ellos a través de sus perfiles!
 
