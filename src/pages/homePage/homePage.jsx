@@ -1,7 +1,7 @@
-import HeroSection from '../../components/heroSection/heroSection';
-import FeaturedCarousel from '../../components/featuredCarousel/featuredCarousel';
-import SystemLog from '../../components/systemLog/systemLog';
-import './homePage.css';
+import HeroSection from '../../components/HeroSection/HeroSection';
+import FeaturedCarousel from '../../components/FeaturedCarousel/FeaturedCarousel';
+import SystemLog from '../../components/SystemLog/SystemLog';
+import './HomePage.css';
 
 const HomePage = () => {
   return (

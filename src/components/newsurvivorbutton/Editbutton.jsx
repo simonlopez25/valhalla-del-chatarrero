@@ -1,4 +1,4 @@
-import "./DeleteandEdit.css";
+import "./DeleteAndEdit.css";
 
 function EditButton({ onClick }) {
   return (

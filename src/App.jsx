@@ -4,8 +4,8 @@ import { Footer } from "./components/Footer/Footer";
 import SellersPage from "./pages/SellersPage/SellersPage";
 import HomePage from "./pages/HomePage/HomePage";
 import History from "./pages/History/History";
-import Users from "./pages/users/Users";
-import "./style/App.css";
+import Users from "./pages/Users/Users";
+import "./styles/App.css";
 
 // Páginas de ejemplo temporales
 

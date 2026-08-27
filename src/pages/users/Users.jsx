@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import Pagination from "../../components/pagination/Pagination";
+import { useEffect, useState } from "react";
+import Pagination from "../../components/Pagination/Pagination";
+import { fetchUsers } from "../../services/userService";
 
-import NewSurvivorButton from "../../components/newsurvivorbutton/NewSurvivorButton";
-import EditButton from "../../components/newsurvivorbutton/EditButton";
-import DeleteButton from "../../components/newsurvivorbutton/DeleteButton";
-import ViewButton from "../../components/newsurvivorbutton/ViewButton";
+import NewSurvivorButton from "../../components/NewSurvivorButton/NewSurvivorButton";
+import EditButton from "../../components/NewSurvivorButton/EditButton";
+import DeleteButton from "../../components/NewSurvivorButton/DeleteButton";
+import ViewButton from "../../components/NewSurvivorButton/ViewButton";
 import "./Users.css";
 
 function Users() {
@@ -16,18 +16,17 @@ function Users() {
   const usersPerPage = 10;
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const loadUsers = async () => {
       try {
-        const response = await axios.get("https://api.escuelajs.co/api/v1/users");
-        setUsers(response.data || []);
-      } catch (err) {
+        setUsers(await fetchUsers());
+      } catch {
         setError("No se pudieron cargar los registros de usuarios.");
       } finally {
         setLoading(false);
       }
     };
 
-    fetchUsers();
+    loadUsers();
   }, []);
 
   if (loading) {

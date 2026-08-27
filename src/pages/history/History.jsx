@@ -1,4 +1,4 @@
-import HistoryComp from '../../components/history/HistoryComp';
+import HistoryComp from '../../components/History/HistoryComp';
 import './History.css';
 
 function History() {

@@ -1,3 +1,5 @@
+import "./IdBadge.css";
+
 function IdBadge({ id }) {
   return (
     <div className="idBadge">

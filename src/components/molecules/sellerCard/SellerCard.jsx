@@ -1,7 +1,7 @@
-import Avatar from '../../atoms/avatar/Avatar';
-import IdBadge from '../../atoms/idBadge/IdBadge';
-import RoleBadge from '../../atoms/roleBadge/RoleBadge';
-import StatusBadge from '../../atoms/statusBadge/StatusBadge';
+import Avatar from '../../atoms/Avatar/Avatar';
+import IdBadge from '../../atoms/IdBadge/IdBadge';
+import RoleBadge from '../../atoms/RoleBadge/RoleBadge';
+import StatusBadge from '../../atoms/StatusBadge/StatusBadge';
 import './SellerCard.css';
 
 function SellerCard({ seller }) {

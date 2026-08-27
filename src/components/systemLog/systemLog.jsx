@@ -1,4 +1,4 @@
-import "./systemLog.css";
+import "./SystemLog.css";
 
 const SystemLog = () => {
   return (
