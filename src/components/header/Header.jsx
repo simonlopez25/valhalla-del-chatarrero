@@ -1,5 +1,5 @@
-import { Navbar } from '../Navbar/Navbar';
-import { WeatherWidget } from '../WeatherWidget/WeatherWidget';
+import { Navbar } from '../navbar/Navbar';
+import { WeatherWidget } from '../weatherWidget/WeatherWidget';
 import logoType from '../../assets/img/logoType.png';
 import './Header.css';
 

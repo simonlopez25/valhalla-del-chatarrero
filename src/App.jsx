@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
-import SellersPage from "./pages/SellersPage/SellersPage";
-import HomePage from "./pages/HomePage/HomePage";
-import History from "./pages/History/History";
+import Header from "./components/header/Header";
+import { Footer } from "./components/footer/Footer";
+import SellersPage from "./pages/sellersPage/SellersPage";
+import HomePage from "./pages/homePage/HomePage";
+import History from "./pages/history/History";
 import Users from "./pages/users/Users";
-import "./style/App.css";
+import "./styles/App.css";
 
 // Páginas de ejemplo temporales
 

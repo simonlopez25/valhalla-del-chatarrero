@@ -2,7 +2,7 @@ import "./NewSurvivorButton.css";
 
 function NewSurvivorButton({ onClick }) {
   return (
-    <button className="btnNewRecord" onClick={onClick}>
+    <button type="button" className="btnNewRecord" onClick={onClick}>
       <svg
         className="btnIcon"
         width="16"

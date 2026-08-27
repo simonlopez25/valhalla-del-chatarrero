@@ -1,11 +1,10 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
+import NewSurvivorButton from "../../components/newSurvivorButton/NewSurvivorButton";
+import EditButton from "../../components/editButton/EditButton";
+import DeleteButton from "../../components/deleteButton/DeleteButton";
+import ViewButton from "../../components/viewButton/ViewButton";
 import Pagination from "../../components/pagination/Pagination";
-
-import NewSurvivorButton from "../../components/newsurvivorbutton/NewSurvivorButton";
-import EditButton from "../../components/newsurvivorbutton/EditButton";
-import DeleteButton from "../../components/newsurvivorbutton/DeleteButton";
-import ViewButton from "../../components/newsurvivorbutton/ViewButton";
+import { fetchUsers } from "../../services/userService";
 import "./Users.css";
 
 function Users() {
@@ -16,25 +15,23 @@ function Users() {
   const usersPerPage = 10;
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const loadUsers = async () => {
       try {
-        const response = await axios.get("https://api.escuelajs.co/api/v1/users");
-        setUsers(response.data || []);
-      } catch (err) {
+        setUsers(await fetchUsers());
+      } catch {
         setError("No se pudieron cargar los registros de usuarios.");
       } finally {
         setLoading(false);
       }
     };
 
-    fetchUsers();
+    loadUsers();
   }, []);
 
   if (loading) {
     return <div className="loadingScreen">Cargando registros del páramo...</div>;
   }
 
-  
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
   const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);

@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { fetchHighestPriceProducts } from "../../services/productService";
-import "./featuredCarousel.css";
+import "./FeaturedCarousel.css";
 
 const FeaturedCarousel = () => {
   const [highestPriceProducts, setHighestPriceProducts] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -13,6 +15,9 @@ const FeaturedCarousel = () => {
         setHighestPriceProducts(productsData);
       } catch (error) {
         console.error("No se pudo cargar el inventario", error);
+        setHasError(true);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -37,8 +42,12 @@ const FeaturedCarousel = () => {
     );
   };
 
-  if (highestPriceProducts.length === 0) {
+  if (isLoading) {
     return <div className="loadingText">CARGANDO NODOS DE DATOS...</div>;
+  }
+
+  if (hasError || highestPriceProducts.length === 0) {
+    return <div className="loadingText">INVENTARIO NO DISPONIBLE.</div>;
   }
 
   return (

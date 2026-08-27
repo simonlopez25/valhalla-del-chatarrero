@@ -1,4 +1,4 @@
-import "./heroSection.css";
+import "./HeroSection.css";
 import apocalypseImage from "../../assets/img/apocalypse.jpg";
 
 const HeroSection = () => {

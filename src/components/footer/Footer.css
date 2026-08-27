@@ -48,3 +48,17 @@
   font-size: 0.8rem;
   letter-spacing: 0.5px;
 }
+
+@media (max-width: 640px) {
+  .footerContainer {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 16px;
+    text-align: center;
+  }
+
+  .footerSections {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

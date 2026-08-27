@@ -1,21 +1,18 @@
-:root {
-  --colorBackground: #1a1512;
-  --colorSurface: #241d18;
-  --colorAccent: #d98c4a;
-  --colorAccentSoft: #d98c4a33;
-  --colorText: #f4ede4;
-  --colorTextMuted: #b8ab9c;
-  --colorStatusDot: #e05d5d;
-  --fontHeading: "Oswald", sans-serif;
-}
 .sellersPageContainer {
-  padding: 2rem 1.5rem; 
-  background-color: var(--colorBackground); 
+  padding: 2rem;
+  background-color: var(--colorBackground);
   min-height: 100vh;
   box-sizing: border-box;
 }
 
+@media (max-width: 480px) {
+  .sellersPageContainer {
+    padding: 1.5rem 1rem;
+  }
+}
 
+@media (min-width: 768px) {
   .sellersPageContainer {
     padding: 2rem 4rem;
   }
+}

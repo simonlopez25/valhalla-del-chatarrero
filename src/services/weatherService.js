@@ -1,5 +1,9 @@
 import axios from "axios";
 
+const WEATHER_API_URL =
+  import.meta.env.VITE_WEATHER_API_URL ||
+  "https://api.open-meteo.com/v1/forecast";
+
 const getWeatherDescription = (code) => {
   const weatherCodes = {
     0: "Despejado",
@@ -27,9 +31,13 @@ const getWeatherDescription = (code) => {
 };
 
 export const fetchCurrentWeather = async (latitude, longitude) => {
-  const response = await axios.get(
-    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`,
-  );
+  const response = await axios.get(WEATHER_API_URL, {
+    params: {
+      latitude,
+      longitude,
+      current_weather: true,
+    },
+  });
 
   const currentWeather = response.data.current_weather;
 
