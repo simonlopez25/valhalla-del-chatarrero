@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import NewSurvivorButton from "../../components/NewSurvivorButton/NewSurvivorButton";
-import EditButton from "../../components/EditButton/EditButton";
-import DeleteButton from "../../components/DeleteButton/DeleteButton";
-import ViewButton from "../../components/ViewButton/ViewButton";
-import Pagination from "../../components/Pagination/Pagination";
+import NewSurvivorButton from "../../components/newSurvivorButton/NewSurvivorButton";
+import EditButton from "../../components/editButton/EditButton";
+import DeleteButton from "../../components/deleteButton/DeleteButton";
+import ViewButton from "../../components/viewButton/ViewButton";
+import Pagination from "../../components/pagination/Pagination";
 import { fetchUsers } from "../../services/userService";
 import "./Users.css";
 

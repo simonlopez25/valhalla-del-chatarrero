@@ -1,5 +1,5 @@
-import SectionHeader from '../../components/Molecules/SectionHeader/SectionHeader';
-import SellerGrid from '../../components/Organisms/SellerGrid/SellerGrid';
+import SectionHeader from '../../components/molecules/sectionHeader/SectionHeader';
+import SellerGrid from '../../components/organisms/sellerGrid/SellerGrid';
 import './SellersPage.css';
 
 function SellersPage() {

@@ -1,4 +1,4 @@
-import SellerCard from '../../Molecules/SellerCard/SellerCard';
+import SellerCard from '../../molecules/sellerCard/SellerCard';
 import { sellersData } from '../../../data/sellersData';
 import './SellerGrid.css';
 
