@@ -54,7 +54,19 @@ Este proyecto ha sido posible gracias al uso de un conjunto moderno y profesiona
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+[![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)]
+[![Jira](https://img.shields.io/badge/Jira-%230052CC.svg?style=for-the-badge&logo=jira&logoColor=white)]
 
+
+---
+## 🔗 Enlaces del Proyecto
+
+Accede a los recursos clave, despliegues y tableros de gestión de **Valhalla del Chatarrero**:
+
+[![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://valhalla-del-chatarrero.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub_Repo-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/simonlopez25/valhalla-del-chatarrero.git)
+[![Figma](https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/YYE8czAPCxSpbQGDRNjNHx/valhalla-del-chatarrero?node-id=0-1&t=7cRwSKKT5J3AfcUv-0)
+[![Jira](https://img.shields.io/badge/Jira-%230052CC.svg?style=for-the-badge&logo=jira&logoColor=white)](https://simonlopezsaldarroaga.atlassian.net/jira/software/projects/VDC/boards/34/backlog)
 
 ---
 
@@ -64,27 +76,35 @@ Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con el
 
 * **Simon Lopez** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/simon-lopez-a478bb235 Linkedin)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/simonlopez25)
 
 * **Beatriz Iñiguez** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Beatriz484)
 
 * **Jhojann Sossa** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhojann-sossa-009b25121 Linkedin)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jhojannsossa)
 
 * **Patricia Diaz** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/patriciaapariciodiaz Linkedin)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/apariciodiazpatricia-cell)
 
 * **Jose Loero NieleZ** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]()
 
 * **Margarita Bellido** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/margaritabellidoroig)
 
 * **Wilfredy Salcedo** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Willfredy742)
 
 * **Maria Jose Rodriguez** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-jose-rodriguez-ramos Linkedin)
+  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mjrr39sevilla)
 
 ---
 
@@ -106,3 +126,5 @@ valhalla-del-chatarrero/
 ├── package.json       # Dependencias y scripts del proyecto
 ├── README.md          # Documentación del proyecto
 └── vite.config.js     # Configuración de Vite
+
+
