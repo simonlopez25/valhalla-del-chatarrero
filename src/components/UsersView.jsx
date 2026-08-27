@@ -2,17 +2,68 @@ import { useState } from 'react';
 import { useUsers } from '../hooks/useUsers';
 import './UsersView.css';
 
+const DEFAULT_AVATAR = 'https://i.imgur.com/LDOO4Qs.jpg';
+const FALLBACK_AVATARS = [
+  'https://i.imgur.com/LDOO4Qs.jpg',
+  'https://i.imgur.com/DTfowdu.jpg',
+  'https://i.imgur.com/yhW6Yw1.jpg',
+];
+
 const SITE_USER_AVATARS = {
   'john@mail.com': 'https://i.imgur.com/LDOO4Qs.jpg',
   'maria@mail.com': 'https://i.imgur.com/DTfowdu.jpg',
   'admin@mail.com': 'https://i.imgur.com/yhW6Yw1.jpg',
 };
 
-const FALLBACK_AVATARS = [
-  'https://i.imgur.com/LDOO4Qs.jpg',
-  'https://i.imgur.com/DTfowdu.jpg',
-  'https://i.imgur.com/yhW6Yw1.jpg',
-];
+const ROLE_LABELS = {
+  customer: 'Sobreviviente',
+  admin: 'Líder',
+};
+
+const getUserImage = (item, email) =>
+  item?.avatar ||
+  SITE_USER_AVATARS[email] ||
+  FALLBACK_AVATARS[Number(item?.id || 0) % FALLBACK_AVATARS.length] ||
+  DEFAULT_AVATAR;
+
+const UserCard = ({ item, onEdit, onDelete }) => {
+  const name = item?.name ?? 'Desconocido';
+  const email = item?.email ?? '';
+  const src = getUserImage(item, email);
+
+  return (
+    <div className="scrap-card" key={item.id}>
+      <span className="scrap-badge">{item?.role?.toUpperCase() ?? 'SIN_ROLE'}</span>
+
+      <div className="scrap-card__media">
+        {!src && <div className="scrap-card__placeholder">...</div>}
+        {src ? (
+          <img
+            src={src}
+            alt={name}
+            loading="lazy"
+            onError={(e) => {
+              e.target.src = DEFAULT_AVATAR;
+            }}
+          />
+        ) : null}
+      </div>
+
+      <div className="scrap-card__body">
+        <h3>{name}</h3>
+        <p>{email}</p>
+      </div>
+
+      <div className="scrap-card__footer">
+        <span className="scrap-price">ID: {item.id}</span>
+        <div className="scrap-card__actions">
+          <button className="scrap-button scrap-button--ghost" onClick={() => onEdit(item)}>Editar</button>
+          <button className="scrap-button scrap-button--danger" onClick={() => onDelete(item)}>Borrar</button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function UsersView() {
   const { items, loading, error, create, update, remove } = useUsers();
@@ -37,7 +88,7 @@ export default function UsersView() {
       email: form.email,
       password: form.password,
       role: form.role,
-      avatar: form.avatar || SITE_USER_AVATARS[form.email] || 'https://i.imgur.com/LDOO4Qs.jpg',
+      avatar: form.avatar || SITE_USER_AVATARS[form.email] || DEFAULT_AVATAR,
     };
 
     try {
@@ -144,8 +195,8 @@ export default function UsersView() {
               value={form.role}
               onChange={(e) => setForm((prev) => ({ ...prev, role: e.target.value }))}
             >
-              <option value="customer">Sobreviviente</option>
-              <option value="admin">Líder</option>
+              <option value="customer">{ROLE_LABELS.customer}</option>
+              <option value="admin">{ROLE_LABELS.admin}</option>
             </select>
           </label>
 
@@ -165,37 +216,14 @@ export default function UsersView() {
       {message && <div className="scrap-state">{message}</div>}
 
       <div className="scrap-grid">
-        {items.map((item) => {
-          const name = item?.name ?? 'Desconocido';
-          const email = item?.email ?? '';
-          const image =
-            item?.avatar ||
-            SITE_USER_AVATARS[email] ||
-            FALLBACK_AVATARS[Number(item?.id || 0) % FALLBACK_AVATARS.length];
-
-          return (
-            <div className="scrap-card" key={item.id}>
-              <span className="scrap-badge">{item?.role?.toUpperCase() ?? 'SIN_ROLE'}</span>
-
-              <div className="scrap-card__media">
-                <img src={image} alt={name} loading="lazy" />
-              </div>
-
-              <div className="scrap-card__body">
-                <h3>{name}</h3>
-                <p>{email}</p>
-              </div>
-
-              <div className="scrap-card__footer">
-                <span className="scrap-price">ID: {item.id}</span>
-                <div className="scrap-card__actions">
-                  <button className="scrap-button scrap-button--ghost" onClick={() => handleEdit(item)}>Editar</button>
-                  <button className="scrap-button scrap-button--danger" onClick={() => handleDelete(item)}>Borrar</button>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {items.map((item) => (
+          <UserCard
+            key={item.id}
+            item={item}
+            onEdit={handleEdit}
+            onDelete={handleDelete}
+          />
+        ))}
       </div>
     </div>
   );
