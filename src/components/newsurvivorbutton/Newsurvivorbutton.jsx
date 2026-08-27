@@ -1,6 +1,6 @@
-import "./Newsurvivorbutton.css";
+import "./NewSurvivorButton.css";
 
-function Newsurvivorbutton({ onClick }) {
+function NewSurvivorButton({ onClick }) {
   return (
     <button className="btnNewRecord" onClick={onClick}>
       <svg
@@ -24,4 +24,4 @@ function Newsurvivorbutton({ onClick }) {
   );
 }
 
-export default Newsurvivorbutton;
+export default NewSurvivorButton;

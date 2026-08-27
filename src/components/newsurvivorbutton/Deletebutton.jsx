@@ -1,6 +1,6 @@
-import "./Deleteandedit.css";
+import "./DeleteandEdit.css";
 
-function Deletebutton({ onClick }) {
+function DeleteButton({ onClick }) {
   return (
     <button className="actionButton deleteButton" onClick={onClick} title="Eliminar">
       <svg
@@ -23,4 +23,4 @@ function Deletebutton({ onClick }) {
   );
 }
 
-export default Deletebutton;
+export default DeleteButton;

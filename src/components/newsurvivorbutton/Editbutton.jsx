@@ -1,6 +1,6 @@
-import "./Deleteandedit.css";
+import "./DeleteandEdit.css";
 
-function Editbutton({ onClick }) {
+function EditButton({ onClick }) {
   return (
     <button className="actionButton editButton" onClick={onClick} title="Editar">
       <svg
@@ -21,4 +21,4 @@ function Editbutton({ onClick }) {
   );
 }
 
-export default Editbutton;
+export default EditButton;

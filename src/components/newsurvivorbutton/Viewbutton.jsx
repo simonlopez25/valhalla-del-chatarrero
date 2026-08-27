@@ -1,6 +1,6 @@
-import "./Deleteandedit.css";
+import "./DeleteandEdit.css";
 
-function Viewbutton() {
+function ViewButton() {
   const handleClick = () => {
     alert("Sujeto no identificado");
   };
@@ -29,4 +29,4 @@ function Viewbutton() {
   );
 }
 
-export default Viewbutton;
+export default ViewButton;

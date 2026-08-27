@@ -2,13 +2,15 @@
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  padding: 10px 0;
+  padding: 12px 25px; 
   width: 100%;
+  box-sizing: border-box;
 }
 
 .paginationInfo {
   color: #c9b29b; 
   font-size: 14px;
+  margin-left: 20px; 
 }
 
 .paginationButtons {

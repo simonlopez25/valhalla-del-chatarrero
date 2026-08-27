@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Pagination from "../../components/Pagination/Pagination";
-// Tus componentes de botones personalizados
-import Newsurvivorbutton from "../../components/newsurvivorbutton/Newsurvivorbutton";
-import Editbutton from "../../components/newsurvivorbutton/Editbutton";
-import Deletebutton from "../../components/newsurvivorbutton/Deletebutton";
-import Viewbutton from "../../components/newsurvivorbutton/Viewbutton";
+import Pagination from "../../components/pagination/Pagination";
+
+import NewSurvivorButton from "../../components/newsurvivorbutton/NewSurvivorButton";
+import EditButton from "../../components/newsurvivorbutton/EditButton";
+import DeleteButton from "../../components/newsurvivorbutton/DeleteButton";
+import ViewButton from "../../components/newsurvivorbutton/ViewButton";
 import "./Users.css";
 
 function Users() {
@@ -34,7 +34,7 @@ function Users() {
     return <div className="loadingScreen">Cargando registros del páramo...</div>;
   }
 
-  // Lógica de paginación con .slice()
+  
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
   const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
@@ -59,7 +59,7 @@ function Users() {
           <h1>REGISTRO DE SOBREVIVIENTES</h1>
           <p>Administración del censo del páramo. Añade, modifica o purga registros de individuos conocidos en el sector.</p>
         </div>
-        <Newsurvivorbutton />
+        <NewSurvivorButton />
       </div>
 
       {error && <p className="usersError">{error}</p>}
@@ -95,9 +95,9 @@ function Users() {
                 </td>
                 <td>
                   <div className="actionButtons">
-                    <Viewbutton userId={user.id} />
-                    <Editbutton userId={user.id} />
-                    <Deletebutton userId={user.id} />
+                    <ViewButton userId={user.id} />
+                    <EditButton userId={user.id} />
+                    <DeleteButton userId={user.id} />
                   </div>
                 </td>
               </tr>

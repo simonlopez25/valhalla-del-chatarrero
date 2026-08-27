@@ -32,8 +32,8 @@ function App() {
             <Route path="/sellersPage" element={<SellersPage />} />
             <Route path="/history" element={<HistoryPage />} />
             <Route path="/showcase" element={<ShowcasePage />} />
-            <Route path="/users" element={<UsersPage />} />
-            <Route path="/user" element={<Users />} />
+            <Route path="/users" element={<Users />} />
+            
           </Routes>
         </main>
 
