@@ -69,10 +69,10 @@ Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con el
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
 
 * **Jhojann Sossa** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhojann-sossa-009b25121/)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhojann-sossa-009b25121 Linkedin)
 
 * **Patricia Diaz** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/patriciaapariciodiaz/)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/patriciaapariciodiaz Linkedin)
 
 * **Jose Loero NieleZ** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
@@ -84,7 +84,7 @@ Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con el
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
 
 * **Maria Jose Rodriguez** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-jose-rodriguez-ramos)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-jose-rodriguez-ramos Linkedin)
 
 ---
 
