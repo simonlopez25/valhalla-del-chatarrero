@@ -75,7 +75,7 @@ Accede a los recursos clave, despliegues y tableros de gestión de **Valhalla de
 Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con ellos a través de sus perfiles!
 
 * **Simon Lopez** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/simon-lopez-a478bb235 Linkedin)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/simon-lopez-a478bb235)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/simonlopez25)
 
 * **Beatriz Iñiguez** - *Frontend Developer*  
@@ -83,11 +83,11 @@ Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con el
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Beatriz484)
 
 * **Jhojann Sossa** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhojann-sossa-009b25121 Linkedin)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhojann-sossa-009b25121)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jhojannsossa)
 
 * **Patricia Diaz** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/patriciaapariciodiaz Linkedin)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/patriciaapariciodiaz)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/apariciodiazpatricia-cell)
 
 * **Jose Loero NieleZ** - *Frontend Developer*  
@@ -103,7 +103,7 @@ Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con el
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Willfredy742)
 
 * **Maria Jose Rodriguez** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-jose-rodriguez-ramos Linkedin)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-jose-rodriguez-ramos)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mjrr39sevilla)
 
 ---
