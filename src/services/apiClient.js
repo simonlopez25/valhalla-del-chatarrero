@@ -1,19 +1,20 @@
 const BASE_URL = 'https://api.escuelajs.co/api/v1';
 
 async function request(endpoint, options = {}) {
+  const { signal, ...rest } = options;
   const url = `${BASE_URL}${endpoint}`;
   const config = {
     headers: {
       'Content-Type': 'application/json',
     },
-    ...options,
+    ...rest,
   };
 
   if (config.body && typeof config.body === 'object') {
     config.body = JSON.stringify(config.body);
   }
 
-  const response = await fetch(url, config);
+  const response = await fetch(url, { ...config, signal });
 
   if (!response.ok) {
     const errorBody = await response.json().catch(() => ({}));

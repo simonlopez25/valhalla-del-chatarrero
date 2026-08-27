@@ -17,15 +17,21 @@
 }
 
 .navLink {
-  color: #e59880;
+  color: var(--ink-muted);
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
   letter-spacing: 1.5px;
+  text-transform: uppercase;
   padding-bottom: 4px;
-  transition: border-bottom 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+}
+
+.navLink:hover {
+  color: var(--accent);
 }
 
 .navLink.active {
-  border-bottom: 2px solid #e59880;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
 }

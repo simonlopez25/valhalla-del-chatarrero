@@ -1,52 +1,78 @@
 import { useState, useEffect } from "react";
-import { fetchHighestPriceProducts } from "../../services/productService";
+import {
+  getVisibleProducts,
+  productPrice,
+  resolveProductImage,
+} from "../../services/productsService";
 import "./FeaturedCarousel.css";
 
+function ProductImage({ src, alt }) {
+  const [view, setView] = useState({ src, isLoaded: false });
+
+  if (view.src !== src) {
+    setView({ src, isLoaded: false });
+  }
+
+  const handleLoad = () => setView((prev) => ({ ...prev, isLoaded: true }));
+  const handleError = () => {
+    const fallback = `https://picsum.photos/seed/${Math.floor(Math.random() * 1000)}/600/600`;
+    setView((prev) =>
+      prev.src === fallback ? prev : { src: fallback, isLoaded: false }
+    );
+  };
+
+  return (
+    <>
+      {!view.isLoaded && (
+        <div className="productImagePlaceholder" aria-hidden="true">...</div>
+      )}
+      <img
+        key={view.src}
+        src={view.src}
+        alt={alt}
+        className="productImage"
+        loading="lazy"
+        onLoad={handleLoad}
+        onError={handleError}
+      />
+    </>
+  );
+}
+
 const FeaturedCarousel = () => {
-  const [highestPriceProducts, setHighestPriceProducts] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
+    let ignore = false;
+
     const loadProducts = async () => {
       try {
-        const productsData = await fetchHighestPriceProducts();
-        setHighestPriceProducts(productsData);
+        const visible = await getVisibleProducts();
+        const topFive = [...visible]
+          .sort((a, b) => productPrice(b) - productPrice(a))
+          .slice(0, 5);
+        if (!ignore) setProducts(topFive);
       } catch (error) {
         console.error("No se pudo cargar el inventario", error);
-        setHasError(true);
+        if (!ignore) setHasError(true);
       } finally {
-        setIsLoading(false);
+        if (!ignore) setIsLoading(false);
       }
     };
 
     loadProducts();
+    return () => {
+      ignore = true;
+    };
   }, []);
-
-  const handleNextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      highestPriceProducts.length
-        ? (prevIndex + 1) % highestPriceProducts.length
-        : 0,
-    );
-  };
-
-  const handlePrevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      highestPriceProducts.length
-        ? prevIndex === 0
-          ? highestPriceProducts.length - 1
-          : prevIndex - 1
-        : 0,
-    );
-  };
 
   if (isLoading) {
     return <div className="loadingText">CARGANDO NODOS DE DATOS...</div>;
   }
 
-  if (hasError || highestPriceProducts.length === 0) {
+  if (hasError || products.length === 0) {
     return <div className="loadingText">INVENTARIO NO DISPONIBLE.</div>;
   }
 
@@ -57,59 +83,38 @@ const FeaturedCarousel = () => {
           <p className="sectionKicker">MERCADO // TRANSMISIÓN 04</p>
           <h2 id="featured-title">BOTÍN DESTACADO</h2>
         </div>
-        <span className="syncStatus">
-          NODO ACTIVO [{String(currentIndex + 1).padStart(2, "0")} /
-          {String(highestPriceProducts.length).padStart(2, "0")}]
-        </span>
+        <span className="syncStatus">TOP 5 DEL INVENTARIO</span>
       </div>
 
-      <div className="carouselControls">
-        <button
-          type="button"
-          onClick={handlePrevSlide}
-          className="controlButton"
-          aria-label="Producto anterior"
-        >
-          ←
-        </button>
+      <div className="featuredGrid">
+        {products.map((product, index) => {
+          const title = String(product?.title ?? '').trim() || 'Artefacto desconocido';
+          const category = String(product?.category?.name ?? '').trim() || 'DESCONOCIDA';
+          const src = resolveProductImage(product);
 
-        <div className="cardTrack">
-          {[0, 1, 2].map((offset) => {
-            const product =
-              highestPriceProducts[
-                (currentIndex + offset) % highestPriceProducts.length
-              ];
-
-            return (
-              <article className="productCard" key={`${product.id}-${offset}`}>
-                <div className="productImageFrame">
-                  <img src={product.image} alt={product.name} className="productImage" />
-                  <span className="productCondition">{product.condition}</span>
+          return (
+            <article className="productCard" key={product?.id ?? index}>
+              <div className="productImageFrame">
+                <ProductImage src={src} alt={title} />
+                <span className="productCondition">DISPONIBLE</span>
+                <span className="productRank">#{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <div className="productInfo">
+                <div className="productMeta">
+                  <span>{category}</span>
+                  <span>STOCK 1</span>
                 </div>
-                <div className="productInfo">
-                  <div className="productMeta">
-                    <span>{product.category}</span>
-                    <span>STOCK {product.stock}</span>
-                  </div>
-                  <h3 className="productTitle">{product.name}</h3>
-                  <div className="productBottomLine">
-                    <p className="productPrice">{product.price.toLocaleString("es-ES")} CR</p>
-                    <button type="button" className="buyButton">AÑADIR</button>
-                  </div>
+                <h3 className="productTitle">{title}</h3>
+                <div className="productBottomLine">
+                  <p className="productPrice">
+                    {productPrice(product).toLocaleString("es-ES")} CR
+                  </p>
+                  <button type="button" className="buyButton">AÑADIR</button>
                 </div>
-              </article>
-            );
-          })}
-        </div>
-
-        <button
-          type="button"
-          onClick={handleNextSlide}
-          className="controlButton"
-          aria-label="Producto siguiente"
-        >
-          →
-        </button>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );

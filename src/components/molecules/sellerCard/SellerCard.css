@@ -27,50 +27,10 @@
 }
 
 
-.sellerCardRoleWrapper {
-  display: inline-block;
-  background-color: var(--colorAccentSoft);
-  border: 1px solid var(--colorAccent);
-  color: var(--colorAccent);
-  font-size: 0.65rem;
-  font-family: var(--fontHeading);
-  letter-spacing: 0.08em;
-  padding: 0.2rem 0.5rem;
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
-  align-self: flex-start;
-}
-
 .sellerCardDescription {
   color: var(--colorTextMuted);
   font-size: 0.85rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
   flex-grow: 1;
-}
-
-.sellerCard [class*="roleBadge"],
-.sellerCard .roleBadge {
-  color: #e5b38a !important;
-}
-
-
-.sellerCard [class*="idBadge"],
-.sellerCard .idBadge {
-  color: #c2b6a8 !important;
-}
-
-.sellerCard [class*="roleBadge"],
-.sellerCard .roleBadge {
-  display: inline-block;
-  background-color: var(--colorAccentSoft, rgba(224, 122, 95, 0.15));
-  border: 1px solid var(--colorAccent, #e07a5f);
-  color: #e5b38a !important;
-  font-size: 0.65rem;
-  font-family: var(--fontHeading);
-  letter-spacing: 0.08em;
-  padding: 0.25rem 0.6rem;
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
-  align-self: flex-start;
 }

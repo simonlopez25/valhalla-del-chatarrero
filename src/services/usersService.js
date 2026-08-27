@@ -1,4 +1,4 @@
-import request from './api';
+import request from './apiClient';
 
 export const getUsers = ({ limit = 10, offset = 0 } = {}) => {
   const params = new URLSearchParams();
