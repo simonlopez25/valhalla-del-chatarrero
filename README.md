@@ -29,7 +29,11 @@ Bienvenido a **Valhalla del Chatarrero**, una plataforma de comercio online inme
     *   **API de Usuarios:** Permite visualizar y administrar la base de datos de habitantes del páramo.
     *   **API del Tiempo :** "Open-Meteo" . Permite visualizar el clima y sus cambios.
 ---
-## 📸 Galería de Páginas
+## 📸 Diseño en Figma y Galería de Páginas
+
+
+<img width="1290" height="627" alt="Captura de pantalla 2026-08-27 151333" src="https://github.com/user-attachments/assets/ce4e2236-4b2b-4533-956c-c60c8f9a700f" />
+
 
 A continuación, se muestra un recorrido visual por las secciones de la aplicación:
 
