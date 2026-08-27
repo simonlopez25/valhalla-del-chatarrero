@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --colorBackground: #1a1512;
+  --colorSurface: #241d18;
+  --colorAccent: #d98c4a;
+  --colorAccentSoft: #d98c4a33;
+  --colorText: #f4ede4;
+  --colorTextMuted: #b8ab9c;
+  --colorStatusDot: #e05d5d;
+  --fontHeading: "Oswald", sans-serif;
+}
+
+body {
+  background-color: #0f0d0c;
+  color: #ffffff;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+}
+
+.appLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 32px;
+}
+
+@media (max-width: 600px) {
+  .mainContent {
+    padding: 20px;
+  }
+}

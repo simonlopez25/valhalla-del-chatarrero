@@ -1,0 +1,29 @@
+.statusBadge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--colorAccentSoft);
+  margin-top: auto; /* Empuja el estado abajo del todo de la tarjeta */
+}
+
+.statusBadgeText {
+  color: var(--colorTextMuted);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap; /* Evita que el texto rompa de forma extraña */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.statusBadgeIcon {
+  color: var(--colorAccent);
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  /* Este filtro tiñe los emojis estándar al tono naranja óxido de la interfaz */
+  filter: sepia(100%) saturate(400%) hue-rotate(345deg) brightness(0.95);
+}

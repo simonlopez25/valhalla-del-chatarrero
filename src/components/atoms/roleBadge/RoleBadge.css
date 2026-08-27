@@ -1,0 +1,9 @@
+.roleBadge {
+  color: #e5b38a; /* Un tono naranja claro/arenoso con gran contraste */
+  font-size: 0.75rem;
+  font-family: var(--fontHeading);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}

@@ -1,0 +1,26 @@
+.actionButton {
+  background-color: transparent;
+  border: 1px solid #d4b59f;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: rgba(212, 181, 159, 0.15);
+  border-color: #f3b093;
+}
+
+.actionButton:active {
+  transform: scale(0.95);
+}
+
+.actionIcon {
+  stroke: #d4b59f;
+  flex-shrink: 0;
+}

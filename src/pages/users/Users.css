@@ -1,0 +1,162 @@
+.usersMainContainer {
+  padding: 40px;
+  background-color: #0c0907;
+  min-height: 100vh;
+  color: #d1bfa7;
+  font-family: inherit;
+}
+
+.usersHeaderSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.usersHeaderSection h1 {
+  font-size: 28px;
+  color: #e8b49e;
+  margin: 0 0 8px 0;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.usersHeaderSection p {
+  font-size: 14px;
+  color: #8c735d;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.tableContainer {
+  background-color: #14100d;
+  border: 1px solid #3d3024;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  padding-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background-color: #14100d;
+  color: #e8b49e;
+  padding: 20px 24px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  border-bottom: 1px solid #3d3024;
+  font-weight: 700;
+}
+
+td {
+  padding: 18px 24px;
+  border-bottom: 1px solid #241d17;
+  font-size: 14px;
+  color: #b59f88;
+  vertical-align: middle;
+}
+
+tbody tr:last-child td {
+  border-bottom: 1px solid #3d3024;
+}
+
+tbody tr:hover {
+  background-color: #1c1510;
+}
+
+.identityCell {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.userAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid #4a382a;
+}
+
+.userName {
+  font-weight: bold;
+  color: #f0ebd8;
+  display: block;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.userRole {
+  color: #8c735d;
+  font-size: 12px;
+  display: block;
+  margin-top: 2px;
+}
+
+.classificationBadge {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid #594432;
+  color: #d9c3ab;
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.loadingScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0c0907;
+  color: #e8b49e;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.usersError {
+  background-color: #3b1c1c;
+  border: 1px solid #8c3b3b;
+  color: #ff9999;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .usersMainContainer {
+    padding: 20px;
+  }
+
+  .usersHeaderSection {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .tableContainer {
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    padding: 14px 16px;
+    white-space: nowrap;
+  }
+}
