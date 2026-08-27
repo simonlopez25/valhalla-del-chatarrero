@@ -1,24 +1,18 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
-import { Footer } from './components/Footer/Footer';
-import SellersPage from './pages/SellersPage/SellersPage';
-import './style/App.css';
-import Users from './pages/users/Users'; // 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
+import SellersPage from "./pages/SellersPage/SellersPage";
+import HomePage from "./pages/HomePage/HomePage";
+import History from "./pages/History/History";
+import Users from "./pages/users/Users";
+import "./style/App.css";
 
 // Páginas de ejemplo temporales
-function PortalPage() {
-  return <h2>Sección Portal</h2>;
-}
 
-function HistoryPage() {
-  return <h2>Sección Historia</h2>;
-}
 function ShowcasePage() {
   return <h2>Sección Vitrina</h2>;
 }
-function UsersPage() {
-  return <h2>Sección Usuarios</h2>;
-}
+
 
 function App() {
   return (
@@ -28,9 +22,9 @@ function App() {
 
         <main className="mainContent">
           <Routes>
-            <Route path="/" element={<PortalPage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/sellersPage" element={<SellersPage />} />
-            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/history" element={<History />} />
             <Route path="/showcase" element={<ShowcasePage />} />
             <Route path="/users" element={<Users />} />
             

@@ -1,0 +1,6 @@
+.homeContainer {
+  background: transparent;
+  min-height: 100vh;
+  padding: 1px 1rem 3rem;
+  box-sizing: border-box;
+}
