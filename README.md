@@ -4,6 +4,10 @@
   <img src="public/imagen apo.png" alt="Banner Post-Apocalíptico Valhalla del Chatarrero" width="100%" />
 </div>
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=28&duration=3000&pause=1000&color=D98C4A&center=true&vCenter=true&width=650&height=70&lines=LA+HORDA+BINARIA;BÚNKER+DE+COMPONENTES;EL+VALHALLA+DEL+CHATARRERO" alt="La Horda Binaria Animacion" />
+</p>
+
 Bienvenido a **Valhalla del Chatarrero**, una plataforma de comercio online inmersiva ambientada en un páramo desolado y peligroso. Este proyecto no es solo una tienda; es una experiencia narrativa donde los usuarios, o "supervivientes", interactúan con un inventario de tecnología recuperada y un registro de otros habitantes del sector.
 
 ---
