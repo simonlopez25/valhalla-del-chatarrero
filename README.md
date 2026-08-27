@@ -4,7 +4,7 @@
   <img src="public/imagen apo.png" alt="Banner Post-Apocalíptico Valhalla del Chatarrero" width="100%" />
 </div>
 
-Bienvenido a **Valhalla del Chatarrero**, una plataforma de comercio electrónico inmersiva ambientada en un páramo desolado y peligroso. Este proyecto no es solo una tienda; es una experiencia narrativa donde los usuarios, o "sobrevivientes", interactúan con un inventario de tecnología recuperada y un registro de otros habitantes del sector.
+Bienvenido a **Valhalla del Chatarrero**, una plataforma de comercio online inmersiva ambientada en un páramo desolado y peligroso. Este proyecto no es solo una tienda; es una experiencia narrativa donde los usuarios, o "supervivientes", interactúan con un inventario de tecnología recuperada y un registro de otros habitantes del sector.
 
 ---
 
@@ -12,13 +12,13 @@ Bienvenido a **Valhalla del Chatarrero**, una plataforma de comercio electrónic
 
 *   **Temática Post-Apocalíptica:** Diseño visual oscuro, tipografía industrial y una paleta de colores quemados que sumergen al usuario en el páramo.
 
-*   **Navegación Intuitiva:** La aplicación cuenta con 4 páginas principales accesibles a través de una barra de navegación estilo terminal:
+*   **Navegación Intuitiva:** La aplicación cuenta con 5 páginas principales accesibles a través de una barra de navegación estilo terminal:
 
     *   **Portal (Inicio):** Resumen del sector y los 5 objetos más valiosos a la venta.
     *   **Equipo:** Conoce a los expertos que hacen posible el Valhalla.
     *   **Historia:** Adéntrate en el lore del páramo y la fundación de la comunidad.
     *   **Vitrina (Productos):** Catálogo completo de chatarra recuperada.
-    *   **Usuarios:** Registro y gestión de los sobrevivientes del sector.
+    *   **Usuarios:** Registro y gestión de los supervivientes del sector.
 
 *   **Integración de APIs:**
     *   **API de Productos:** Muestra dinámicamente artículos únicos con sus precios.
@@ -72,13 +72,13 @@ Accede a los recursos clave, despliegues y tableros de gestión de **Valhalla de
 
 ## 👥 Equipo de Valhalla (Colaboradores)
 
-Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con ellos a través de sus perfiles!
+Este proyecto fue forjado por un equipo de 8 supervivientes. ¡Conéctate con ellos a través de sus perfiles!
 
-* **Simon Lopez** - *Frontend Developer*  
+* **Simón López** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/simon-lopez-a478bb235)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/simonlopez25)
 
-* **Beatriz Iñiguez** - *Frontend Developer*  
+* **Beatriz Íñiguez** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Beatriz484)
 
@@ -86,11 +86,11 @@ Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con el
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhojann-sossa-009b25121)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jhojannsossa)
 
-* **Patricia Diaz** - *Frontend Developer*  
+* **Patricia Aparicio** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/patriciaapariciodiaz)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/apariciodiazpatricia-cell)
 
-* **Jose Loero NieleZ** - *Frontend Developer*  
+* **Jose Loero Nielez** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]()
 
@@ -102,7 +102,7 @@ Este proyecto fue forjado por un equipo de 8 sobrevivientes. ¡Conéctate con el
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Willfredy742)
 
-* **Maria Jose Rodriguez** - *Frontend Developer*  
+* **María José Rodriguez Ramos** - *Frontend Developer*  
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-jose-rodriguez-ramos)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mjrr39sevilla)
 
