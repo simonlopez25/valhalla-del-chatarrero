@@ -7,33 +7,34 @@ import {
 import "./FeaturedCarousel.css";
 
 function ProductImage({ src, alt }) {
-  const [view, setView] = useState({ src, isLoaded: false });
+  const [prevSrc, setPrevSrc] = useState(src);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
-  if (view.src !== src) {
-    setView({ src, isLoaded: false });
+  if (prevSrc !== src) {
+    setPrevSrc(src);
+    setIsLoaded(false);
+    setHasError(false);
   }
 
-  const handleLoad = () => setView((prev) => ({ ...prev, isLoaded: true }));
-  const handleError = () => {
-    const fallback = `https://picsum.photos/seed/${Math.floor(Math.random() * 1000)}/600/600`;
-    setView((prev) =>
-      prev.src === fallback ? prev : { src: fallback, isLoaded: false }
-    );
-  };
+  const imageSource = hasError
+    ? "https://picsum.photos/seed/fallback/600/600"
+    : src;
 
   return (
     <>
-      {!view.isLoaded && (
-        <div className="productImagePlaceholder" aria-hidden="true">...</div>
+      {!isLoaded && (
+        <div className="productImagePlaceholder" aria-hidden="true">
+          ...
+        </div>
       )}
       <img
-        key={view.src}
-        src={view.src}
+        src={imageSource}
         alt={alt}
         className="productImage"
         loading="lazy"
-        onLoad={handleLoad}
-        onError={handleError}
+        onLoad={() => setIsLoaded(true)}
+        onError={() => setHasError(true)}
       />
     </>
   );
@@ -88,8 +89,10 @@ const FeaturedCarousel = () => {
 
       <div className="featuredGrid">
         {products.map((product, index) => {
-          const title = String(product?.title ?? '').trim() || 'Artefacto desconocido';
-          const category = String(product?.category?.name ?? '').trim() || 'DESCONOCIDA';
+          const title =
+            String(product?.title ?? "").trim() || "Artefacto desconocido";
+          const category =
+            String(product?.category?.name ?? "").trim() || "DESCONOCIDA";
           const src = resolveProductImage(product);
 
           return (
@@ -97,7 +100,9 @@ const FeaturedCarousel = () => {
               <div className="productImageFrame">
                 <ProductImage src={src} alt={title} />
                 <span className="productCondition">DISPONIBLE</span>
-                <span className="productRank">#{String(index + 1).padStart(2, "0")}</span>
+                <span className="productRank">
+                  #{String(index + 1).padStart(2, "0")}
+                </span>
               </div>
               <div className="productInfo">
                 <div className="productMeta">
@@ -109,7 +114,9 @@ const FeaturedCarousel = () => {
                   <p className="productPrice">
                     {productPrice(product).toLocaleString("es-ES")} CR
                   </p>
-                  <button type="button" className="buyButton">AÑADIR</button>
+                  <button type="button" className="buyButton">
+                    AÑADIR
+                  </button>
                 </div>
               </div>
             </article>
