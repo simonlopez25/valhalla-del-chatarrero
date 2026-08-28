@@ -5,13 +5,13 @@ import VitrinaCard from '../../components/vitrinaCard/VitrinaCard';
 import VitrinaPagination from '../../components/vitrinaPagination/VitrinaPagination';
 import './ShowcasePage.css';
 
-const ITEMS_PER_PAGE = 20;
-const ALL_CATEGORIES = '';
+const itemsPerPage = 20;
+const allCategories = '';
 
 export default function ShowcasePage() {
   const [items, setItems] = useState([]);
-  const [activeCategoryId, setActiveCategoryId] = useState(ALL_CATEGORIES);
-  const [lastCategoryId, setLastCategoryId] = useState(ALL_CATEGORIES);
+  const [activeCategoryId, setActiveCategoryId] = useState(allCategories);
+  const [lastCategoryId, setLastCategoryId] = useState(allCategories);
   const [sort, setSort] = useState('price-asc');
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -56,7 +56,7 @@ export default function ShowcasePage() {
 
   const filteredItems = useMemo(
     () =>
-      activeCategoryId === ALL_CATEGORIES
+      activeCategoryId === allCategories
         ? items
         : items.filter(
             (item) => String(item?.category?.id) === String(activeCategoryId)
@@ -74,11 +74,11 @@ export default function ShowcasePage() {
     return arr;
   }, [filteredItems, sort]);
 
-  const totalPages = Math.max(1, Math.ceil(sortedItems.length / ITEMS_PER_PAGE));
+  const totalPages = Math.max(1, Math.ceil(sortedItems.length / itemsPerPage));
   const currentPage = Math.min(page, totalPages);
   const pageItems = sortedItems.slice(
-    (currentPage - 1) * ITEMS_PER_PAGE,
-    currentPage * ITEMS_PER_PAGE
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
   );
 
   if (loading && !items.length) {

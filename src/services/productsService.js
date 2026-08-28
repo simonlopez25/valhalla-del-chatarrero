@@ -1,14 +1,14 @@
 import request from './apiClient';
 
-const FAKE_PRODUCT_PATTERNS = [/^title-[a-f0-9-]+$/i, /^desc-[a-f0-9-]+$/i];
-const MACHINE_TITLE_PATTERN =
+const fakeProductPatterns = [/^title-[a-f0-9-]+$/i, /^desc-[a-f0-9-]+$/i];
+const machineTitlePattern =
   /^(title|titulo|desc|descripcion|name|nombre|test|prueba|producto|catalog[-_ ]?item|item|sku|node)(?:[-_ ]|$)/i;
-const UUID_TAIL_PATTERN = /[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
-const SPAM_CHARS_PATTERN = /(.)\1{3,}/u;
-const SLUG_TITLE_PATTERN = /^\S{40,}$/;
-const HEX_FRAGMENT_PATTERN = /[a-f0-9]{8,}/i;
-const GENERATED_CATEGORY_PATTERN = /^(catalog|test|fake|demo)[-_ ]/i;
-const CAPS_KEBAB_PATTERN = /^[\p{Lu}0-9]+(?:-[\p{Lu}0-9]+){1,}$/u;
+const uuidTailPattern = /[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
+const spamCharsPattern = /(.)\1{3,}/u;
+const slugTitlePattern = /^\S{40,}$/;
+const hexFragmentPattern = /[a-f0-9]{8,}/i;
+const generatedCategoryPattern = /^(catalog|test|fake|demo)[-_ ]/i;
+const capsKebabPattern = /^[\p{Lu}0-9]+(?:-[\p{Lu}0-9]+){1,}$/u;
 
 const hasGeneratedIdToken = (title) =>
   String(title)
@@ -18,7 +18,7 @@ const hasGeneratedIdToken = (title) =>
       (token) => token.length >= 8 && /[0-9]/.test(token) && !/[aeiou]/i.test(token)
     );
 
-const INVALID_IMAGE_PATTERNS = [
+const invalidImagePatterns = [
   'placehold.co',
   'placeimg.com',
   'pravatar.cc',
@@ -27,7 +27,7 @@ const INVALID_IMAGE_PATTERNS = [
 
 export const isValidImageUrl = (url) => {
   if (typeof url !== 'string' || url.trim().length === 0) return false;
-  return !INVALID_IMAGE_PATTERNS.some((pattern) => url.includes(pattern));
+  return !invalidImagePatterns.some((pattern) => url.includes(pattern));
 };
 
 const normalizeImages = (rawImages) => {
@@ -64,20 +64,20 @@ export const isJunkProduct = (product) => {
   const description = String(product.description ?? '').trim();
   const categoryName = String(product?.category?.name ?? '').trim();
   const patterns = [
-    ...FAKE_PRODUCT_PATTERNS,
-    MACHINE_TITLE_PATTERN,
-    UUID_TAIL_PATTERN,
-    SPAM_CHARS_PATTERN,
-    SLUG_TITLE_PATTERN,
-    HEX_FRAGMENT_PATTERN,
-    CAPS_KEBAB_PATTERN,
+    ...fakeProductPatterns,
+    machineTitlePattern,
+    uuidTailPattern,
+    spamCharsPattern,
+    slugTitlePattern,
+    hexFragmentPattern,
+    capsKebabPattern,
   ];
 
   if (productPrice(product) === 0) return true;
   if (title.length < 6) return true;
   if (description.length < 40) return true;
-  if (!categoryName || GENERATED_CATEGORY_PATTERN.test(categoryName)) return true;
-  if (CAPS_KEBAB_PATTERN.test(categoryName)) return true;
+  if (!categoryName || generatedCategoryPattern.test(categoryName)) return true;
+  if (capsKebabPattern.test(categoryName)) return true;
   if (patterns.some((pattern) => pattern.test(title))) return true;
   if (hasGeneratedIdToken(title)) return true;
 
@@ -103,18 +103,18 @@ export const getProducts = ({ limit = 50, offset = 0, signal, ...filters } = {})
 
 export const getProduct = (id) => request(`/products/${id}`);
 
-const PAGE_SIZE = 100;
-const MAX_PRODUCTS = 400;
+const pageSize = 100;
+const maxProducts = 400;
 
 const fetchAllProducts = async () => {
   const collected = [];
 
-  for (let offset = 0; offset < MAX_PRODUCTS; offset += PAGE_SIZE) {
-    const batch = await getProducts({ limit: PAGE_SIZE, offset });
+  for (let offset = 0; offset < maxProducts; offset += pageSize) {
+    const batch = await getProducts({ limit: pageSize, offset });
 
     if (!Array.isArray(batch) || batch.length === 0) break;
     collected.push(...batch);
-    if (batch.length < PAGE_SIZE) break;
+    if (batch.length < pageSize) break;
   }
 
   return collected;

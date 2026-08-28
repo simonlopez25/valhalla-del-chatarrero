@@ -77,11 +77,11 @@ const FeaturedCarousel = () => {
   }
 
   return (
-    <section className="carouselContainer" aria-labelledby="featured-title">
+    <section className="carouselContainer" aria-labelledby="featuredTitle">
       <div className="carouselHeader">
         <div>
           <p className="sectionKicker">MERCADO // TRANSMISIÓN 04</p>
-          <h2 id="featured-title">BOTÍN DESTACADO</h2>
+          <h2 id="featuredTitle">BOTÍN DESTACADO</h2>
         </div>
         <span className="syncStatus">TOP 5 DEL INVENTARIO</span>
       </div>

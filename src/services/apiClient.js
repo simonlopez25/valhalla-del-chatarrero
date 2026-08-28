@@ -1,8 +1,8 @@
-const BASE_URL = 'https://api.escuelajs.co/api/v1';
+const baseUrl = 'https://api.escuelajs.co/api/v1';
 
 async function request(endpoint, options = {}) {
   const { signal, ...rest } = options;
-  const url = `${BASE_URL}${endpoint}`;
+  const url = `${baseUrl}${endpoint}`;
   const config = {
     headers: {
       'Content-Type': 'application/json',

@@ -11,7 +11,7 @@
   --historyColorPergaminoOscuro: #C9B896;
 }
 
-.history-comp {
+.historyComp {
   position: relative;
   background-color: var(--historyColorPergamino);
   color: var(--historyColorMarronOscuro);
@@ -23,7 +23,7 @@
   border-radius: 2px;
 }
 
-.history-comp h1 {
+.historyComp h1 {
   font-family: 'Anton', sans-serif;
   font-weight: 400;
   color: var(--historyColorFondoOscuro);
@@ -34,7 +34,7 @@
   text-align: center;
 }
 
-.history-date {
+.historyDate {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -48,7 +48,7 @@
   border-bottom: 1px solid var(--historyColorKhaki);
 }
 
-.history-text {
+.historyText {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -58,7 +58,7 @@
   text-align: center;
 }
 
-.archive-image {
+.archiveImage {
   position: relative;
   margin: 2.5rem 0;
   border: 1px solid var(--historyColorKhaki);
@@ -67,13 +67,13 @@
   background-color: var(--historyColorPergaminoOscuro);
 }
 
-.archive-image img {
+.archiveImage img {
   width: 100%;
   display: block;
   filter: sepia(30%) contrast(95%);
 }
 
-.archive-image figcaption {
+.archiveImage figcaption {
   font-family: 'Space Grotesk', sans-serif;
   text-align: center;
   font-size: 0.75rem;
@@ -83,7 +83,7 @@
   text-transform: uppercase;
 }
 
-.featured-quote {
+.historyQuote {
   border-left: 3px solid var(--historyColorOxido);
   padding: 1.5rem 2rem;
   margin: 2.5rem 0;
@@ -93,12 +93,12 @@
   color: var(--historyColorMarronOscuro);
 }
 
-.featured-quote p {
+.historyQuote p {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
-.approval-seal {
+.approvalSeal {
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
@@ -108,32 +108,32 @@
 }
 
 @media (max-width: 768px) {
-  .history-comp {
+  .historyComp {
     padding: 2rem 1.25rem;
   }
 
-  .history-comp h1 {
+  .historyComp h1 {
     font-size: 36px;
   }
 
-  .history-date {
+  .historyDate {
     font-size: 12px;
   }
 
-  .history-text {
+  .historyText {
     font-size: 14px;
     line-height: 1.6;
   }
 
-  .featured-quote {
+  .historyQuote {
     padding: 1rem 1.25rem;
   }
 
-  .featured-quote p {
+  .historyQuote p {
     font-size: 1rem;
   }
 
-  .approval-seal {
+  .approvalSeal {
     width: 55px;
     bottom: 1rem;
     right: 1rem;
@@ -141,17 +141,17 @@
 }
 
 @media (max-width: 480px) {
-  .history-comp h1 {
+  .historyComp h1 {
     font-size: 28px;
     letter-spacing: 0.5px;
   }
 
-  .history-date {
+  .historyDate {
     font-size: 11px;
     letter-spacing: 0.5px;
   }
 
-  .history-text {
+  .historyText {
     font-size: 13px;
   }
 }

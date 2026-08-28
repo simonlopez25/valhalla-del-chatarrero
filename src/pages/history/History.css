@@ -1,4 +1,4 @@
-.history-page {
+.historyPage {
   background-color: rgba(23, 19, 15, 0.8);
   min-height: 100vh;
   display: flex;
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 480px) {
-  .history-page {
+  .historyPage {
     padding: 1.5rem 0.5rem;
   }
 }

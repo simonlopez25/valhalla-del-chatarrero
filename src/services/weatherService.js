@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const WEATHER_API_URL =
+const weatherApiUrl =
   import.meta.env.VITE_WEATHER_API_URL ||
   "https://api.open-meteo.com/v1/forecast";
 
@@ -31,7 +31,7 @@ const getWeatherDescription = (code) => {
 };
 
 export const fetchCurrentWeather = async (latitude, longitude) => {
-  const response = await axios.get(WEATHER_API_URL, {
+  const response = await axios.get(weatherApiUrl, {
     params: {
       latitude,
       longitude,

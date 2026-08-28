@@ -1,10 +1,10 @@
 import './VitrinaFilter.css';
 
-const ALL = '';
+const allCategories = '';
 
 function VitrinaFilter({ categories, activeCategoryId, sort, onCategoryChange, onSortChange }) {
   const currentLabel =
-    activeCategoryId === ALL
+    activeCategoryId === allCategories
       ? 'TODAS'
       : categories.find((c) => String(c.id) === String(activeCategoryId))?.name || 'TODAS';
 
@@ -20,7 +20,7 @@ function VitrinaFilter({ categories, activeCategoryId, sort, onCategoryChange, o
           value={activeCategoryId}
           onChange={(e) => onCategoryChange(e.target.value)}
         >
-          <option value={ALL}>TODAS</option>
+          <option value={allCategories}>TODAS</option>
           {categories.map((cat) => (
             <option key={cat.id} value={cat.id}>
               {cat.name}

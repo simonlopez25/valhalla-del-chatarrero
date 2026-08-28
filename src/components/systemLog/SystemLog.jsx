@@ -2,11 +2,11 @@ import "./SystemLog.css";
 
 const SystemLog = () => {
   return (
-    <section className="logWrapper" aria-labelledby="system-log-title">
+    <section className="logWrapper" aria-labelledby="systemLogTitle">
       <div className="sectionHeaderRow">
         <div>
           <p className="sectionKicker">DIAGNÓSTICO // UPLINK 7G</p>
-          <h3 id="system-log-title" className="sectionHeader">REGISTRO DE SUBSISTEMA</h3>
+          <h3 id="systemLogTitle" className="sectionHeader">REGISTRO DE SUBSISTEMA</h3>
         </div>
         <span className="systemState"><i /> INESTABLE</span>
       </div>

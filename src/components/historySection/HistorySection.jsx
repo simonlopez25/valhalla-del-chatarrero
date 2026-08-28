@@ -4,11 +4,11 @@ import seal from '../../assets/img/seal.webp';
 
 function HistorySection() {
   return (
-    <section className="history-comp">
+    <section className="historyComp">
       <h1>NUESTRA HISTORIA</h1>
-      <p className="history-date">50 AÑOS DE SANGRE, SUDOR Y ÓXIDO</p>
+      <p className="historyDate">50 AÑOS DE SANGRE, SUDOR Y ÓXIDO</p>
 
-      <p className="history-text">
+      <p className="historyText">
         El colapso no fue un evento único, fue un desgarro lento y doloroso.
         Las fábricas se silenciaron, los cielos se tiñeron del color de la
         sangre seca, y la producción, tal como la conocíamos, cesó. En el
@@ -18,7 +18,7 @@ function HistorySection() {
         supervivencia no está en crear, sino en recuperar.
       </p>
 
-      <p className="history-text">
+      <p className="historyText">
         Nuestra filosofía es brutalmente simple. Cada pieza de engranaje,
         cada máscara de gas filtrada, cada bota de cuero reseco tiene un
         linaje. Han sobrevivido al fuego, a las tormentas ácidas y al
@@ -26,12 +26,12 @@ function HistorySection() {
         reforzamos. El óxido no es deterioro, es una cicatriz de honor.
       </p>
 
-      <figure className="archive-image">
+      <figure className="archiveImage">
         <img src={wasteland} alt="Primeras rutas de recolección" />
         <figcaption>SECTOR 4: LAS PRIMERAS RUTAS DE RECOLECCIÓN (AÑO 12)</figcaption>
       </figure>
 
-      <blockquote className="history-quote">
+      <blockquote className="historyQuote">
         <p>
           "No confiamos en lo nuevo. Lo nuevo se rompe. Confiamos en lo que
           ya ha sobrevivido al fin del mundo."
@@ -39,7 +39,7 @@ function HistorySection() {
         — EL FUNDADOR, AÑO 05
       </blockquote>
 
-      <p className="history-text">
+      <p className="historyText">
         Detrás de cada artículo en nuestra vitrina hay una historia forjada
         en la crudeza del páramo. El cuero endurecido lleva la memoria de
         mil pasos por tierra agrietada. Los filtros de carbono aún guardan
@@ -48,12 +48,12 @@ function HistorySection() {
         custodios del remanente.
       </p>
 
-      <p className="history-text">
+      <p className="historyText">
         Nuestros usuarios no son clientes; son supervivientes. Únete a la
         cadena de recuperación. Porque mientras haya chatarra, habrá
         esperanza.
       </p>
-       <img src={seal} alt="Sello de aprobado" className="approval-seal" />
+       <img src={seal} alt="Sello de aprobado" className="approvalSeal" />
     </section>
   );
 }
