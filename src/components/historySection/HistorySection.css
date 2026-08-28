@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;700&family=Work+Sans:wght@400;500&display=swap');
+:root {
+  --historyColorFondoOscuro: #1A120C;
+  --historyColorMarronBase: #3B2F21;
+  --historyColorMarronOscuro: #2A1F16;
+  --historyColorOxido: #8B3A1D;
+  --historyColorCuero: #4A3625;
+  --historyColorCueroClaro: #5C4033;
+  --historyColorKhaki: #8B6F4E;
+  --historyColorPergamino: #DFCDAD;
+  --historyColorPergaminoOscuro: #C9B896;
+}
+
+.historyComp {
+  position: relative;
+  background-color: var(--historyColorPergamino);
+  color: var(--historyColorMarronOscuro);
+  padding: 3rem 2rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Work Sans', sans-serif;
+  border-radius: 2px;
+}
+
+.historyComp h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  color: var(--historyColorFondoOscuro);
+  font-size: 64px;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.historyDate {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: var(--historyColorCuero);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--historyColorKhaki);
+}
+
+.historyText {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--historyColorMarronOscuro);
+  text-align: center;
+}
+
+.archiveImage {
+  position: relative;
+  margin: 2.5rem 0;
+  border: 1px solid var(--historyColorKhaki);
+  border-radius: 2px;
+  padding: 0.75rem;
+  background-color: var(--historyColorPergaminoOscuro);
+}
+
+.archiveImage img {
+  width: 100%;
+  display: block;
+  filter: sepia(30%) contrast(95%);
+}
+
+.archiveImage figcaption {
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--historyColorCuero);
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+}
+
+.historyQuote {
+  border-left: 3px solid var(--historyColorOxido);
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+  font-family: 'Work Sans', sans-serif;
+  font-style: italic;
+  background-color: var(--historyColorPergaminoOscuro);
+  color: var(--historyColorMarronOscuro);
+}
+
+.historyQuote p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.approvalSeal {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 80px;
+  height: auto;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .historyComp {
+    padding: 2rem 1.25rem;
+  }
+
+  .historyComp h1 {
+    font-size: 36px;
+  }
+
+  .historyDate {
+    font-size: 12px;
+  }
+
+  .historyText {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .historyQuote {
+    padding: 1rem 1.25rem;
+  }
+
+  .historyQuote p {
+    font-size: 1rem;
+  }
+
+  .approvalSeal {
+    width: 55px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .historyComp h1 {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  .historyDate {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .historyText {
+    font-size: 13px;
+  }
+}

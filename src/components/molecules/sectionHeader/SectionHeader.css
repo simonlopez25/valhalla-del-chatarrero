@@ -41,10 +41,10 @@
 }
 .sectionHeaderWithAccent {
   position: relative;
-  padding-left: 1.5rem; /* Espacio para que la línea no se monte en el texto */
+  padding-left: 1.5rem;
   margin-bottom: 2.5rem;
 }
-/* Creamos la línea vertical naranja óxido con absoluta precisión */
+
 .sectionHeaderWithAccent::before {
   content: "";
   position: absolute;
@@ -52,5 +52,5 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background-color: var(--colorAccent, #e07a5f); /* Color naranja óxido industrial */
+  background-color: var(--colorAccent);
 }

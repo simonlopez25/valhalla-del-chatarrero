@@ -1,0 +1,24 @@
+.weatherWidget {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.weatherCondition {
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.weatherIcon {
+  font-size: 1.1rem;
+}
+
+.weatherIconImg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
