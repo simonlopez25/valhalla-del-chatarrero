@@ -1,6 +1,6 @@
 import { Navbar } from '../navbar/Navbar';
 import { WeatherWidget } from '../weatherWidget/WeatherWidget';
-import logoType from '../../assets/img/logoType.png';
+import logoType from '../../assets/img/logotype.png';
 import './Header.css';
 
 export function Header() {

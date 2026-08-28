@@ -56,7 +56,7 @@ const FeaturedCarousel = () => {
           .slice(0, 5);
         if (!ignore) setProducts(topFive);
       } catch (error) {
-        console.error("No se pudo cargar el inventario", error);
+        console.error("Failed to load inventory:", error);
         if (!ignore) setHasError(true);
       } finally {
         if (!ignore) setIsLoading(false);

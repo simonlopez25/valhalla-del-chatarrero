@@ -1,4 +1,4 @@
-.vitrinaPagination {
+.showcasePagination {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,7 +6,7 @@
   margin-top: 2.5rem;
 }
 
-.vitrinaPageBtn {
+.showcasePageBtn {
   background: transparent;
   color: var(--ink-muted);
   border: 1px solid var(--border);
@@ -21,24 +21,24 @@
   transition: all 0.15s ease;
 }
 
-.vitrinaPageBtn:hover:not([disabled]):not(.vitrinaPageBtn--active) {
+.showcasePageBtn:hover:not([disabled]):not(.showcasePageBtn--active) {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.vitrinaPageBtn--active {
+.showcasePageBtn--active {
   background: var(--accent);
   color: var(--on-primary);
   border-color: var(--accent);
   font-weight: bold;
 }
 
-.vitrinaPageBtn[disabled] {
+.showcasePageBtn[disabled] {
   opacity: 0.35;
   cursor: not-allowed;
 }
 
-.vitrinaPageEllipsis {
+.showcasePageEllipsis {
   color: var(--ink-faint);
   font-family: var(--font-mono);
   padding: 0 0.15rem;

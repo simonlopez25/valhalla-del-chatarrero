@@ -1,4 +1,4 @@
-.vitrinaFilter {
+.showcaseFilter {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -9,13 +9,13 @@
   border-bottom: 1px solid var(--hairline);
 }
 
-.vitrinaGroup {
+.showcaseGroup {
   display: flex;
   align-items: flex-end;
   gap: 0.65rem;
 }
 
-.vitrinaFilterLabel {
+.showcaseFilterLabel {
   color: var(--ink-faint);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -24,7 +24,7 @@
   padding-bottom: 0.55rem;
 }
 
-.vitrinaSelect {
+.showcaseSelect {
   background: var(--bar);
   color: var(--ink);
   border: 1px solid var(--border);
@@ -35,16 +35,16 @@
   transition: border-color 0.15s ease;
 }
 
-.vitrinaSelect:hover {
+.showcaseSelect:hover {
   border-color: var(--accent);
 }
 
-.vitrinaSelect:focus {
+.showcaseSelect:focus {
   outline: none;
   border-color: var(--accent);
 }
 
-.vitrinaActiveTag {
+.showcaseActiveTag {
   background: #2b231d;
   border-left: 2px solid var(--green);
   color: var(--green-soft);
@@ -55,17 +55,17 @@
 }
 
 @media (max-width: 720px) {
-  .vitrinaFilter {
+  .showcaseFilter {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .vitrinaGroup {
+  .showcaseGroup {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .vitrinaActiveTag {
+  .showcaseActiveTag {
     padding: 0.35rem 0.5rem;
   }
 }

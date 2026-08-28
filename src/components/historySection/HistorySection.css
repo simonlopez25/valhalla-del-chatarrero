@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;700&family=Work+Sans:wght@400;500&display=swap');
 :root {
-  --historyColorFondoOscuro: #1A120C;
-  --historyColorMarronBase: #3B2F21;
-  --historyColorMarronOscuro: #2A1F16;
-  --historyColorOxido: #8B3A1D;
-  --historyColorCuero: #4A3625;
-  --historyColorCueroClaro: #5C4033;
-  --historyColorKhaki: #8B6F4E;
-  --historyColorPergamino: #DFCDAD;
-  --historyColorPergaminoOscuro: #C9B896;
+  --historyDarkBackground: #1A120C;
+  --historyBaseBrown: #3B2F21;
+  --historyDarkBrown: #2A1F16;
+  --historyRust: #8B3A1D;
+  --historyLeather: #4A3625;
+  --historyKhaki: #8B6F4E;
+  --historyParchment: #DFCDAD;
+  --historyDarkParchment: #C9B896;
 }
 
 .historyComp {
   position: relative;
-  background-color: var(--historyColorPergamino);
-  color: var(--historyColorMarronOscuro);
+  background-color: var(--historyParchment);
+  color: var(--historyDarkBrown);
   padding: 3rem 2rem;
   max-width: 900px;
   width: 100%;
@@ -26,7 +25,7 @@
 .historyComp h1 {
   font-family: 'Anton', sans-serif;
   font-weight: 400;
-  color: var(--historyColorFondoOscuro);
+  color: var(--historyDarkBackground);
   font-size: 64px;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
@@ -40,12 +39,12 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.7px;
-  color: var(--historyColorCuero);
+  color: var(--historyLeather);
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--historyColorKhaki);
+  border-bottom: 1px solid var(--historyKhaki);
 }
 
 .historyText {
@@ -54,17 +53,17 @@
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  color: var(--historyColorMarronOscuro);
+  color: var(--historyDarkBrown);
   text-align: center;
 }
 
 .archiveImage {
   position: relative;
   margin: 2.5rem 0;
-  border: 1px solid var(--historyColorKhaki);
+  border: 1px solid var(--historyKhaki);
   border-radius: 2px;
   padding: 0.75rem;
-  background-color: var(--historyColorPergaminoOscuro);
+  background-color: var(--historyDarkParchment);
 }
 
 .archiveImage img {
@@ -78,19 +77,19 @@
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 2px;
-  color: var(--historyColorCuero);
+  color: var(--historyLeather);
   margin-top: 0.75rem;
   text-transform: uppercase;
 }
 
 .historyQuote {
-  border-left: 3px solid var(--historyColorOxido);
+  border-left: 3px solid var(--historyRust);
   padding: 1.5rem 2rem;
   margin: 2.5rem 0;
   font-family: 'Work Sans', sans-serif;
   font-style: italic;
-  background-color: var(--historyColorPergaminoOscuro);
-  color: var(--historyColorMarronOscuro);
+  background-color: var(--historyDarkParchment);
+  color: var(--historyDarkBrown);
 }
 
 .historyQuote p {

@@ -25,6 +25,7 @@
   font-size: clamp(1.15rem, 2vw, 1.6rem);
   letter-spacing: 1px;
   text-transform: uppercase;
+  color: var(--colorAccent);
 }
 
 .systemState {
