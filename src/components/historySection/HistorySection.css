@@ -1,20 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;700&family=Work+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500&family=Work+Sans:wght@400;500&display=swap');
+
 :root {
-  --historyColorFondoOscuro: #1A120C;
-  --historyColorMarronBase: #3B2F21;
-  --historyColorMarronOscuro: #2A1F16;
-  --historyColorOxido: #8B3A1D;
-  --historyColorCuero: #4A3625;
-  --historyColorCueroClaro: #5C4033;
-  --historyColorKhaki: #8B6F4E;
-  --historyColorPergamino: #DFCDAD;
-  --historyColorPergaminoOscuro: #C9B896;
+  --historyColorCardBg: #393431;
+  --historyColorCardBorder: #A58B81;
+  --historyColorTitle: #FFB597;
+  --historyColorDate: #FFB965;
+  --historyColorImageBg: #1F1B19;
+  --historyColorImageBorder: #57423A;
+  --historyColorText: #DDC0B6;
+  --historyColorQuoteBg: rgba(46, 41, 39, 0.8);
+  --historyColorQuoteBorder: #93000A;
 }
 
 .historyComp {
+  box-sizing: border-box;
   position: relative;
-  background-color: var(--historyColorPergamino);
-  color: var(--historyColorMarronOscuro);
+  background-color: var(--historyColorCardBg);
+  border: 1px solid var(--historyColorCardBorder);
+  color: var(--historyColorText);
   padding: 3rem 2rem;
   max-width: 900px;
   width: 100%;
@@ -26,7 +29,7 @@
 .historyComp h1 {
   font-family: 'Anton', sans-serif;
   font-weight: 400;
-  color: var(--historyColorFondoOscuro);
+  color: var(--historyColorTitle);
   font-size: 64px;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
@@ -35,17 +38,17 @@
 }
 
 .historyDate {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.7px;
-  color: var(--historyColorCuero);
+  color: var(--historyColorDate);
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--historyColorKhaki);
+  border-bottom: 1px solid var(--historyColorCardBorder);
 }
 
 .historyText {
@@ -54,43 +57,43 @@
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-  color: var(--historyColorMarronOscuro);
+  color: var(--historyColorText);
   text-align: center;
 }
 
 .archiveImage {
   position: relative;
   margin: 2.5rem 0;
-  border: 1px solid var(--historyColorKhaki);
+  border: 1px solid var(--historyColorImageBorder);
   border-radius: 2px;
   padding: 0.75rem;
-  background-color: var(--historyColorPergaminoOscuro);
+  background-color: var(--historyColorImageBg);
 }
 
 .archiveImage img {
   width: 100%;
   display: block;
-  filter: sepia(30%) contrast(95%);
+  filter: grayscale(40%) contrast(100%);
 }
 
 .archiveImage figcaption {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 2px;
-  color: var(--historyColorCuero);
+  color: var(--historyColorText);
   margin-top: 0.75rem;
   text-transform: uppercase;
 }
 
 .historyQuote {
-  border-left: 3px solid var(--historyColorOxido);
+  border-left: 3px solid var(--historyColorQuoteBorder);
   padding: 1.5rem 2rem;
   margin: 2.5rem 0;
   font-family: 'Work Sans', sans-serif;
   font-style: italic;
-  background-color: var(--historyColorPergaminoOscuro);
-  color: var(--historyColorMarronOscuro);
+  background-color: var(--historyColorQuoteBg);
+  color: var(--historyColorText);
 }
 
 .historyQuote p {
