@@ -134,7 +134,7 @@
   margin: 2.5rem 0;
   font-family: 'Work Sans', sans-serif;
   font-style: italic;
-  background-color: var(--historyColorQuoteBg);
+  background-color: #14100D;
   color: var(--historyColorText);
 }
 
@@ -142,7 +142,15 @@
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
-
+.historyQuoteAuthor {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--historyColorDate);
+  text-transform: uppercase;
+}
 .approvalSeal {
   position: absolute;
   bottom: 1.5rem;

@@ -35,13 +35,13 @@ function HistorySection() {
   <figcaption>SECTOR 4: LAS PRIMERAS RUTAS DE RECOLECCIÓN (AÑO 12)</figcaption>
 </figure>
 
-   <blockquote className="historyQuote">
-        <p>
-          "No confiamos en lo nuevo. Lo nuevo se rompe. Confiamos en lo que
-          ya ha sobrevivido al fin del mundo."
-        </p>
-        — EL FUNDADOR, AÑO 05
-      </blockquote>
+  <blockquote className="historyQuote">
+  <p>
+    "No confiamos en lo nuevo. Lo nuevo se rompe. Confiamos en lo que
+    ya ha sobrevivido al fin del mundo."
+  </p>
+  <span className="historyQuoteAuthor">— EL FUNDADOR, AÑO 05</span>
+</blockquote>
 
       <p className="historyText">
         Detrás de cada artículo en nuestra vitrina hay una historia forjada
