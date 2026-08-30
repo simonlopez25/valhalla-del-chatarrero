@@ -153,11 +153,12 @@
 }
 .approvalSeal {
   position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  width: 128px;
-  height: auto;
+  bottom: 1rem;
+  right: 1rem;
+  width: 100px;
+  height: 100px;
   opacity: 0.9;
+  transform: rotate(15deg);
 }
 
 @media (max-width: 768px) {
