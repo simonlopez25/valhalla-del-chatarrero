@@ -64,10 +64,32 @@
 .archiveImage {
   position: relative;
   margin: 2.5rem 0;
-  border: 1px solid var(--historyColorImageBorder);
-  border-radius: 2px;
-  padding: 0.75rem;
+  border: 2px solid var(--historyColorCardBorder);
+  border-radius: 4px;
+  padding: 1.25rem;
   background-color: var(--historyColorImageBg);
+}
+
+.archiveImage::before,
+.archiveImage::after,
+.archiveImageLabel::before,
+.archiveImageLabel::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--historyColorCardBorder);
+}
+
+.archiveImage::before {
+  top: -6px;
+  left: -6px;
+}
+
+.archiveImage::after {
+  top: -6px;
+  right: -6px;
 }
 
 .archiveImage img {
@@ -76,12 +98,26 @@
   filter: grayscale(40%) contrast(100%);
 }
 
+.archiveImageLabel {
+  position: relative;
+  background-color: #14100D;
+  color: var(--historyColorText);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  border: 1px solid var(--historyColorImageBorder);
+}
+
 .archiveImage figcaption {
   font-family: 'JetBrains Mono', monospace;
   text-align: center;
   font-size: 0.75rem;
   letter-spacing: 2px;
-  color: var(--historyColorText);
+  color: var(--historyColorDate);
   margin-top: 0.75rem;
   text-transform: uppercase;
 }

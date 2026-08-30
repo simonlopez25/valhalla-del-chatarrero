@@ -26,12 +26,12 @@ function HistorySection() {
         reforzamos. El óxido no es deterioro, es una cicatriz de honor.
       </p>
 
-      <figure className="archiveImage">
-        <img src={wasteland} alt="Primeras rutas de recolección" />
-        <figcaption>SECTOR 4: LAS PRIMERAS RUTAS DE RECOLECCIÓN (AÑO 12)</figcaption>
-      </figure>
-
-      <blockquote className="historyQuote">
+     <figure className="archiveImage">
+  <img src={wasteland} alt="Primeras rutas de recolección" />
+  <div className="archiveImageLabel">ARCHIVE 091 - THE JUNK ROAD</div>
+  <figcaption>SECTOR 4: LAS PRIMERAS RUTAS DE RECOLECCIÓN (AÑO 12)</figcaption>
+</figure>
+   <blockquote className="historyQuote">
         <p>
           "No confiamos en lo nuevo. Lo nuevo se rompe. Confiamos en lo que
           ya ha sobrevivido al fin del mundo."
