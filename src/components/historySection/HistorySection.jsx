@@ -33,6 +33,7 @@ function HistorySection() {
   <div className="archiveImageLabel">ARCHIVE 091 - THE JUNK ROAD</div>
   <figcaption>SECTOR 4: LAS PRIMERAS RUTAS DE RECOLECCIÓN (AÑO 12)</figcaption>
 </figure>
+  
  <p className="historyText">
         Detrás de cada artículo en nuestra vitrina hay una historia forjada
         en la crudeza del páramo. El cuero endurecido lleva la memoria de

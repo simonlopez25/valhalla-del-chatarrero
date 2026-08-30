@@ -63,7 +63,7 @@
 
 .archiveImage {
   position: relative;
-  margin: 2.5rem 0;
+  margin: 3.5rem 0;
   border: 2px solid var(--historyColorCardBorder);
   border-radius: 4px;
   padding: 1.25rem;
@@ -79,28 +79,15 @@
   z-index: 2;
 }
 
-.archiveCornerTopLeft {
-  top: -6px;
-  left: -6px;
-}
-
-.archiveCornerTopRight {
-  top: -6px;
-  right: -6px;
-}
-
-.archiveCornerBottomLeft {
-  bottom: -6px;
-  left: -6px;
-}
-
-.archiveCornerBottomRight {
-  bottom: -6px;
-  right: -6px;
-}
+.archiveCornerTopLeft { top: -6px; left: -6px; }
+.archiveCornerTopRight { top: -6px; right: -6px; }
+.archiveCornerBottomLeft { bottom: -6px; left: -6px; }
+.archiveCornerBottomRight { bottom: -6px; right: -6px; }
 
 .archiveImage img {
   width: 100%;
+  aspect-ratio: 766 / 470;
+  object-fit: cover;
   display: block;
   filter: grayscale(40%) contrast(100%);
 }
@@ -121,17 +108,17 @@
 .archiveImage figcaption {
   font-family: 'JetBrains Mono', monospace;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   letter-spacing: 2px;
-  color: var(--historyColorDate);
-  margin-top: 0.75rem;
+  color: var(--historyColorTitle);
+  margin-top: 1.25rem;
   text-transform: uppercase;
 }
-
 .historyQuote {
   border-left: 3px solid var(--historyColorQuoteBorder);
   padding: 1.5rem 2rem;
-  margin: 2.5rem 0;
+  margin: 3rem 0;
   font-family: 'Work Sans', sans-serif;
   font-style: italic;
   background-color: #14100D;
