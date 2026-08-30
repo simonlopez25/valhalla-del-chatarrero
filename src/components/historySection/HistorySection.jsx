@@ -1,7 +1,6 @@
 import './HistorySection.css';
 import wasteland from '../../assets/img/Wasteland.webp';
-import seal from '../../assets/img/seal.webp';
-
+import seal from '../../assets/img/seal.png';
 function HistorySection() {
   return (
     <section className="historyComp">
