@@ -49,12 +49,14 @@ function HistorySection() {
   </p>
   <span className="historyQuoteAuthor">— EL FUNDADOR, AÑO 05</span>
 </blockquote>
-      <p className="historyText">
-        Nuestros usuarios no son clientes; son supervivientes. Únete a la
-        cadena de recuperación. Porque mientras haya chatarra, habrá
-        esperanza.
-      </p>
-       <img src={seal} alt="Sello de aprobado" className="approvalSeal" />
+     <p className="historyText">
+  Nuestros usuarios no son clientes; son supervivientes. Únete a la
+  cadena de recuperación. Porque mientras haya chatarra, habrá
+  esperanza.
+</p>
+<div className="historyFooter">
+  <img src={seal} alt="Sello de aprobado" className="approvalSeal" />
+</div>   
     </section>
   );
 }
