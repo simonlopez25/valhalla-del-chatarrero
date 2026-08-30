@@ -33,16 +33,7 @@ function HistorySection() {
   <div className="archiveImageLabel">ARCHIVE 091 - THE JUNK ROAD</div>
   <figcaption>SECTOR 4: LAS PRIMERAS RUTAS DE RECOLECCIÓN (AÑO 12)</figcaption>
 </figure>
-
-  <blockquote className="historyQuote">
-  <p>
-    "No confiamos en lo nuevo. Lo nuevo se rompe. Confiamos en lo que
-    ya ha sobrevivido al fin del mundo."
-  </p>
-  <span className="historyQuoteAuthor">— EL FUNDADOR, AÑO 05</span>
-</blockquote>
-
-      <p className="historyText">
+ <p className="historyText">
         Detrás de cada artículo en nuestra vitrina hay una historia forjada
         en la crudeza del páramo. El cuero endurecido lleva la memoria de
         mil pasos por tierra agrietada. Los filtros de carbono aún guardan
@@ -50,7 +41,13 @@ function HistorySection() {
         lo que está roto puede ser letalmente hermoso de nuevo. Somos los
         custodios del remanente.
       </p>
-
+ <blockquote className="historyQuote">
+  <p>
+    "No confiamos en lo nuevo. Lo nuevo se rompe. Confiamos en lo que
+    ya ha sobrevivido al fin del mundo."
+  </p>
+  <span className="historyQuoteAuthor">— EL FUNDADOR, AÑO 05</span>
+</blockquote>
       <p className="historyText">
         Nuestros usuarios no son clientes; son supervivientes. Únete a la
         cadena de recuperación. Porque mientras haya chatarra, habrá

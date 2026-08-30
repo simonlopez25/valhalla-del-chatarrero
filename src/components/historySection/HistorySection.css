@@ -155,14 +155,14 @@
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
-  width: 80px;
+  width: 128px;
   height: auto;
   opacity: 0.9;
 }
 
 @media (max-width: 768px) {
   .historyComp {
-    padding: 2rem 1.25rem;
+    padding-bottom: 3.5rem; 
   }
 
   .historyComp h1 {
@@ -188,6 +188,7 @@
 
   .approvalSeal {
     width: 55px;
+    height: 55px;
     bottom: 1rem;
     right: 1rem;
   }
