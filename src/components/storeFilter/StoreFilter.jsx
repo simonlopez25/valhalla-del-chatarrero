@@ -1,22 +1,22 @@
-import './VitrinaFilter.css';
+import './StoreFilter.css';
 
 const ALL = '';
 
-function VitrinaFilter({ categories, activeCategoryId, sort, onCategoryChange, onSortChange }) {
+function StoreFilter({ categories, activeCategoryId, sort, onCategoryChange, onSortChange }) {
   const currentLabel =
     activeCategoryId === ALL
       ? 'TODAS'
       : categories.find((c) => String(c.id) === String(activeCategoryId))?.name || 'TODAS';
 
   return (
-    <div className="vitrinaFilter">
-      <div className="vitrinaGroup">
-        <label className="vitrinaFilterLabel" htmlFor="vitrinaCategory">
+    <div className="storeFilter">
+      <div className="storeGroup">
+        <label className="storeFilterLabel" htmlFor="storeCategory">
           Filtrar por categoría:
         </label>
         <select
-          id="vitrinaCategory"
-          className="vitrinaSelect"
+          id="storeCategory"
+          className="storeSelect"
           value={activeCategoryId}
           onChange={(e) => onCategoryChange(e.target.value)}
         >
@@ -27,16 +27,16 @@ function VitrinaFilter({ categories, activeCategoryId, sort, onCategoryChange, o
             </option>
           ))}
         </select>
-        <span className="vitrinaActiveTag">{currentLabel.toUpperCase()}</span>
+        <span className="storeActiveTag">{currentLabel.toUpperCase()}</span>
       </div>
 
-      <div className="vitrinaGroup">
-        <label className="vitrinaFilterLabel" htmlFor="vitrinaSort">
+      <div className="storeGroup">
+        <label className="storeFilterLabel" htmlFor="storeSort">
           Ordenar por:
         </label>
         <select
-          id="vitrinaSort"
-          className="vitrinaSelect"
+          id="storeSort"
+          className="storeSelect"
           value={sort}
           onChange={(e) => onSortChange(e.target.value)}
         >
@@ -48,4 +48,4 @@ function VitrinaFilter({ categories, activeCategoryId, sort, onCategoryChange, o
   );
 }
 
-export default VitrinaFilter;
+export default StoreFilter;

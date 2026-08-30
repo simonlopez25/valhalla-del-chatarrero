@@ -1,4 +1,4 @@
-.vitrinaCard {
+.storeCard {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,12 +8,12 @@
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.vitrinaCard:hover {
+.storeCard:hover {
   border-color: var(--accent);
   transform: translateY(-3px);
 }
 
-.vitrinaCardCategory {
+.storeCardCategory {
   position: absolute;
   top: 0.9rem;
   left: 0.9rem;
@@ -28,14 +28,14 @@
   margin: 0;
 }
 
-.vitrinaCardMedia {
+.storeCardMedia {
   position: relative;
   overflow: hidden;
   aspect-ratio: 16 / 10;
   background: var(--deep);
 }
 
-.vitrinaCardMedia img {
+.storeCardMedia img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -45,16 +45,16 @@
   transition: transform 0.35s ease;
 }
 
-.vitrinaCard:hover .vitrinaCardMedia img {
+.storeCard:hover .storeCardMedia img {
   transform: scale(1.05);
 }
 
-.vitrinaCardBody {
+.storeCardBody {
   padding: 0.85rem 0.25rem 0.25rem;
   flex: 1;
 }
 
-.vitrinaCardBody h3 {
+.storeCardBody h3 {
   color: var(--ink-heading);
   font-family: var(--font-display);
   font-weight: 500;
@@ -65,7 +65,7 @@
   min-height: 2.4em;
 }
 
-.vitrinaCardBody p {
+.storeCardBody p {
   color: var(--ink-muted);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -73,11 +73,12 @@
   margin-top: 0.45rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.vitrinaCardFooter {
+.storeCardFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,14 +87,14 @@
   margin-top: 0.5rem;
 }
 
-.vitrinaCardPrice {
+.storeCardPrice {
   color: var(--primary);
   font-family: var(--font-mono);
   font-weight: bold;
   font-size: 1rem;
 }
 
-.vitrinaAddButton {
+.storeAddButton {
   background: transparent;
   color: var(--accent);
   border: 1px dashed var(--accent);
@@ -106,7 +107,7 @@
   transition: background-color 0.2s, color 0.2s;
 }
 
-.vitrinaAddButton:hover {
+.storeAddButton:hover {
   background: var(--accent);
   color: var(--on-primary);
 }

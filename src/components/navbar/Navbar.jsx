@@ -5,7 +5,7 @@ const navItems = [
   { path: '/', label: 'PORTAL' },
   { path: '/sellersPage', label: 'EQUIPO' },
   { path: '/history', label: 'HISTORIA' },
-  { path: '/showcase', label: 'VITRINA' },
+  { path: '/store', label: 'VITRINA' },
   { path: '/users', label: 'USUARIOS' },
 ];
 

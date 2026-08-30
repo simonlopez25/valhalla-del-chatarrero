@@ -1,7 +1,7 @@
 import { resolveProductImage, productPrice } from '../../services/productsService';
-import './VitrinaCard.css';
+import './StoreCard.css';
 
-function VitrinaCard({ item }) {
+function StoreCard({ item }) {
   const title = item?.title ?? 'Artefacto desconocido';
   const category = item?.category?.name ?? item?.categoryName ?? 'SIN CATEGORÍA';
   const price = productPrice(item);
@@ -9,21 +9,20 @@ function VitrinaCard({ item }) {
   const src = resolveProductImage(item);
 
   return (
-    <article className="vitrinaCard">
-      <span className="vitrinaCardCategory">{category}</span>
-
-      <div className="vitrinaCardMedia">
+    <article className="storeCard">
+      <span className="storeCardCategory">{category}</span>
+      <div className="storeCardMedia">
         <img src={src} alt={title} loading="lazy" />
       </div>
 
-      <div className="vitrinaCardBody">
+      <div className="storeCardBody">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
 
-      <div className="vitrinaCardFooter">
-        <span className="vitrinaCardPrice">${price.toLocaleString('es-ES')}</span>
-        <button type="button" className="vitrinaAddButton">
+      <div className="storeCardFooter">
+        <span className="storeCardPrice">${price.toLocaleString('es-ES')}</span>
+        <button type="button" className="storeAddButton">
           AÑADIR
         </button>
       </div>
@@ -31,4 +30,4 @@ function VitrinaCard({ item }) {
   );
 }
 
-export default VitrinaCard;
+export default StoreCard;

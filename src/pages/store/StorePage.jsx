@@ -1,14 +1,14 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getVisibleProducts, productPrice } from '../../services/productsService';
-import VitrinaFilter from '../../components/vitrinaFilter/VitrinaFilter';
-import VitrinaCard from '../../components/vitrinaCard/VitrinaCard';
-import VitrinaPagination from '../../components/vitrinaPagination/VitrinaPagination';
-import './ShowcasePage.css';
+import StoreFilter from '../../components/storeFilter/StoreFilter';
+import StoreCard from '../../components/storeCard/Store';
+import StorePagination from '../../components/storePagination/StorePagination';
+import './StorePage.css';
 
 const ITEMS_PER_PAGE = 20;
 const ALL_CATEGORIES = '';
 
-export default function ShowcasePage() {
+export default function StorePage() {
   const [items, setItems] = useState([]);
   const [activeCategoryId, setActiveCategoryId] = useState(ALL_CATEGORIES);
   const [lastCategoryId, setLastCategoryId] = useState(ALL_CATEGORIES);
@@ -82,32 +82,32 @@ export default function ShowcasePage() {
   );
 
   if (loading && !items.length) {
-    return <div className="vitrinaState">Cargando vitrina...</div>;
+    return <div className="storeState">Cargando vitrina...</div>;
   }
 
   if (error && !items.length) {
     return (
-      <div className="vitrinaState vitrinaState--error">
+      <div className="storeState storeState--error">
         Error al cargar: {error.message}
       </div>
     );
   }
 
   return (
-    <div className="vitrinaPage">
-      <header className="vitrinaHeader">
+    <div className="storePage">
+      <header className="storeHeader">
         <div>
-          <p className="vitrinaKicker">MERCADO SCAVENGER // TRANSMISIÓN 07</p>
+          <p className="storeKicker">MERCADO SCAVENGER // TRANSMISIÓN 07</p>
           <h1>VITRINA DEL CHATARRERO</h1>
           <p>
             Componentes vitales recuperados de la ruina del viejo mundo. Chips fritos, cables
             pelados y pantallas rajadas. Todo se vende &quot;tal cual&quot;.
           </p>
         </div>
-        <span className="vitrinaCount">{sortedItems.length} ARTEFACTOS</span>
+        <span className="storeCount">{sortedItems.length} ARTEFACTOS</span>
       </header>
 
-      <VitrinaFilter
+      <StoreFilter
         categories={categories}
         activeCategoryId={activeCategoryId}
         sort={sort}
@@ -115,13 +115,13 @@ export default function ShowcasePage() {
         onSortChange={setSort}
       />
 
-      <div className="vitrinaGrid">
+      <div className="storeGrid">
         {pageItems.map((item) => (
-          <VitrinaCard key={item.id} item={item} />
+          <StoreCard key={item.id} item={item} />
         ))}
       </div>
 
-      <VitrinaPagination page={currentPage} totalPages={totalPages} onPageChange={setPage} />
+      <StorePagination page={currentPage} totalPages={totalPages} onPageChange={setPage} />
     </div>
   );
 }

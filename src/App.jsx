@@ -4,7 +4,7 @@ import { Footer } from './components/footer/Footer';
 import HomePage from './pages/homePage/HomePage';
 import History from './pages/history/History';
 import SellersPage from './pages/sellersPage/SellersPage';
-import ShowcasePage from './pages/showcase/ShowcasePage';
+import StorePage from './pages/store/StorePage';
 import Users from './pages/users/Users';
 import './styles/App.css';
 
@@ -19,7 +19,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/history" element={<History />} />
             <Route path="/sellersPage" element={<SellersPage />} />
-            <Route path="/showcase" element={<ShowcasePage />} />
+            <Route path="/store" element={<StorePage />} />
             <Route path="/users" element={<Users />} />
           </Routes>
         </main>

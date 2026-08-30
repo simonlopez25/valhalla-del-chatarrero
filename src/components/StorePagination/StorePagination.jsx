@@ -1,6 +1,6 @@
-import './VitrinaPagination.css';
+import './StorePagination.css';
 
-function VitrinaPagination({ page, totalPages, onPageChange }) {
+function StorePagination({ page, totalPages, onPageChange }) {
   const windowSize = 5;
 
   let start = Math.max(1, page - Math.floor(windowSize / 2));
@@ -11,9 +11,9 @@ function VitrinaPagination({ page, totalPages, onPageChange }) {
   for (let i = start; i <= end; i += 1) pages.push(i);
 
   return (
-    <div className="vitrinaPagination">
+    <div className="storePagination">
       <button
-        className="vitrinaPageBtn"
+        className="storePageBtn"
         onClick={() => onPageChange(page - 1)}
         disabled={page <= 1}
         aria-label="Página anterior"
@@ -21,22 +21,22 @@ function VitrinaPagination({ page, totalPages, onPageChange }) {
         &lt;
       </button>
 
-      {start > 1 && <span className="vitrinaPageEllipsis">…</span>}
+      {start > 1 && <span className="storePageEllipsis">…</span>}
 
       {pages.map((num) => (
         <button
           key={num}
-          className={`vitrinaPageBtn${num === page ? ' vitrinaPageBtn--active' : ''}`}
+          className={`storePageBtn${num === page ? ' storePageBtn--active' : ''}`}
           onClick={() => onPageChange(num)}
         >
           {num}
         </button>
       ))}
 
-      {end < totalPages && <span className="vitrinaPageEllipsis">…</span>}
+      {end < totalPages && <span className="storePageEllipsis">…</span>}
 
       <button
-        className="vitrinaPageBtn"
+        className="storePageBtn"
         onClick={() => onPageChange(page + 1)}
         disabled={page >= totalPages}
         aria-label="Página siguiente"
@@ -47,4 +47,4 @@ function VitrinaPagination({ page, totalPages, onPageChange }) {
   );
 }
 
-export default VitrinaPagination;
+export default StorePagination;
