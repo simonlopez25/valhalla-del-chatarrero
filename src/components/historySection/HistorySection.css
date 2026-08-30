@@ -147,9 +147,9 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100px;
-  height: 100px;
-  opacity: 0.9;
+  width: 128px;
+  height: 128px;
+  opacity: 1; 
   transform: rotate(15deg);
 }
 
@@ -179,12 +179,12 @@
     font-size: 1rem;
   }
 
-  .approvalSeal {
-    width: 55px;
-    height: 55px;
-    bottom: 0rem;
-    right: 0rem;
-  }
+ .approvalSeal {
+  width: 70px; 
+  height: 70px;
+  bottom: 0;
+  right: 0;
+}
 }
 
 @media (max-width: 480px) {

@@ -1,6 +1,6 @@
 import './HistorySection.css';
 import wasteland from '../../assets/img/Wasteland.webp';
-import seal from '../../assets/img/seal.png';
+import stamp from '../../assets/img/stamp.png';
 function HistorySection() {
   return (
     <section className="historyComp">
@@ -55,7 +55,7 @@ function HistorySection() {
   esperanza.
 </p>
 <div className="historyFooter">
-  <img src={seal} alt="Sello de aprobado" className="approvalSeal" />
+  <img src={stamp} alt="Sello de aprobado" className="approvalSeal" />
 </div>   
     </section>
   );
