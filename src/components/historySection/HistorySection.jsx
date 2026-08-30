@@ -25,12 +25,16 @@ function HistorySection() {
         tiempo. Nosotros no fabricamos; nosotros rescatamos, reparamos y
         reforzamos. El óxido no es deterioro, es una cicatriz de honor.
       </p>
-
-     <figure className="archiveImage">
+<figure className="archiveImage">
+  <span className="archiveCorner archiveCornerTopLeft"></span>
+  <span className="archiveCorner archiveCornerTopRight"></span>
+  <span className="archiveCorner archiveCornerBottomLeft"></span>
+  <span className="archiveCorner archiveCornerBottomRight"></span>
   <img src={wasteland} alt="Primeras rutas de recolección" />
   <div className="archiveImageLabel">ARCHIVE 091 - THE JUNK ROAD</div>
   <figcaption>SECTOR 4: LAS PRIMERAS RUTAS DE RECOLECCIÓN (AÑO 12)</figcaption>
 </figure>
+
    <blockquote className="historyQuote">
         <p>
           "No confiamos en lo nuevo. Lo nuevo se rompe. Confiamos en lo que

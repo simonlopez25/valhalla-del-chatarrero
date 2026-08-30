@@ -70,25 +70,32 @@
   background-color: var(--historyColorImageBg);
 }
 
-.archiveImage::before,
-.archiveImage::after,
-.archiveImageLabel::before,
-.archiveImageLabel::after {
-  content: '';
+.archiveCorner {
   position: absolute;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: var(--historyColorCardBorder);
+  z-index: 2;
 }
 
-.archiveImage::before {
+.archiveCornerTopLeft {
   top: -6px;
   left: -6px;
 }
 
-.archiveImage::after {
+.archiveCornerTopRight {
   top: -6px;
+  right: -6px;
+}
+
+.archiveCornerBottomLeft {
+  bottom: -6px;
+  left: -6px;
+}
+
+.archiveCornerBottomRight {
+  bottom: -6px;
   right: -6px;
 }
 
@@ -99,7 +106,6 @@
 }
 
 .archiveImageLabel {
-  position: relative;
   background-color: #14100D;
   color: var(--historyColorText);
   font-family: 'JetBrains Mono', monospace;
