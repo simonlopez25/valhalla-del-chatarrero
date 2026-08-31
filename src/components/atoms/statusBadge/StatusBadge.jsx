@@ -1,7 +1,6 @@
 import './StatusBadge.css';
 
 function StatusBadge({ status, icon }) {
-  // Si el texto que viene en status ya incluye "ESTADO:", lo mostramos directamente
   const displayText = status.startsWith('ESTADO:') ? status : `ESTADO: ${status}`;
 
   return (

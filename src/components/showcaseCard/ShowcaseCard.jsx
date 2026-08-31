@@ -1,7 +1,7 @@
 import { resolveProductImage, productPrice } from '../../services/productsService';
-import './VitrinaCard.css';
+import './ShowcaseCard.css';
 
-function VitrinaCard({ item }) {
+function ShowcaseCard({ item }) {
   const title = item?.title ?? 'Artefacto desconocido';
   const category = item?.category?.name ?? item?.categoryName ?? 'SIN CATEGORÍA';
   const price = productPrice(item);
@@ -9,21 +9,21 @@ function VitrinaCard({ item }) {
   const src = resolveProductImage(item);
 
   return (
-    <article className="vitrinaCard">
-      <span className="vitrinaCardCategory">{category}</span>
+    <article className="showcaseCard">
+      <span className="showcaseCardCategory">{category}</span>
 
-      <div className="vitrinaCardMedia">
+      <div className="showcaseCardMedia">
         <img src={src} alt={title} loading="lazy" />
       </div>
 
-      <div className="vitrinaCardBody">
+      <div className="showcaseCardBody">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
 
-      <div className="vitrinaCardFooter">
-        <span className="vitrinaCardPrice">${price.toLocaleString('es-ES')}</span>
-        <button type="button" className="vitrinaAddButton">
+      <div className="showcaseCardFooter">
+        <span className="showcaseCardPrice">${price.toLocaleString('es-ES')}</span>
+        <button type="button" className="showcaseAddButton">
           AÑADIR
         </button>
       </div>
@@ -31,4 +31,4 @@ function VitrinaCard({ item }) {
   );
 }
 
-export default VitrinaCard;
+export default ShowcaseCard;

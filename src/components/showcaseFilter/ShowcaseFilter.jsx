@@ -1,22 +1,22 @@
-import './VitrinaFilter.css';
+import './ShowcaseFilter.css';
 
 const allCategories = '';
 
-function VitrinaFilter({ categories, activeCategoryId, sort, onCategoryChange, onSortChange }) {
+function ShowcaseFilter({ categories, activeCategoryId, sort, onCategoryChange, onSortChange }) {
   const currentLabel =
     activeCategoryId === allCategories
       ? 'TODAS'
       : categories.find((c) => String(c.id) === String(activeCategoryId))?.name || 'TODAS';
 
   return (
-    <div className="vitrinaFilter">
-      <div className="vitrinaGroup">
-        <label className="vitrinaFilterLabel" htmlFor="vitrinaCategory">
+    <div className="showcaseFilter">
+      <div className="showcaseGroup">
+        <label className="showcaseFilterLabel" htmlFor="showcaseCategory">
           Filtrar por categoría:
         </label>
         <select
-          id="vitrinaCategory"
-          className="vitrinaSelect"
+          id="showcaseCategory"
+          className="showcaseSelect"
           value={activeCategoryId}
           onChange={(e) => onCategoryChange(e.target.value)}
         >
@@ -27,16 +27,16 @@ function VitrinaFilter({ categories, activeCategoryId, sort, onCategoryChange, o
             </option>
           ))}
         </select>
-        <span className="vitrinaActiveTag">{currentLabel.toUpperCase()}</span>
+        <span className="showcaseActiveTag">{currentLabel.toUpperCase()}</span>
       </div>
 
-      <div className="vitrinaGroup">
-        <label className="vitrinaFilterLabel" htmlFor="vitrinaSort">
+      <div className="showcaseGroup">
+        <label className="showcaseFilterLabel" htmlFor="showcaseSort">
           Ordenar por:
         </label>
         <select
-          id="vitrinaSort"
-          className="vitrinaSelect"
+          id="showcaseSort"
+          className="showcaseSelect"
           value={sort}
           onChange={(e) => onSortChange(e.target.value)}
         >
@@ -48,4 +48,4 @@ function VitrinaFilter({ categories, activeCategoryId, sort, onCategoryChange, o
   );
 }
 
-export default VitrinaFilter;
+export default ShowcaseFilter;

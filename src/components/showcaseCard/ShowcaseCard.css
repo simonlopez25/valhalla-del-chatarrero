@@ -1,4 +1,4 @@
-.vitrinaCard {
+.showcaseCard {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,12 +8,12 @@
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.vitrinaCard:hover {
+.showcaseCard:hover {
   border-color: var(--accent);
   transform: translateY(-3px);
 }
 
-.vitrinaCardCategory {
+.showcaseCardCategory {
   position: absolute;
   top: 0.9rem;
   left: 0.9rem;
@@ -28,14 +28,14 @@
   margin: 0;
 }
 
-.vitrinaCardMedia {
+.showcaseCardMedia {
   position: relative;
   overflow: hidden;
   aspect-ratio: 16 / 10;
   background: var(--deep);
 }
 
-.vitrinaCardMedia img {
+.showcaseCardMedia img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -45,16 +45,16 @@
   transition: transform 0.35s ease;
 }
 
-.vitrinaCard:hover .vitrinaCardMedia img {
+.showcaseCard:hover .showcaseCardMedia img {
   transform: scale(1.05);
 }
 
-.vitrinaCardBody {
+.showcaseCardBody {
   padding: 0.85rem 0.25rem 0.25rem;
   flex: 1;
 }
 
-.vitrinaCardBody h3 {
+.showcaseCardBody h3 {
   color: var(--ink-heading);
   font-family: var(--font-display);
   font-weight: 500;
@@ -65,7 +65,7 @@
   min-height: 2.4em;
 }
 
-.vitrinaCardBody p {
+.showcaseCardBody p {
   color: var(--ink-muted);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -77,7 +77,7 @@
   overflow: hidden;
 }
 
-.vitrinaCardFooter {
+.showcaseCardFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,14 +86,14 @@
   margin-top: 0.5rem;
 }
 
-.vitrinaCardPrice {
+.showcaseCardPrice {
   color: var(--primary);
   font-family: var(--font-mono);
   font-weight: bold;
   font-size: 1rem;
 }
 
-.vitrinaAddButton {
+.showcaseAddButton {
   background: transparent;
   color: var(--accent);
   border: 1px dashed var(--accent);
@@ -106,7 +106,7 @@
   transition: background-color 0.2s, color 0.2s;
 }
 
-.vitrinaAddButton:hover {
+.showcaseAddButton:hover {
   background: var(--accent);
   color: var(--on-primary);
 }

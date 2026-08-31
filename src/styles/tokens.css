@@ -38,7 +38,7 @@
   --colorSurface: var(--panel);
   --colorAccent: var(--accent);
   --colorAccentSoft: rgba(255, 140, 105, 0.2);
-  --colorText: var(--ink-heading);
+  --colorText: var(--accent);
   --colorTextMuted: var(--ink-muted);
   --colorStatusDot: var(--danger);
   --fontHeading: var(--font-display);

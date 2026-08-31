@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getVisibleProducts, productPrice } from '../../services/productsService';
-import VitrinaFilter from '../../components/vitrinaFilter/VitrinaFilter';
-import VitrinaCard from '../../components/vitrinaCard/VitrinaCard';
-import VitrinaPagination from '../../components/vitrinaPagination/VitrinaPagination';
+import ShowcaseFilter from '../../components/showcaseFilter/ShowcaseFilter';
+import ShowcaseCard from '../../components/showcaseCard/ShowcaseCard';
+import ShowcasePagination from '../../components/showcasePagination/ShowcasePagination';
 import './ShowcasePage.css';
 
 const itemsPerPage = 20;
@@ -82,32 +82,32 @@ export default function ShowcasePage() {
   );
 
   if (loading && !items.length) {
-    return <div className="vitrinaState">Cargando vitrina...</div>;
+    return <div className="showcaseState">Cargando vitrina...</div>;
   }
 
   if (error && !items.length) {
     return (
-      <div className="vitrinaState vitrinaState--error">
+      <div className="showcaseState showcaseState--error">
         Error al cargar: {error.message}
       </div>
     );
   }
 
   return (
-    <div className="vitrinaPage">
-      <header className="vitrinaHeader">
+    <div className="showcasePage">
+      <header className="showcaseHeader">
         <div>
-          <p className="vitrinaKicker">MERCADO SCAVENGER // TRANSMISIÓN 07</p>
+          <p className="showcaseKicker">MERCADO SCAVENGER // TRANSMISIÓN 07</p>
           <h1>VITRINA DEL CHATARRERO</h1>
           <p>
             Componentes vitales recuperados de la ruina del viejo mundo. Chips fritos, cables
             pelados y pantallas rajadas. Todo se vende &quot;tal cual&quot;.
           </p>
         </div>
-        <span className="vitrinaCount">{sortedItems.length} ARTEFACTOS</span>
+        <span className="showcaseCount">{sortedItems.length} ARTEFACTOS</span>
       </header>
 
-      <VitrinaFilter
+      <ShowcaseFilter
         categories={categories}
         activeCategoryId={activeCategoryId}
         sort={sort}
@@ -115,13 +115,13 @@ export default function ShowcasePage() {
         onSortChange={setSort}
       />
 
-      <div className="vitrinaGrid">
+      <div className="showcaseGrid">
         {pageItems.map((item) => (
-          <VitrinaCard key={item.id} item={item} />
+          <ShowcaseCard key={item.id} item={item} />
         ))}
       </div>
 
-      <VitrinaPagination page={currentPage} totalPages={totalPages} onPageChange={setPage} />
+      <ShowcasePagination page={currentPage} totalPages={totalPages} onPageChange={setPage} />
     </div>
   );
 }
