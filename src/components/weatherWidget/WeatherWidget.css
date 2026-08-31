@@ -6,6 +6,7 @@
   font-family: var(--font-mono);
   font-size: 0.85rem;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .weatherCondition {
@@ -21,4 +22,15 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
+}
+
+@media (max-width: 420px) {
+  .weatherCondition {
+    display: none; /* Oculta la descripción del clima para dejar solo temperatura e icono */
+  }
+
+  .weatherWidget {
+    font-size: 0.78rem;
+    gap: 6px;
+  }
 }

@@ -2,11 +2,11 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const navItems = [
-  { path: '/', label: 'PORTAL' },
-  { path: '/sellersPage', label: 'EQUIPO' },
-  { path: '/history', label: 'HISTORIA' },
-  { path: '/showcase', label: 'TIENDA' },
-  { path: '/users', label: 'USUARIOS' },
+  { path: '/', label: 'PORTAL', short: 'INICIO' },
+  { path: '/sellersPage', label: 'EQUIPO', short: 'EQUIPO' },
+  { path: '/history', label: 'HISTORIA', short: 'HISTORIA' },
+  { path: '/showcase', label: 'TIENDA', short: 'TIENDA' },
+  { path: '/users', label: 'USUARIOS', short: 'USUARIOS' },
 ];
 
 export function Navbar() {
@@ -19,7 +19,8 @@ export function Navbar() {
               to={item.path}
               className={({ isActive }) => (isActive ? 'navLink active' : 'navLink')}
             >
-              {item.label}
+              <span className="navLabel">{item.label}</span>
+              <span className="navShort">{item.short}</span>
             </NavLink>
           </li>
         ))}

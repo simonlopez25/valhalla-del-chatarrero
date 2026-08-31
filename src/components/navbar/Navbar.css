@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   flex: 1;
+  position: relative;
 }
 
 .navList {
@@ -13,7 +14,6 @@
   margin: 0;
   padding: 0;
   gap: 32px;
-  flex-wrap: wrap;
 }
 
 .navLink {
@@ -25,6 +25,7 @@
   text-transform: uppercase;
   padding-bottom: 4px;
   transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
 .navLink:hover {
@@ -34,4 +35,83 @@
 .navLink.active {
   color: var(--accent);
   border-bottom: 2px solid var(--accent);
+}
+
+.navShort {
+  display: none;
+}
+
+/* Tablet Landscape / Pantallas Medianas (901px - 1100px) */
+@media (max-width: 1100px) {
+  .navList {
+    gap: 20px;
+  }
+
+  .navLink {
+    font-size: 0.74rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Tablets (Portrait / 541px - 900px) */
+@media (max-width: 900px) {
+  .navbar {
+    order: 3;
+    flex: 1 1 100%;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .navList {
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navLink {
+    font-size: 0.75rem;
+    letter-spacing: 1.2px;
+    padding-bottom: 3px;
+  }
+
+  .navLabel {
+    display: inline;
+  }
+
+  .navShort {
+    display: none;
+  }
+}
+
+/* Teléfonos Móviles (<= 540px) */
+@media (max-width: 540px) {
+  .navbar {
+    order: 3;
+    flex: 1 1 100%;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .navList {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navLink {
+    font-size: 0.68rem;
+    letter-spacing: 0.8px;
+    padding: 2px 4px;
+  }
+
+  .navLabel {
+    display: none;
+  }
+
+  .navShort {
+    display: inline;
+  }
 }
