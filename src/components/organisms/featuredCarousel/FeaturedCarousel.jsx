@@ -3,7 +3,7 @@ import {
   getVisibleProducts,
   productPrice,
   resolveProductImage,
-} from "../../services/productsService";
+} from "../../../services/productsService";
 import "./FeaturedCarousel.css";
 
 function ProductImage({ src, alt }) {

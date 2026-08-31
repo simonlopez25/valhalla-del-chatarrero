@@ -10,6 +10,9 @@ const hexFragmentPattern = /[a-f0-9]{8,}/i;
 const generatedCategoryPattern = /^(catalog|test|fake|demo)[-_ ]/i;
 const capsKebabPattern = /^[\p{Lu}0-9]+(?:-[\p{Lu}0-9]+){1,}$/u;
 
+const pageSize = 100;
+const maxProducts = 400;
+
 const hasGeneratedIdToken = (title) =>
   String(title)
     .split(/[^A-Za-z0-9]+/)
@@ -102,9 +105,6 @@ export const getProducts = ({ limit = 50, offset = 0, signal, ...filters } = {})
 };
 
 export const getProduct = (id) => request(`/products/${id}`);
-
-const pageSize = 100;
-const maxProducts = 400;
 
 const fetchAllProducts = async () => {
   const collected = [];

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchCurrentWeather } from "../../services/weatherService";
+import { fetchCurrentWeather } from "../../../services/weatherService";
 import "./WeatherWidget.css";
 
 export function WeatherWidget() {

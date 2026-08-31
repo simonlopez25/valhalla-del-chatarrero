@@ -1,6 +1,6 @@
-import { Navbar } from '../navbar/Navbar';
-import { WeatherWidget } from '../weatherWidget/WeatherWidget';
-import logoType from '../../assets/img/logotype.png';
+import { Navbar } from '../../molecules/navbar/Navbar';
+import { WeatherWidget } from '../../molecules/weatherWidget/WeatherWidget';
+import logoType from '../../../assets/img/logotype.png';
 import './Header.css';
 
 export function Header() {
