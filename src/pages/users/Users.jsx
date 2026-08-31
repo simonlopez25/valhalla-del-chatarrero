@@ -53,7 +53,7 @@ function Users() {
     <main className="usersMainContainer">
       <div className="usersHeaderSection">
         <div>
-          <h1>REGISTRO DE SOBREVIVIENTES</h1>
+          <h1>REGISTRO DE SUPERVIVIENTES</h1>
           <p>Administración del censo del páramo. Añade, modifica o purga registros de individuos conocidos en el sector.</p>
         </div>
         <NewSurvivorButton />
