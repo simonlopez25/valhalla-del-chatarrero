@@ -1,20 +1,18 @@
 import { useState } from "react";
 import TrashIcon from "../../atoms/Icon/TrashIcon";
 import ConfirmDialog from "../../molecules/ConfirmDialog/ConfirmDialog";
-import useDeleteProduct from "../../../hooks/useDeleteProduct";
 
-function DeleteProductButton({ productId, onDeleted }) {
+const DeleteProductButton = ({ productId, onDelete }) => {
   const [showConfirm, setShowConfirm] = useState(false);
-  const { removeProduct, isDeleting, error } = useDeleteProduct();
 
-  function handleConfirm() {
-    removeProduct(productId, onDeleted);
+  const handleConfirm = () => {
+    onDelete(productId);
     setShowConfirm(false);
-  }
+  };
 
   return (
     <>
-      <button onClick={() => setShowConfirm(true)} disabled={isDeleting}>
+      <button onClick={() => setShowConfirm(true)}>
         <TrashIcon />
       </button>
 
@@ -25,10 +23,8 @@ function DeleteProductButton({ productId, onDeleted }) {
           onCancel={() => setShowConfirm(false)}
         />
       )}
-
-      {error && <p className="error-text">{error}</p>}
     </>
   );
-}
+};
 
 export default DeleteProductButton;
