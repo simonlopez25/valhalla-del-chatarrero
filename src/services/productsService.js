@@ -129,10 +129,12 @@ const fetchAllProducts = async () => {
   return collected;
 };
 
-export const getVisibleProducts = async (id) => {
-  await axios.delete(`https://api.escuelajs.co/api/v1/products/${id}`);
-
+export const getVisibleProducts = async () => {
   const products = await fetchAllProducts();
   if (!Array.isArray(products)) return [];
   return products.filter((product) => !isJunkProduct(product));
+};
+
+export const deleteProduct = async (id) => {
+  await axios.delete(`https://api.escuelajs.co/api/v1/products/${id}`);
 };
