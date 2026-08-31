@@ -45,7 +45,6 @@
   flex-shrink: 0;
 }
 
-/* Tablet Landscape / Pantallas Medianas (901px - 1100px) */
 @media (max-width: 1100px) {
   .headerContainer {
     padding: 14px 20px;
@@ -61,7 +60,6 @@
   }
 }
 
-/* Tablets (Portrait / 541px - 900px) */
 @media (max-width: 900px) {
   .headerContainer {
     padding: 14px 20px;
@@ -85,7 +83,6 @@
   }
 }
 
-/* Teléfonos Móviles (<= 540px) */
 @media (max-width: 540px) {
   .headerContainer {
     padding: 10px 14px;
@@ -98,7 +95,7 @@
   }
 
   .brandTitle {
-    display: none; /* Se oculta en móviles para dar espacio al logo y clima */
+    display: none;
   }
 
   .brandSection {
