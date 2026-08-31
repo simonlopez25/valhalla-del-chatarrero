@@ -1,0 +1,78 @@
+.showcasePage {
+  padding: 2rem 2rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: var(--ink);
+}
+
+.showcaseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.showcaseKicker {
+  color: var(--primary);
+  font: 0.68rem/1 var(--font-mono);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.showcaseHeader h1 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  color: var(--colorAccent);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.showcaseHeader p {
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-top: 0.6rem;
+  max-width: 760px;
+}
+
+.showcaseHeaderActions {
+  display: flex;
+  align-items: center;
+}
+
+.showcaseCreateButton {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.showcaseCreateButton:hover {
+  background: var(--colorAccentSoft);
+}
+
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (max-width: 720px) {
+  .showcasePage {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .showcaseHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

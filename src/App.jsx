@@ -1,5 +1,7 @@
+import ShowcasePage from './pages/showcase/ShowcasePage.jsx';
+
 function App() {
-  return <div>El mejor equipo</div>;
+  return <ShowcasePage />;
 }
 
 export default App;

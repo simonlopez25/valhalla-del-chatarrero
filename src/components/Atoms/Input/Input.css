@@ -1,0 +1,33 @@
+.atom-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.atom-inputLabel {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.atom-inputField {
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: var(--deep);
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+}
+
+.atom-inputField:focus {
+  border-color: var(--accent);
+}
+
+.atom-inputError {
+  color: var(--danger-soft);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+}
