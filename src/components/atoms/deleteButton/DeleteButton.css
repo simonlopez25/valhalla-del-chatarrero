@@ -1,6 +1,6 @@
 .actionButton {
   background-color: transparent;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--borderStrong);
   width: 36px;
   height: 36px;
   display: inline-flex;
@@ -12,7 +12,7 @@
 
 .actionButton:hover {
   background-color: var(--hover);
-  border-color: var(--danger-soft);
+  border-color: var(--dangerSoft);
 }
 
 .actionButton:active {
@@ -20,11 +20,11 @@
 }
 
 .actionIcon {
-  stroke: var(--ink-muted);
+  stroke: var(--inkMuted);
   flex-shrink: 0;
   transition: stroke 0.2s ease;
 }
 
 .actionButton:hover .actionIcon {
-  stroke: var(--danger-soft);
+  stroke: var(--dangerSoft);
 }

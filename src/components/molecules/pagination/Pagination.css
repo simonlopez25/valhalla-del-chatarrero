@@ -8,8 +8,8 @@
 }
 
 .paginationInfo {
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
+  color: var(--inkFaint);
+  font-family: var(--fontMono);
   font-size: 0.78rem;
   letter-spacing: 0.5px;
   margin-left: 20px;
@@ -22,10 +22,10 @@
 
 .pageButton {
   background-color: transparent;
-  border: 1px solid var(--border-strong);
-  color: var(--ink-muted);
+  border: 1px solid var(--borderStrong);
+  color: var(--inkMuted);
   padding: 6px 12px;
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   font-size: 0.72rem;
   cursor: pointer;
   transition: all 0.2s ease;

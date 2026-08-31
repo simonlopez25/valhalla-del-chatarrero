@@ -8,27 +8,27 @@
 
 .showcasePageBtn {
   background: transparent;
-  color: var(--ink-muted);
+  color: var(--inkMuted);
   border: 1px solid var(--border);
   width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
-.showcasePageBtn:hover:not([disabled]):not(.showcasePageBtn--active) {
+.showcasePageBtn:hover:not([disabled]):not(.showcasePageBtnActive) {
   border-color: var(--accent);
   color: var(--accent);
 }
 
-.showcasePageBtn--active {
+.showcasePageBtnActive {
   background: var(--accent);
-  color: var(--on-primary);
+  color: var(--onPrimary);
   border-color: var(--accent);
   font-weight: bold;
 }
@@ -39,7 +39,7 @@
 }
 
 .showcasePageEllipsis {
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
+  color: var(--inkFaint);
+  font-family: var(--fontMono);
   padding: 0 0.15rem;
 }

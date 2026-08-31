@@ -1,5 +1,5 @@
 import './HistorySection.css';
-import wasteland from '../../../assets/img/Wasteland.webp';
+import wasteland from '../../../assets/img/wasteland.webp';
 import stamp from '../../../assets/img/stamp.png';
 function HistorySection() {
   return (

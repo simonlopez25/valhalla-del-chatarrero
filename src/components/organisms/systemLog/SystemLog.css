@@ -15,13 +15,13 @@
 
 .sectionKicker {
   color: var(--primary);
-  font: 0.68rem/1 var(--font-mono);
+  font: 0.68rem/1 var(--fontMono);
   letter-spacing: 2px;
   margin-bottom: 0.45rem;
 }
 
 .sectionHeader {
-  font-family: var(--font-display);
+  font-family: var(--fontDisplay);
   font-size: clamp(1.15rem, 2vw, 1.6rem);
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -30,7 +30,7 @@
 
 .systemState {
   color: var(--warn);
-  font: 0.7rem var(--font-mono);
+  font: 0.7rem var(--fontMono);
   letter-spacing: 1px;
   white-space: nowrap;
 }
@@ -51,10 +51,10 @@
   overflow: hidden;
   background-color: var(--deep);
   border: 1px solid var(--border);
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   padding: 1rem;
   margin-top: 0.8rem;
-  box-shadow: 0 0 0 4px var(--deep), 0 0 0 5px var(--border-subtle);
+  box-shadow: 0 0 0 4px var(--deep), 0 0 0 5px var(--borderSubtle);
 }
 
 .terminalBox::before {
@@ -83,7 +83,7 @@
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  color: var(--ink-faint);
+  color: var(--inkFaint);
   border-bottom: 1px solid var(--hairline);
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
@@ -94,7 +94,7 @@
   z-index: 1;
   margin: 0.3rem 0;
   font-size: 0.9rem;
-  color: var(--ink-muted);
+  color: var(--inkMuted);
   animation: lineBoot 0.5s ease both;
 }
 
@@ -135,7 +135,7 @@
   align-items: center;
   gap: 1.25rem;
   border-top: 1px solid var(--hairline);
-  color: var(--ink-faint);
+  color: var(--inkFaint);
   font-size: 0.65rem;
   letter-spacing: 0.8px;
   margin-top: 1rem;

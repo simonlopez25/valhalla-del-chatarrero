@@ -1,9 +1,9 @@
 .btnNewRecord {
   background-color: var(--primary);
-  color: var(--on-primary);
-  border: 1px solid var(--primary-border);
+  color: var(--onPrimary);
+  border: 1px solid var(--primaryBorder);
   padding: 10px 16px;
-  font-family: var(--font-display);
+  font-family: var(--fontDisplay);
   font-weight: 600;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -16,7 +16,7 @@
 }
 
 .btnNewRecord:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--primaryHover);
 }
 
 .btnNewRecord:active {
@@ -25,5 +25,5 @@
 
 .btnIcon {
   flex-shrink: 0;
-  stroke: var(--on-primary);
+  stroke: var(--onPrimary);
 }

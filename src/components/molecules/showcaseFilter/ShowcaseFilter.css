@@ -16,8 +16,8 @@
 }
 
 .showcaseFilterLabel {
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
+  color: var(--inkFaint);
+  font-family: var(--fontMono);
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -29,7 +29,7 @@
   color: var(--ink);
   border: 1px solid var(--border);
   padding: 0.55rem 0.85rem;
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   font-size: 0.78rem;
   cursor: pointer;
   transition: border-color 0.15s ease;
@@ -47,8 +47,8 @@
 .showcaseActiveTag {
   background: #2b231d;
   border-left: 2px solid var(--green);
-  color: var(--green-soft);
-  font: 0.68rem var(--font-mono);
+  color: var(--greenSoft);
+  font: 0.68rem var(--fontMono);
   letter-spacing: 1px;
   padding: 0.55rem 0.65rem;
   white-space: nowrap;

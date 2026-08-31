@@ -40,8 +40,8 @@ function ShowcaseFilter({ categories, activeCategoryId, sort, onCategoryChange, 
           value={sort}
           onChange={(e) => onSortChange(e.target.value)}
         >
-          <option value="price-asc">Precio: Menor a Mayor</option>
-          <option value="price-desc">Precio: Mayor a Menor</option>
+          <option value="priceAsc">Precio: Menor a Mayor</option>
+          <option value="priceDesc">Precio: Mayor a Menor</option>
         </select>
       </div>
     </div>

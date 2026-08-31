@@ -17,13 +17,13 @@
 
 .showcaseKicker {
   color: var(--primary);
-  font: 0.68rem/1 var(--font-mono);
+  font: 0.68rem/1 var(--fontMono);
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
 
 .showcaseHeader h1 {
-  font-family: var(--font-display);
+  font-family: var(--fontDisplay);
   text-transform: uppercase;
   letter-spacing: 0.12rem;
   color: var(--colorAccent);
@@ -31,8 +31,8 @@
 }
 
 .showcaseHeader p {
-  color: var(--ink-muted);
-  font-family: var(--font-mono);
+  color: var(--inkMuted);
+  font-family: var(--fontMono);
   font-size: 0.8rem;
   line-height: 1.6;
   margin-top: 0.6rem;
@@ -42,7 +42,7 @@
 .showcaseCount {
   flex-shrink: 0;
   color: var(--green);
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   font-size: 0.72rem;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -58,15 +58,15 @@
   color: var(--accent);
   background: var(--panel);
   border: 1px dashed var(--accent);
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   letter-spacing: 0.5px;
   padding: 1rem;
   margin: 1rem 0;
 }
 
-.showcaseState--error {
-  color: var(--danger-soft);
-  border-color: var(--danger-soft);
+.showcaseStateError {
+  color: var(--dangerSoft);
+  border-color: var(--dangerSoft);
 }
 
 @media (max-width: 720px) {

@@ -26,7 +26,7 @@ function ShowcasePagination({ page, totalPages, onPageChange }) {
       {pages.map((num) => (
         <button
           key={num}
-          className={`showcasePageBtn${num === page ? ' showcasePageBtn--active' : ''}`}
+          className={`showcasePageBtn${num === page ? ' showcasePageBtnActive' : ''}`}
           onClick={() => onPageChange(num)}
         >
           {num}

@@ -12,7 +12,7 @@ export default function ShowcasePage() {
   const [items, setItems] = useState([]);
   const [activeCategoryId, setActiveCategoryId] = useState(allCategories);
   const [lastCategoryId, setLastCategoryId] = useState(allCategories);
-  const [sort, setSort] = useState('price-asc');
+  const [sort, setSort] = useState('priceAsc');
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -67,7 +67,7 @@ export default function ShowcasePage() {
   const sortedItems = useMemo(() => {
     const arr = [...filteredItems];
     arr.sort((a, b) =>
-      sort === 'price-desc'
+      sort === 'priceDesc'
         ? productPrice(b) - productPrice(a)
         : productPrice(a) - productPrice(b)
     );
@@ -87,7 +87,7 @@ export default function ShowcasePage() {
 
   if (error && !items.length) {
     return (
-      <div className="showcaseState showcaseState--error">
+      <div className="showcaseState showcaseStateError">
         Error al cargar: {error.message}
       </div>
     );

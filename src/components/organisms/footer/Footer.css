@@ -4,8 +4,8 @@
   justify-content: space-between;
   background-color: var(--bar);
   padding: 20px 32px;
-  border-top: 1px solid var(--border-subtle);
-  font-family: var(--font-mono);
+  border-top: 1px solid var(--borderSubtle);
+  font-family: var(--fontMono);
 }
 
 .footerBrand {
@@ -27,14 +27,14 @@
 
 .footerTitle {
   color: var(--accent);
-  font-family: var(--font-display);
+  font-family: var(--fontDisplay);
   font-size: 0.85rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .footerCopyright {
-  color: var(--ink-faint);
+  color: var(--inkFaint);
   font-size: 0.8rem;
 }
 

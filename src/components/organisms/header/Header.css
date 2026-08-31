@@ -4,7 +4,7 @@
   justify-content: space-between;
   background-color: var(--bar);
   padding: 16px 32px;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--borderSubtle);
   width: 100%;
   box-sizing: border-box;
 }
@@ -28,7 +28,7 @@
 
 .brandTitle {
   color: var(--accent);
-  font-family: var(--font-display);
+  font-family: var(--fontDisplay);
   font-weight: 700;
   font-size: 1.35rem;
   letter-spacing: 1.5px;

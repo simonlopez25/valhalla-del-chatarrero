@@ -15,13 +15,13 @@
 
 .sectionKicker {
   color: var(--primary);
-  font: 0.68rem/1 var(--font-mono);
+  font: 0.68rem/1 var(--fontMono);
   letter-spacing: 2px;
   margin-bottom: 0.45rem;
 }
 
 .carouselHeader h2 {
-  font-family: var(--font-display);
+  font-family: var(--fontDisplay);
   font-size: clamp(1.15rem, 2vw, 1.6rem);
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -29,7 +29,7 @@
 }
 
 .syncStatus {
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   color: var(--green);
   font-size: 0.72rem;
   white-space: nowrap;
@@ -85,8 +85,8 @@
   bottom: 0.55rem;
   background: #171311e6;
   border-left: 2px solid var(--green);
-  color: var(--green-soft);
-  font: 0.62rem var(--font-mono);
+  color: var(--greenSoft);
+  font: 0.62rem var(--fontMono);
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0.3rem 0.45rem;
@@ -97,8 +97,8 @@
   top: 0.55rem;
   right: 0.55rem;
   background: var(--accent);
-  color: var(--on-primary);
-  font: 0.62rem var(--font-mono);
+  color: var(--onPrimary);
+  font: 0.62rem var(--fontMono);
   letter-spacing: 1px;
   padding: 0.25rem 0.4rem;
 }
@@ -110,18 +110,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ink-faint);
-  font-family: var(--font-mono);
+  color: var(--inkFaint);
+  font-family: var(--fontMono);
   background: var(--deep);
 }
 
 .productTitle {
-  font-family: var(--font-display);
+  font-family: var(--fontDisplay);
   font-size: 1rem;
   line-height: 1.2;
   margin: 0.55rem 0;
   min-height: 2.4em;
-  color: var(--ink-heading);
+  color: var(--inkHeading);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 500;
@@ -130,15 +130,15 @@
 .productMeta {
   display: flex;
   justify-content: space-between;
-  color: var(--ink-faint);
-  font: 0.62rem var(--font-mono);
+  color: var(--inkFaint);
+  font: 0.62rem var(--fontMono);
   letter-spacing: 0.7px;
   margin-top: 0.65rem;
 }
 
 .productPrice {
   color: var(--primary);
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   font-weight: bold;
 }
 
@@ -153,24 +153,24 @@
 .buyButton {
   background: #2b231d;
   color: var(--ink);
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--borderStrong);
   padding: 0.5rem;
   cursor: pointer;
-  font: 0.68rem var(--font-mono);
+  font: 0.68rem var(--fontMono);
   letter-spacing: 0.7px;
   transition: background-color 0.2s, color 0.2s;
 }
 
 .buyButton:hover {
   background: var(--primary);
-  color: var(--on-primary);
+  color: var(--onPrimary);
 }
 
 .loadingText {
-  color: var(--ink-faint);
+  color: var(--inkFaint);
   text-align: center;
   padding: 2rem;
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
 }
 
 @keyframes cardReveal {
