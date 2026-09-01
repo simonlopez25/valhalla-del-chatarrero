@@ -202,6 +202,14 @@ npm run dev
 🚀 ¡Listo! La terminal te otorgará un enlace local (generalmente http://localhost:5173/) para abrir el portal y comenzar a explorar la interfaz de componentes restaurados directamente en tu navegador.
 
 ````
+## ⚙️ Protocolos de Operación CRUD
+
+El sistema implementa una arquitectura basada en componentes para la gestión integral de entidades a través de la API, estructurando sus flujos de datos bajo los siguientes principios:
+
+* **Create (Creación)** 🛠️: Inserción de nuevos recursos en el sistema, destacando el módulo de registro de usuarios integrado de forma no intrusiva mediante interceptores globales y servicios centralizados con Axios.
+* **Read (Consulta)** 🔍: Obtención y sincronización de listados y recursos desde el backend, asegurando una validación estricta de los tipos de datos devueltos.
+* **Update (Modificación)** 🔄: Actualización de los registros existentes en el sistema para mantener la consistencia de los datos del inventario y de los perfiles activos.
+* **Delete (Eliminación)** 🗑️: Purga y baja lógica o física de elementos obsoletos o registros inactivos dentro de la base de datos del refugio.
 ## 👥 Equipo de Valhalla (Colaboradores)
 
 
