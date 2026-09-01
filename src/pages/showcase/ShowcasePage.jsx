@@ -3,7 +3,7 @@ import { getVisibleProducts, productPrice } from '../../services/productsService
 import ShowcaseFilter from '../../components/showcaseFilter/ShowcaseFilter';
 import ShowcaseCard from '../../components/showcaseCard/ShowcaseCard';
 import ShowcasePagination from '../../components/showcasePagination/ShowcasePagination';
-import ProductModal from '../../components/ProductModal/index.js';
+import ProductModal from '../../components/productModal/index.js';
 import './ShowcasePage.css';
 
 const itemsPerPage = 20;
