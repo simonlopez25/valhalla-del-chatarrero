@@ -1,8 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getVisibleProducts, productPrice } from '../../services/productsService';
-import ShowcaseFilter from '../../components/molecules/showcase-filter/ShowcaseFilter';
-import ShowcaseCard from '../../components/molecules/showcase-card/ShowcaseCard';
-import ShowcasePagination from '../../components/molecules/showcase-pagination/ShowcasePagination';
+import ShowcaseFilter from '../../components/molecules/showcaseFilter/ShowcaseFilter';
+import ShowcaseCard from '../../components/molecules/showcaseCard/ShowcaseCard';
+import ShowcasePagination from '../../components/molecules/showcasePagination/ShowcasePagination';
 import ProductModal from '../../components/organisms/product-modal/index.js';
 import './ShowcasePage.css';
 
@@ -13,13 +13,19 @@ export default function ShowcasePage() {
   const [items, setItems] = useState([]);
   const [activeCategoryId, setActiveCategoryId] = useState(allCategories);
   const [lastCategoryId, setLastCategoryId] = useState(allCategories);
-  const [sort, setSort] = useState('price-asc');
+  const [sort, setSort] = useState('priceAsc');
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  if (lastCategoryId !== activeCategoryId) {
+  const handleDeleteProduct = (productId) => {
+    setItems((currentItems) =>
+      currentItems.filter((item) => String(item.id) !== String(productId))
+    );
+  };
+
+ if (lastCategoryId !== activeCategoryId) {
     setLastCategoryId(activeCategoryId);
     setPage(1);
   }
@@ -69,7 +75,7 @@ export default function ShowcasePage() {
   const sortedItems = useMemo(() => {
     const arr = [...filteredItems];
     arr.sort((a, b) =>
-      sort === 'price-desc'
+      sort === 'priceDesc'
         ? productPrice(b) - productPrice(a)
         : productPrice(a) - productPrice(b)
     );
@@ -89,7 +95,7 @@ export default function ShowcasePage() {
 
   if (error && !items.length) {
     return (
-      <div className="showcaseState showcaseState--error">
+      <div className="showcaseState showcaseStateError">
         Error al cargar: {error.message}
       </div>
     );
@@ -110,6 +116,7 @@ export default function ShowcasePage() {
           <button type="button" className="showcaseCreateButton" onClick={() => setIsModalOpen(true)}>
             NUEVO PRODUCTO
           </button>
+          <span className="showcaseCount">{sortedItems.length} ARTEFACTOS</span>
         </div>
       </header>
 
@@ -123,7 +130,7 @@ export default function ShowcasePage() {
 
       <div className="showcaseGrid">
         {pageItems.map((item) => (
-          <ShowcaseCard key={item.id} item={item} />
+          <ShowcaseCard key={item.id} item={item} onDeleteProduct={handleDeleteProduct} />
         ))}
       </div>
 

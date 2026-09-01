@@ -1,0 +1,36 @@
+.sellerCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colorSurface);
+  border: 1px solid var(--colorAccentSoft);
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.sellerCardContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 1rem;
+}
+
+.sellerCardName {
+  background-image: linear-gradient(to right, var(--colorAccent), var(--colorText));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: var(--fontHeading);
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+}
+
+
+.sellerCardDescription {
+  color: var(--colorTextMuted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}

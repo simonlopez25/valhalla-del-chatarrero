@@ -1,0 +1,13 @@
+.roleBadge {
+  display: inline-block;
+  background-color: var(--colorAccentSoft);
+  border: 1px solid var(--colorAccent);
+  color: var(--colorAccent);
+  font-size: 0.65rem;
+  font-family: var(--fontDisplay);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.8rem;
+  align-self: flex-start;
+}
