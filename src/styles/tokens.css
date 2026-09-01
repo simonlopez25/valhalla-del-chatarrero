@@ -7,31 +7,31 @@
   --hover: #211c18;
   --deep: #0c0b0a;
 
-  --border-subtle: #2a2220;
+  --borderSubtle: #2a2220;
   --border: #3a322d;
-  --border-strong: #54473d;
+  --borderStrong: #54473d;
   --hairline: #241f1b;
 
   --ink: #e5ded4;
-  --ink-heading: #f4ede4;
-  --ink-muted: #b3a89b;
-  --ink-faint: #73675c;
+  --inkHeading: #f4ede4;
+  --inkMuted: #b3a89b;
+  --inkFaint: #73675c;
 
   --accent: #ff8c69;
   --primary: #d97757;
-  --primary-hover: #ff9a78;
-  --primary-border: #ffad8d;
-  --on-primary: #171311;
+  --primaryHover: #ff9a78;
+  --primaryBorder: #ffad8d;
+  --onPrimary: #171311;
 
   --green: #78a889;
-  --green-soft: #b7d5bd;
+  --greenSoft: #b7d5bd;
   --warn: #d99b36;
   --danger: #c94a4a;
-  --danger-soft: #ff8a80;
+  --dangerSoft: #ff8a80;
 
-  --font-display: 'Oswald', 'Bebas Neue', Impact, sans-serif;
-  --font-mono: 'Courier New', Courier, monospace;
-  --font-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  --fontDisplay: 'Oswald', 'Bebas Neue', Impact, sans-serif;
+  --fontMono: 'Courier New', Courier, monospace;
+  --fontBase: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, sans-serif;
 
   --colorBackground: var(--bg);
@@ -39,7 +39,7 @@
   --colorAccent: var(--accent);
   --colorAccentSoft: rgba(255, 140, 105, 0.2);
   --colorText: var(--accent);
-  --colorTextMuted: var(--ink-muted);
+  --colorTextMuted: var(--inkMuted);
   --colorStatusDot: var(--danger);
-  --fontHeading: var(--font-display);
+  --fontHeading: var(--fontDisplay);
 }

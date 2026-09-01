@@ -1,6 +1,6 @@
 import { useState } from "react";
-import TrashIcon from "../../atoms/Icon/TrashIcon";
-import ConfirmDialog from "../../molecules/ConfirmDialog/ConfirmDialog";
+import TrashIcon from "../../atoms/icon/TrashIcon";
+import ConfirmDialog from "../../molecules/confirmDialog/ConfirmDialog";
 
 const DeleteProductButton = ({ productId, onDelete }) => {
   const [showConfirm, setShowConfirm] = useState(false);

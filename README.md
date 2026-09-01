@@ -1,7 +1,7 @@
 # 🛡️ Valhalla del Chatarrero - E-commerce Post-Apocalíptico
 
 <div align="center">
-  <img src="public/imagen apo.png" alt="Banner Post-Apocalíptico Valhalla del Chatarrero" width="100%" />
+  <img src="public/imagen-apo.png" alt="Banner Post-Apocalíptico Valhalla del Chatarrero" width="100%" />
 </div>
 
 <p align="center">

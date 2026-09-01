@@ -12,7 +12,7 @@
 }
 
 .usersHeaderSection h1 {
-  font-family: var(--font-display);
+  font-family: var(--fontDisplay);
   font-size: clamp(1.5rem, 3vw, 2rem);
   color: var(--colorAccent);
   margin: 0 0 8px 0;
@@ -21,9 +21,9 @@
 }
 
 .usersHeaderSection p {
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   font-size: 0.8rem;
-  color: var(--ink-faint);
+  color: var(--inkFaint);
   margin: 0;
   letter-spacing: 0.5px;
 }
@@ -45,7 +45,7 @@ table {
 th {
   background-color: transparent;
   color: var(--primary);
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   padding: 20px 24px;
   font-size: 0.72rem;
   letter-spacing: 1.2px;
@@ -58,8 +58,8 @@ td {
   padding: 18px 24px;
   border-bottom: 1px solid var(--hairline);
   font-size: 0.85rem;
-  font-family: var(--font-mono);
-  color: var(--ink-muted);
+  font-family: var(--fontMono);
+  color: var(--inkMuted);
   vertical-align: middle;
 }
 
@@ -81,19 +81,19 @@ tbody tr:hover {
   width: 44px;
   height: 44px;
   object-fit: cover;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--borderStrong);
 }
 
 .userName {
   font-weight: bold;
-  color: var(--ink-heading);
+  color: var(--inkHeading);
   display: block;
   font-size: 0.88rem;
   letter-spacing: 0.5px;
 }
 
 .userRole {
-  color: var(--ink-faint);
+  color: var(--inkFaint);
   font-size: 0.78rem;
   display: block;
   margin-top: 2px;
@@ -103,11 +103,11 @@ tbody tr:hover {
   display: inline-block;
   background-color: rgba(120, 168, 137, 0.12);
   border-left: 2px solid var(--green);
-  color: var(--green-soft);
+  color: var(--greenSoft);
   padding: 4px 10px;
   font-size: 0.68rem;
   letter-spacing: 1px;
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   text-transform: uppercase;
 }
 
@@ -123,7 +123,7 @@ tbody tr:hover {
   align-items: center;
   height: 100vh;
   color: var(--accent);
-  font-family: var(--font-display);
+  font-family: var(--fontDisplay);
   font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -131,9 +131,9 @@ tbody tr:hover {
 
 .usersError {
   background-color: var(--panel);
-  border: 1px dashed var(--danger-soft);
-  color: var(--danger-soft);
-  font-family: var(--font-mono);
+  border: 1px dashed var(--dangerSoft);
+  color: var(--dangerSoft);
+  font-family: var(--fontMono);
   padding: 12px;
   margin-bottom: 20px;
 }
