@@ -16,7 +16,14 @@ export default function ShowcasePage() {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  const handleProductUpdated = (updatedProduct) => {
+    setItems((prevItems) =>
+      prevItems.map((item) =>
+        item.id === updatedProduct.id ? updatedProduct : item
+      )
+    );
+  };
+  
   if (lastCategoryId !== activeCategoryId) {
     setLastCategoryId(activeCategoryId);
     setPage(1);
@@ -114,7 +121,16 @@ export default function ShowcasePage() {
         onCategoryChange={setActiveCategoryId}
         onSortChange={setSort}
       />
-
+      <div className="showcaseGrid">
+      {pageItems.map((item) => (
+        <ShowcaseCard 
+        key={item.id} 
+        item={item} 
+        onProductUpdated={handleProductUpdated} 
+         />
+       ))}
+       
+  </div>
       <div className="showcaseGrid">
         {pageItems.map((item) => (
           <ShowcaseCard key={item.id} item={item} />
