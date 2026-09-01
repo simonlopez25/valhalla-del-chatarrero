@@ -1,4 +1,4 @@
-import { resolveProductImage, productPrice } from '../../services/productsService';
+import { resolveProductImage, productPrice } from '../../../services/productsService';
 import './ShowcaseCard.css';
 
 function ShowcaseCard({ item }) {

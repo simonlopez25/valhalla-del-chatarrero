@@ -1,6 +1,6 @@
-import Input from '../../Atoms/Input/Input.jsx';
-import Select from '../../Atoms/Select/Select.jsx';
-import Textarea from '../../Atoms/Textarea/Textarea.jsx';
+import Input from '../../atoms/input/Input.jsx';
+import Select from '../../atoms/select/Select.jsx';
+import Textarea from '../../atoms/textarea/Textarea.jsx';
 
 export default function ProductFormFields({ form, errors, onChange, categories }) {
   return (

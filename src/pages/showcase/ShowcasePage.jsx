@@ -1,9 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getVisibleProducts, productPrice } from '../../services/productsService';
-import ShowcaseFilter from '../../components/showcaseFilter/ShowcaseFilter';
-import ShowcaseCard from '../../components/showcaseCard/ShowcaseCard';
-import ShowcasePagination from '../../components/showcasePagination/ShowcasePagination';
-import ProductModal from '../../components/productModal/index.js';
+import ShowcaseFilter from '../../components/molecules/showcase-filter/ShowcaseFilter';
+import ShowcaseCard from '../../components/molecules/showcase-card/ShowcaseCard';
+import ShowcasePagination from '../../components/molecules/showcase-pagination/ShowcasePagination';
+import ProductModal from '../../components/organisms/product-modal/index.js';
 import './ShowcasePage.css';
 
 const itemsPerPage = 20;

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createProduct } from '../../../services/products.js';
+import { createProduct } from '../../../../services/products.js';
 
 export default function useCreateProduct(onSuccess) {
   const [isSubmitting, setIsSubmitting] = useState(false);

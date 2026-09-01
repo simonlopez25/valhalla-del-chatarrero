@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import useCategories from './hooks/useCategories.js';
 import useCreateProduct from './hooks/useCreateProduct.js';
-import ProductFormFields from '../Molecules/ProductFormFields/ProductFormFields.jsx';
+import ProductFormFields from '../../molecules/product-form-fields/ProductFormFields.jsx';
 import './ProductModal.css';
 
 const LOCAL_PLACEHOLDER = '/product-placeholder.png';
