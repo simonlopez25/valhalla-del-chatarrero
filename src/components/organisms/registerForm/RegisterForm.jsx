@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FormField } from "../../molecules/formField/FormField";
 import { CustomButton } from "../../atoms/customButton/CustomButton";
-import { createUser } from "../../../services/userService";
+import { createUser } from "../../../services/usersService";
 import "./RegisterForm.css"
 
 export const RegisterForm = () => {
