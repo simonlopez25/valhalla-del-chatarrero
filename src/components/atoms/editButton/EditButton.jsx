@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UpdateUserModal from "../updateUserModal/UpdateUserModal";
+import UpdateUserModal from "../../updateUserModal/UpdateUserModal";
 import "./EditButton.css";
 
 /**

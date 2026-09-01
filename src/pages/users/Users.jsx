@@ -85,6 +85,14 @@ function Users() {
     setUserToDelete(null);
   };
 
+  const handleUserUpdated = (message, updatedUser) => {
+    setUsers((prevUsers) =>
+      prevUsers.map((user) => (user.id === updatedUser.id ? updatedUser : user))
+    );
+    setSuccessMessage(message);
+    setTimeout(() => setSuccessMessage(""), 4000);
+  };
+
   return (
     <main className="usersMainContainer">
       <div className="usersHeaderSection">
@@ -131,7 +139,7 @@ function Users() {
                 <td>
                   <div className="actionButtons">
                     <ViewButton userId={user.id} />
-                    <EditButton userId={user.id} />
+                    <EditButton user={user} onUserUpdated={handleUserUpdated} />
                     <DeleteButton onClick={() => handleDeleteClick(user.id)} />
                   </div>
                 </td>
