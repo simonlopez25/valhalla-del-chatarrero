@@ -303,7 +303,7 @@ El sistema implementa una arquitectura basada en componentes para la gestión in
 </table>
 
 </div>
----
+
 
 ## 📁 Carpeteo y Estructura
 
