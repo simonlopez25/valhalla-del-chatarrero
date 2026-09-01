@@ -1,7 +1,8 @@
+import DeleteButton from '../../atoms/deleteButton/DeleteButton';
 import { resolveProductImage, productPrice } from '../../../services/productsService';
 import './ShowcaseCard.css';
 
-function ShowcaseCard({ item }) {
+function ShowcaseCard({ item, onDeleteProduct }) {
   const title = item?.title ?? 'Artefacto desconocido';
   const category = item?.category?.name ?? item?.categoryName ?? 'SIN CATEGORÍA';
   const price = productPrice(item);
@@ -23,9 +24,19 @@ function ShowcaseCard({ item }) {
 
       <div className="showcaseCardFooter">
         <span className="showcaseCardPrice">${price.toLocaleString('es-ES')}</span>
-        <button type="button" className="showcaseAddButton">
-          AÑADIR
-        </button>
+
+        <div className="showcaseCardActions">
+          <DeleteButton
+            itemId={item?.id}
+            onDelete={onDeleteProduct}
+            message="¿Seguro que quieres eliminar este producto de la vitrina?"
+            title="Eliminar producto"
+            className="showcaseDeleteButton"
+          />
+          <button type="button" className="showcaseAddButton">
+            AÑADIR
+          </button>
+        </div>
       </div>
     </article>
   );
