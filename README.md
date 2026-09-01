@@ -132,20 +132,13 @@ Monitorización ambiental mediante Open-Meteo.
 ## 📸 Diseño en Figma y Galería de Páginas
 
 
-<img width="1290" height="627" alt="Captura de pantalla 2026-08-27 151333" src="https://github.com/user-attachments/assets/ce4e2236-4b2b-4533-956c-c60c8f9a700f" />
+<img width="2000" height="1414" alt="figma EL VALHALLA DEL CHATARRERO" src="https://github.com/user-attachments/assets/975e0973-c376-44fb-84e4-b9ed28cba8cf" />
+
 
 
 A continuación, se muestra un recorrido visual por las secciones de la aplicación:
 
-| **1. Portal (Inicio)** | **2. Equipo** |
-| :---: | :---: |
-| ![Portal de Inicio](public/page1.png) | ![Sección Equipo](public/page2.png) |
-| *Vista principal con el llamado a la acción y los objetos destacados.* | *Perfil detallado de los colaboradores del Valhalla.* |
-
-| **3. Nuestra Historia** | **4. Registro de Sobrevivientes** |
-| :---: | :---: |
-| ![Sección Historia](public/page3.png) | ![Sección Usuarios](public/page4.png) |
-| *Narrativa inmersiva sobre el colapso y los primeros recolectores.* | *Tabla interactiva de los usuarios registrados en el sector.* |
+<img width="2000" height="1410" alt="el valhalla del chatarrero paginas" src="https://github.com/user-attachments/assets/71f9846c-e27a-4cec-b12f-003ef94bac5d" />
 
 ---
 
