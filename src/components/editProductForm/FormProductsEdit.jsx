@@ -1,6 +1,6 @@
 // src/components/editProductForm/EditProductForm.jsx
 import React, { useState, useEffect } from "react";
-import { getProduct, updateProduct } from '../../services/productsService';
+import { getProduct, updateProduct } from '../services/productsService';
 import './EditProductForm.css';
 
 export const EditProductForm = ({ productId, onProductUpdated }) => {
