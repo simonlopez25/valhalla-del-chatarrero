@@ -271,3 +271,33 @@ valhalla-del-chatarrero/
 
 ````
 > *“En el páramo digital, cada componente cuenta una historia y cada línea de código es una chispa de supervivencia. ¡El búnker sigue abierto!”*
+---
+
+<div align="center">
+
+<svg width="100%" height="40" viewBox="0 0 1200 40" preserveAspectRatio="none">
+  <path d="M0,20 Q150,5 300,20 T600,20 T900,20 T1200,20 L1200,40 L0,40 Z" fill="#1A1614">
+    <animate attributeName="d" 
+      values="M0,20 Q150,5 300,20 T600,20 T900,20 T1200,20 L1200,40 L0,40 Z;
+              M0,20 Q150,35 300,20 T600,20 T900,20 T1200,20 L1200,40 L0,40 Z;
+              M0,20 Q150,5 300,20 T600,20 T900,20 T1200,20 L1200,40 L0,40 Z" 
+      dur="6s" repeatCount="indefinite" />
+  </path>
+  <path d="M0,25 Q200,10 400,25 T800,25 T1200,25 L1200,40 L0,40 Z" fill="#BD5523" opacity="0.4">
+    <animate attributeName="d" 
+      values="M0,25 Q200,10 400,25 T800,25 T1200,25 L1200,40 L0,40 Z;
+              M0,25 Q200,40 400,25 T800,25 T1200,25 L1200,40 L0,40 Z;
+              M0,25 Q200,10 400,25 T800,25 T1200,25 L1200,40 L0,40 Z" 
+      dur="4s" repeatCount="indefinite" />
+  </path>
+</svg>
+
+
+
+</div>
+
+---
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=BD5523&customColorList=1&height=70&section=footer&text=TRANSMISIÓN%20FINALIZADA%20//%20VALHALLA%20DEL%20CHATARRERO&fontSize=16&fontColor=FFFFFF&animation=fadeIn&fontAlignY=50" width="100%" />
+</p>
