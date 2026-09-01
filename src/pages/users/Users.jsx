@@ -13,6 +13,7 @@ function Users() {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const usersPerPage = 10;
+  
 
   useEffect(() => {
     const loadUsers = async () => {
@@ -102,7 +103,7 @@ function Users() {
           </tbody>
         </table>
 
-        <Pagination 
+        <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
           currentCount={currentUsers.length}
