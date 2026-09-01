@@ -7,3 +7,4 @@ export const fetchUsers = async () => {
   const response = await axios.get(usersApiUrl);
   return Array.isArray(response.data) ? response.data : [];
 };
+

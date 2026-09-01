@@ -11,6 +11,7 @@ function Users() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const usersPerPage = 10;
 
@@ -49,6 +50,15 @@ function Users() {
     }
   };
 
+  /** Refreshes the updated row and shows temporary success feedback. */
+  const handleUserUpdated = (message, updatedUser) => {
+    setUsers((prevUsers) =>
+      prevUsers.map((user) => (user.id === updatedUser.id ? updatedUser : user))
+    );
+    setSuccessMessage(message);
+    window.setTimeout(() => setSuccessMessage(""), 4000);
+  };
+
   return (
     <main className="usersMainContainer">
       <div className="usersHeaderSection">
@@ -60,6 +70,8 @@ function Users() {
       </div>
 
       {error && <p className="usersError">{error}</p>}
+
+      {successMessage && <p className="usersSuccess">{successMessage}</p>}
 
       <div className="tableContainer">
         <table>
@@ -93,7 +105,7 @@ function Users() {
                 <td>
                   <div className="actionButtons">
                     <ViewButton userId={user.id} />
-                    <EditButton userId={user.id} />
+                    <EditButton user={user} onUserUpdated={handleUserUpdated} />
                     <DeleteButton userId={user.id} />
                   </div>
                 </td>
