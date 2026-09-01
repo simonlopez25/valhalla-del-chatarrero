@@ -10,7 +10,7 @@
 
 .statusBadgeText {
   color: var(--colorTextMuted);
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   font-size: 0.72rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;

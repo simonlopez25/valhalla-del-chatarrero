@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import NewSurvivorButton from "../../components/newSurvivorButton/NewSurvivorButton";
-import EditButton from "../../components/editButton/EditButton";
-import DeleteButton from "../../components/deleteButton/DeleteButton";
-import ViewButton from "../../components/viewButton/ViewButton";
-import Pagination from "../../components/pagination/Pagination";
-import { fetchUsers } from "../../services/userService";
+import NewSurvivorButton from "../../components/atoms/newSurvivorButton/NewSurvivorButton";
+import EditButton from "../../components/atoms/editButton/EditButton";
+import DeleteButton from "../../components/atoms/deleteButton/DeleteButton";
+import ViewButton from "../../components/atoms/viewButton/ViewButton";
+import Pagination from "../../components/molecules/pagination/Pagination";
+import { fetchAllUsers } from "../../services/usersService";
 import "./Users.css";
 
 function Users() {
@@ -18,7 +18,7 @@ function Users() {
   useEffect(() => {
     const loadUsers = async () => {
       try {
-        setUsers(await fetchUsers());
+        setUsers(await fetchAllUsers());
       } catch {
         setError("No se pudieron cargar los registros de usuarios.");
       } finally {

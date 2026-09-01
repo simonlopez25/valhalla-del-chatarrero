@@ -1,0 +1,45 @@
+.showcasePagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 2.5rem;
+}
+
+.showcasePageBtn {
+  background: transparent;
+  color: var(--inkMuted);
+  border: 1px solid var(--border);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fontMono);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.showcasePageBtn:hover:not([disabled]):not(.showcasePageBtnActive) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.showcasePageBtnActive {
+  background: var(--accent);
+  color: var(--onPrimary);
+  border-color: var(--accent);
+  font-weight: bold;
+}
+
+.showcasePageBtn[disabled] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.showcasePageEllipsis {
+  color: var(--inkFaint);
+  font-family: var(--fontMono);
+  padding: 0 0.15rem;
+}
