@@ -253,21 +253,21 @@ Este proyecto fue forjado por un equipo de 8 supervivientes. ¡Conéctate con el
 ## 📁 Carpeteo y Estructura
 
 Se ha implementado una estructura de carpetas limpia y escalable para facilitar el mantenimiento y la colaboración:
-
-```text
+````
 valhalla-del-chatarrero/
-├── public/            # Archivos estáticos (imágenes, favicon, etc.)
-├── src/               # Código fuente de la aplicación
-│   ├── assets/        # Imágenes, iconos y recursos visuales
-│   ├── components/    # Componentes reutilizables (Navbar, Card, Table, etc.)
-│   ├── pages/         # Páginas principales de la aplicación (Home, Equipo, Historia, Productos, Usuarios)
-│   ├── style/         # Hojas de estilo global y módulos CSS
-│   ├── App.jsx        # Componente raíz
-│   └── main.jsx       # Punto de entrada de la aplicación
-├── .gitignore         # Archivos a ignorar por Git
-├── package.json       # Dependencias y scripts del proyecto
-├── README.md          # Documentación del proyecto
-└── vite.config.js     # Configuración de Vite
+├── public/           # Archivos estáticos (imágenes, favicon, etc.)
+├── src/              # Código fuente de la aplicación
+│   ├── assets/       # Imágenes, iconos y recursos visuales
+│   ├── components/   # Componentes reutilizables (Navbar, Card, Table, etc.)
+│   ├── pages/        # Páginas principales de la aplicación (Home, Equipo, Historia, Productos, Usuarios)
+│   ├── services/     # Servicios y lógica de comunicación con la API (CRUD)
+│   ├── style/        # Hojas de estilo global y módulos CSS
+│   ├── App.jsx       # Componente raíz
+│   └── main.jsx      # Punto de entrada de la aplicación
+├── .gitignore        # Archivos a ignorar por Git
+├── package.json      # Dependencias y scripts del proyecto
+├── README.md         # Documentación del proyecto
+└── vite.config.js    # Configuración de Vite
 
 ````
 > *“En el páramo digital, cada componente cuenta una historia y cada línea de código es una chispa de supervivencia. ¡El búnker sigue abierto!”*
