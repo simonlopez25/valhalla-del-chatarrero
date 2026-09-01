@@ -4,6 +4,7 @@ import EditButton from "../../components/atoms/editButton/EditButton";
 import DeleteButton from "../../components/atoms/deleteButton/DeleteButton";
 import ViewButton from "../../components/atoms/viewButton/ViewButton";
 import Pagination from "../../components/molecules/pagination/Pagination";
+import { deleteUser } from "../../services/UserServicesDelete";
 import { fetchAllUsers } from "../../services/usersService";
 import "./Users.css";
 
@@ -13,6 +14,11 @@ function Users() {
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  
+  
+  const [showModal, setShowModal] = useState(false);
+  const [userToDelete, setUserToDelete] = useState(null);
+
   const usersPerPage = 10;
   
 
@@ -51,13 +57,32 @@ function Users() {
     }
   };
 
-  /** Refreshes the updated row and shows temporary success feedback. */
-  const handleUserUpdated = (message, updatedUser) => {
-    setUsers((prevUsers) =>
-      prevUsers.map((user) => (user.id === updatedUser.id ? updatedUser : user))
-    );
-    setSuccessMessage(message);
-    window.setTimeout(() => setSuccessMessage(""), 4000);
+  
+  const handleDeleteClick = (id) => {
+    setUserToDelete(id);
+    setShowModal(true);
+  };
+
+  
+  const confirmDelete = async () => {
+    if (!userToDelete) return;
+
+    try {
+      await deleteUser(userToDelete);
+      setUsers(users.filter((user) => user.id !== userToDelete));
+      setShowModal(false);
+      setUserToDelete(null);
+    } catch (err) {
+      console.error("Error al eliminar el usuario:", err);
+      setError("No se pudo eliminar el registro.");
+      setShowModal(false);
+    }
+  };
+
+  
+  const cancelDelete = () => {
+    setShowModal(false);
+    setUserToDelete(null);
   };
 
   return (
@@ -106,8 +131,8 @@ function Users() {
                 <td>
                   <div className="actionButtons">
                     <ViewButton userId={user.id} />
-                    <EditButton user={user} onUserUpdated={handleUserUpdated} />
-                    <DeleteButton userId={user.id} />
+                    <EditButton userId={user.id} />
+                    <DeleteButton onClick={() => handleDeleteClick(user.id)} />
                   </div>
                 </td>
               </tr>
@@ -124,6 +149,24 @@ function Users() {
           onNext={handleNext}
         />
       </div>
+
+      
+      {showModal && (
+        <div className="modalOverlay">
+          <div className="modalCard">
+            <h2>⚠️ ELIMINAR REGISTRO</h2>
+            <p>¿Estás seguro de que deseas eliminar este superviviente del censo del páramo?</p>
+            <div className="modalButtons">
+              <button className="modalBtnCancel" onClick={cancelDelete}>
+                Cancelar
+              </button>
+              <button className="modalBtnConfirm" onClick={confirmDelete}>
+                Confirmar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
