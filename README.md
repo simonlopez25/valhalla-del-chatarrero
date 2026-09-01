@@ -210,44 +210,99 @@ El sistema implementa una arquitectura basada en componentes para la gestión in
 * **Read (Consulta)** 🔍: Obtención y sincronización de listados y recursos desde el backend, asegurando una validación estricta de los tipos de datos devueltos.
 * **Update (Modificación)** 🔄: Actualización de los registros existentes en el sistema para mantener la consistencia de los datos del inventario y de los perfiles activos.
 * **Delete (Eliminación)** 🗑️: Purga y baja lógica o física de elementos obsoletos o registros inactivos dentro de la base de datos del refugio.
-## 👥 Equipo de Valhalla (Colaboradores)
 
 
 
-Este proyecto fue forjado por un equipo de 8 supervivientes. ¡Conéctate con ellos a través de sus perfiles!
+<div align="center">
 
-* **Simón López** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/simon-lopez-a478bb235)
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/simonlopez25)
+## 👥 Supervivientes del Clan (Equipo de Desarrollo)
 
-* **Beatriz Íñiguez** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Beatriz484)
+*Este proyecto fue forjado por un equipo de 8 supervivientes. ¡Conéctate con ellos a través de sus perfiles!*
 
-* **Jhojann Sossa** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhojann-sossa-009b25121)
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jhojannsossa)
+<br/>
 
-* **Patricia Aparicio** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]( https://www.linkedin.com/in/patriciaapariciodiaz)
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/apariciodiazpatricia-cell)
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <a href="https://github.com/simonlopez25">
+        <img src="https://github.com/simonlopez25.png" width="90" height="90" style="border-radius: 50%; border: 4px solid #BD5523; box-shadow: 0 0 15px #BD5523, inset 0 0 10px #1A1614; background-color: #2B2622;" alt="Simón López"/><br/>
+        <b>Simón López</b>
+      </a><br/>
+      <sub>Frontend Developer</sub><br/><br/>
+      <a href="https://www.linkedin.com/in/simon-lopez-a478bb235">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://github.com/Beatriz484">
+        <img src="https://github.com/Beatriz484.png" width="90" height="90" style="border-radius: 50%; border: 4px solid #BD5523; box-shadow: 0 0 15px #BD5523, inset 0 0 10px #1A1614; background-color: #2B2622;" alt="Beatriz Íñiguez"/><br/>
+        <b>Beatriz Íñiguez</b>
+      </a><br/>
+      <sub>Frontend Developer</sub><br/><br/>
+      <a href="https://www.linkedin.com/in/beatriz-iniguez-cascales-dev/">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://github.com/jhojannsossa">
+        <img src="https://github.com/jhojannsossa.png" width="90" height="90" style="border-radius: 50%; border: 4px solid #BD5523; box-shadow: 0 0 15px #BD5523, inset 0 0 10px #1A1614; background-color: #2B2622;" alt="Jhojann Sossa"/><br/>
+        <b>Jhojann Sossa</b>
+      </a><br/>
+      <sub>Frontend Developer</sub><br/><br/>
+      <a href="https://www.linkedin.com/in/jhojann-sossa-009b25121">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://github.com/apariciodiazpatricia-cell">
+        <img src="https://github.com/apariciodiazpatricia-cell.png" width="90" height="90" style="border-radius: 50%; border: 4px solid #BD5523; box-shadow: 0 0 15px #BD5523, inset 0 0 10px #1A1614; background-color: #2B2622;" alt="Patricia Aparicio"/><br/>
+        <b>Patricia Aparicio</b>
+      </a><br/>
+      <sub>Frontend Developer</sub><br/><br/>
+      <a href="https://www.linkedin.com/in/patriciaapariciodiaz">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="25%">
+      <a href="https://github.com/Mltiformacionjose">
+        <img src="https://github.com/Mltiformacionjose.png" width="90" height="90" style="border-radius: 50%; border: 4px solid #BD5523; box-shadow: 0 0 15px #BD5523, inset 0 0 10px #1A1614; background-color: #2B2622;" alt="Jose Loero Nielez"/><br/>
+        <b>Jose Loero Nielez</b>
+      </a><br/>
+      <sub>Frontend Developer</sub><br/><br/>
+      <a href="mailto:multiformacionjose@gmail.com">
+        <img src="https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Gmail"/>
+      </a>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://github.com/margaritabellidoroig">
+        <img src="https://github.com/margaritabellidoroig.png" width="90" height="90" style="border-radius: 50%; border: 4px solid #BD5523; box-shadow: 0 0 15px #BD5523, inset 0 0 10px #1A1614; background-color: #2B2622;" alt="Margarita Bellido"/><br/>
+        <b>Margarita Bellido</b>
+      </a><br/>
+      <sub>Frontend Developer</sub>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://github.com/Willfredy742">
+        <img src="https://github.com/Willfredy742.png" width="90" height="90" style="border-radius: 50%; border: 4px solid #BD5523; box-shadow: 0 0 15px #BD5523, inset 0 0 10px #1A1614; background-color: #2B2622;" alt="Wilfredy Salcedo"/><br/>
+        <b>Wilfredy Salcedo</b>
+      </a><br/>
+      <sub>Frontend Developer</sub>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://github.com/mjrr39sevilla">
+        <img src="https://github.com/mjrr39sevilla.png" width="90" height="90" style="border-radius: 50%; border: 4px solid #BD5523; box-shadow: 0 0 15px #BD5523, inset 0 0 10px #1A1614; background-color: #2B2622;" alt="María José Rodriguez"/><br/>
+        <b>María José Rodriguez</b>
+      </a><br/>
+      <sub>Frontend Developer</sub><br/><br/>
+      <a href="https://www.linkedin.com/in/maria-jose-rodriguez-ramos">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+      </a>
+    </td>
+  </tr>
+</table>
 
-* **Jose Loero Nielez** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)]()
-
-* **Margarita Bellido** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/margaritabellidoroig)
-
-* **Wilfredy Salcedo** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]()
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Willfredy742)
-
-* **María José Rodriguez Ramos** - *Frontend Developer*  
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maria-jose-rodriguez-ramos)
-  [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mjrr39sevilla)
-
+</div>
 ---
 
 ## 📁 Carpeteo y Estructura
