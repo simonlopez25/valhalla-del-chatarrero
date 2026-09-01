@@ -12,4 +12,11 @@ export const getUsers = ({ limit = 10, offset = 0 } = {}) => {
 export const fetchAllUsers = async () => {
   const users = await request('/users');
   return Array.isArray(users) ? users : [];
-};
+ }; 
+
+  export const createUser = async (userData) => {
+    return request('/users', {
+      method: 'POST',
+      data: userData,
+    });
+  };

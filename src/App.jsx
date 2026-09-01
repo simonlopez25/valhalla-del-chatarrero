@@ -6,6 +6,8 @@ import History from './pages/history/History';
 import SellersPage from './pages/sellersPage/SellersPage';
 import ShowcasePage from './pages/showcase/ShowcasePage';
 import Users from './pages/users/Users';
+import RegisterPage from './pages/registerPage/RegisterPage';
+import { GlobalRegisterModal } from './components/globalRegisterModal/GlobalRegisterModal';
 import './styles/App.css';
 
 function App() {
@@ -21,9 +23,10 @@ function App() {
             <Route path="/sellersPage" element={<SellersPage />} />
             <Route path="/showcase" element={<ShowcasePage />} />
             <Route path="/users" element={<Users />} />
+            <Route path="/registerPage" element={<RegisterPage />} />
           </Routes>
         </main>
-
+        <GlobalRegisterModal />
         <Footer />
       </div>
     </Router>

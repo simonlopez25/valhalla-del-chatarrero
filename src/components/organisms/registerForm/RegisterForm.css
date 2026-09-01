@@ -1,0 +1,47 @@
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 5px;
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+}
+
+.registerForm h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Aplica esto para forzar que la etiqueta quede arriba y el rectángulo abajo con espacio */
+.registerForm .formField,
+.registerForm label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* Separa la letra del input blanco */
+    width: 100%;
+}
+
+.feedbackMessage {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 5px;
+    color: #4ade80;
+}
+
+.registerForm button[type="submit"] {
+    background-color: #BD5523;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.registerForm button[type="submit"]:hover {
+    background-color: #a4481d;
+}

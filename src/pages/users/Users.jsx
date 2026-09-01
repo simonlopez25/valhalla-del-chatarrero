@@ -19,6 +19,7 @@ function Users() {
   const [userToDelete, setUserToDelete] = useState(null);
 
   const usersPerPage = 10;
+  
 
   useEffect(() => {
     const loadUsers = async () => {
@@ -136,7 +137,7 @@ function Users() {
           </tbody>
         </table>
 
-        <Pagination 
+        <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
           currentCount={currentUsers.length}
