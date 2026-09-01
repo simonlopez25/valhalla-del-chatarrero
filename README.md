@@ -1,33 +1,133 @@
 # 🛡️ Valhalla del Chatarrero - E-commerce Post-Apocalíptico
 
 <div align="center">
-  <img src="public/imagen apo.png" alt="Banner Post-Apocalíptico Valhalla del Chatarrero" width="100%" />
+  <img width="2172" height="724" alt="ChatGPT Image 1 sept 2026, 18_49_20" src="https://github.com/user-attachments/assets/4301552c-92af-48a7-a171-384fc0256147" />
+
 </div>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=700&size=28&duration=3000&pause=1000&color=D98C4A&center=true&vCenter=true&width=650&height=70&lines=LA+HORDA+BINARIA;BÚNKER+DE+COMPONENTES;EL+VALHALLA+DEL+CHATARRERO" alt="La Horda Binaria Animacion" />
 </p>
 
-Bienvenido a **Valhalla del Chatarrero**, una plataforma de comercio online inmersiva ambientada en un páramo desolado y peligroso. Este proyecto no es solo una tienda; es una experiencia narrativa donde los usuarios, o "supervivientes", interactúan con un inventario de tecnología recuperada y un registro de otros habitantes del sector.
+# ⚙️ Bienvenido al Valhalla del Chatarrero
+
+> *"En un mundo donde la tecnología del viejo mundo es el recurso más valioso, cada pieza de chatarra cuenta una historia."*
+
+**Valhalla del Chatarrero** es una plataforma de comercio online desarrollada como proyecto de **Desarrollo Web Full Stack con IA**, ambientada en un universo postapocalíptico donde los supervivientes comercian con tecnología recuperada, herramientas reutilizadas y artefactos olvidados.
+
+Más que una simple tienda online, este proyecto combina desarrollo web, diseño UI/UX, consumo de APIs y narrativa inmersiva para ofrecer una experiencia única dentro de un entorno hostil dominado por la supervivencia y la escasez de recursos.
+
+---
+
+⚙️ ⚡ ☢️ ⚙️ ⚡ ☢️ ⚙️
 
 ---
 
 ## 🌟 Características Principales
 
-*   **Temática Post-Apocalíptica:** Diseño visual oscuro, tipografía industrial y una paleta de colores quemados que sumergen al usuario en el páramo.
+### 🎨 Diseño Inmersivo Postapocalíptico
 
-*   **Navegación Intuitiva:** La aplicación cuenta con 5 páginas principales accesibles a través de una barra de navegación estilo terminal:
+- Estética inspirada en asentamientos de supervivientes y mercados de chatarra.
+- Paleta de colores basada en óxido, acero envejecido, carbón y cobre industrial.
+- Interfaz visual diseñada para reforzar la narrativa del proyecto.
+- Componentes personalizados con identidad visual propia.
 
-    *   **Portal (Inicio):** Resumen del sector y los 5 objetos más valiosos a la venta.
-    *   **Equipo:** Conoce a los expertos que hacen posible el Valhalla.
-    *   **Historia:** Adéntrate en el lore del páramo y la fundación de la comunidad.
-    *   **Vitrina (Productos):** Catálogo completo de chatarra recuperada.
-    *   **Usuarios:** Registro y gestión de los supervivientes del sector.
+### 🧭 Navegación Intuitiva
 
-*   **Integración de APIs:**
-    *   **API de Productos:** Muestra dinámicamente artículos únicos con sus precios.
-    *   **API de Usuarios:** Permite visualizar y administrar la base de datos de habitantes del páramo.
-    *   **API del Tiempo :** "Open-Meteo" . Permite visualizar el clima y sus cambios.
+La aplicación está estructurada en cinco secciones principales conectadas mediante una barra de navegación.
+
+---
+
+⚙️ ⚡ ☢️ ⚙️ ⚡ ☢️ ⚙️
+
+---
+
+#### 🏠 Portal
+
+Punto de entrada al sector.
+
+- Presentación del proyecto.
+- Contextualización del universo narrativo.
+- Visualización de los objetos más valiosos disponibles en el mercado.
+
+#### 👥 Equipo
+
+Conoce a los integrantes de **La Horda Binaria**.
+
+- Presentación de los desarrolladores (vendedores).
+- Información sobre sus roles inspirados en el mundo post-apocalíptico.
+
+
+#### 📜 Historia
+
+Explora el origen del páramo.
+
+- Lore original del universo.
+- Fundación de Valhalla del Chatarrero.
+- Contexto narrativo que da vida al proyecto.
+
+#### 🛒 Tienda
+
+El principal mercado de intercambio del sector.
+
+- Catálogo completo de productos.
+- Consulta detallada de artefactos recuperados.
+- Información dinámica obtenida desde API externa.
+- Experiencia de compra adaptada a la temática del proyecto.
+
+#### 🛰️ Supervivientes
+
+Gestión de habitantes del sector.
+
+- Registro de usuarios.
+- Consulta de perfiles.
+- Administración de datos mediante integración con API.
+
+---
+
+⚙️ ⚡ ☢️ ⚙️ ⚡ ☢️ ⚙️
+
+---
+
+## 🔌 Integración de APIs
+
+La aplicación consume diferentes servicios externos para proporcionar contenido dinámico y actualizado en tiempo real.
+
+### 📦 Terminal de Artefactos Recuperados
+
+Permite mostrar artículos recuperados del páramo con información detallada como:
+
+- Nombre del objeto.
+- Precio.
+- Descripción.
+- Imagen asociada.
+
+🔗 **Acceder al terminal de artefactos:**  
+[⚙️ Base de Datos de Artefactos](https://fakeapi.platzi.com)
+
+### 👤 Registro de Supervivientes
+
+Gestiona la información de los habitantes registrados en el sector:
+
+- Consulta de usuarios.
+- Visualización de perfiles.
+- Administración de registros.
+
+🔗 **Acceder al registro de supervivientes:**  
+[🛰️ Archivo de Supervivientes](https://fakeapi.platzi.com)
+
+### 🌦️ Sistema Meteorológico del Páramo
+
+Monitorización ambiental mediante Open-Meteo.
+
+- Estado meteorológico actual.
+- Cambios climáticos en tiempo real.
+- Información contextual integrada en la experiencia de usuario.
+
+---
+
+☢️ DATOS • CÓDIGO • SUPERVIVENCIA ☢️
+
 ---
 ## 📸 Diseño en Figma y Galería de Páginas
 
