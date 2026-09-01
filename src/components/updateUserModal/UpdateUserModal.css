@@ -1,0 +1,185 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.updateModal {
+  background-color: var(--panel);
+  border: 1px solid var(--border-strong);
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.updateModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.updateModalHeader h2 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  color: var(--colorAccent);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.closeModalButton {
+  background: transparent;
+  border: none;
+  color: var(--ink-faint);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  transition: color 0.2s ease;
+}
+
+.closeModalButton:hover {
+  color: var(--danger);
+}
+
+.closeModalButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.updateModal form {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formField label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.formField input,
+.formField select {
+  background-color: var(--input-bg, #0d1119);
+  border: 1px solid var(--border);
+  color: var(--ink-heading);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.formField input:focus,
+.formField select:focus {
+  border-color: var(--accent);
+}
+
+.formField input[aria-invalid="true"],
+.formField select[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+.formField input:disabled,
+.formField select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.fieldError {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--danger-soft);
+}
+
+.submitError {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--danger-soft);
+  border: 1px dashed var(--danger-soft);
+  padding: 10px;
+  margin: 0;
+}
+
+.updateModalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.cancelButton,
+.submitButton {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cancelButton {
+  background-color: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--ink-muted);
+}
+
+.cancelButton:hover {
+  background-color: var(--hover);
+}
+
+.submitButton {
+  background-color: var(--primary);
+  border: 1px solid var(--primary-border);
+  color: var(--on-primary);
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.cancelButton:active,
+.submitButton:active {
+  transform: scale(0.98);
+}
+
+.cancelButton:disabled,
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 560px) {
+  .updateModal form {
+    padding: 16px;
+  }
+
+  .updateModalActions {
+    flex-direction: column;
+  }
+
+  .cancelButton,
+  .submitButton {
+    width: 100%;
+  }
+}
