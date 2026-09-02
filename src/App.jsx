@@ -7,7 +7,7 @@ import SellersPage from './pages/sellersPage/SellersPage';
 import ShowcasePage from './pages/showcase/ShowcasePage';
 import Users from './pages/users/Users';
 import RegisterPage from './pages/registerPage/RegisterPage';
-import { GlobalRegisterModal } from './components/globalRegisterModal/GlobalRegisterModal';
+import { GlobalRegisterModal } from './components/organisms/globalRegisterModal/GlobalRegisterModal';
 import './styles/App.css';
 
 function App() {

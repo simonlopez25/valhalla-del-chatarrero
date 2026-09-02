@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { CustomModal } from "../molecules/customModal/CustomModal";
-import { RegisterForm } from "../organisms/registerForm/RegisterForm";
+import { CustomModal } from "../../molecules/customModal/CustomModal";
+import { RegisterForm } from "../registerForm/RegisterForm";
+
 export function GlobalRegisterModal() {
     const [isOpen, setIsOpen] = useState(false);
 

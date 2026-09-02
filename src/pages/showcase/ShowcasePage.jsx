@@ -1,5 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getVisibleProducts, productPrice } from '../../services/productsService';
+import CreateButton from '../../components/atoms/createButton/CreateButton';
+import { CustomModal } from '../../components/molecules/customModal/CustomModal';
+import { ProductForm } from '../../components/organisms/productForm/ProductForm';
 import ShowcaseFilter from '../../components/molecules/showcaseFilter/ShowcaseFilter';
 import ShowcaseCard from '../../components/molecules/showcaseCard/ShowcaseCard';
 import ShowcasePagination from '../../components/molecules/showcasePagination/ShowcasePagination';
@@ -16,6 +19,20 @@ export default function ShowcasePage() {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+
+  const handleProductCreated = (createdProduct) => {
+    setItems((currentItems) => [createdProduct, ...currentItems]);
+    setIsCreateModalOpen(false);
+  };
+
+  const handleProductUpdated = (updatedProduct) => {
+    setItems((currentItems) =>
+      currentItems.map((item) =>
+        String(item.id) === String(updatedProduct.id) ? updatedProduct : item
+      )
+    );
+  };
 
   const handleDeleteProduct = (productId) => {
     setItems((currentItems) =>
@@ -110,7 +127,14 @@ export default function ShowcasePage() {
             pelados y pantallas rajadas. Todo se vende &quot;tal cual&quot;.
           </p>
         </div>
-        <span className="showcaseCount">{sortedItems.length} ARTEFACTOS</span>
+        <div className="showcaseHeaderActions">
+          <span className="showcaseCount">{sortedItems.length} ARTEFACTOS</span>
+          <CreateButton
+            label="NUEVO PRODUCTO"
+            icon="package"
+            onClick={() => setIsCreateModalOpen(true)}
+          />
+        </div>
       </header>
 
       <ShowcaseFilter
@@ -123,11 +147,23 @@ export default function ShowcasePage() {
 
       <div className="showcaseGrid">
         {pageItems.map((item) => (
-          <ShowcaseCard key={item.id} item={item} onDeleteProduct={handleDeleteProduct} />
+          <ShowcaseCard
+            key={item.id}
+            item={item}
+            onDeleteProduct={handleDeleteProduct}
+            onEditProduct={handleProductUpdated}
+          />
         ))}
       </div>
 
       <ShowcasePagination page={currentPage} totalPages={totalPages} onPageChange={setPage} />
+
+      <CustomModal
+        isOpen={isCreateModalOpen}
+        onClose={() => setIsCreateModalOpen(false)}
+      >
+        <ProductForm onProductCreated={handleProductCreated} />
+      </CustomModal>
     </div>
   );
 }

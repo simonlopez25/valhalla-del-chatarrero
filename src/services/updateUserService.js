@@ -1,9 +1,5 @@
 import axios from "axios";
 
-/**
- * Base URL for the users REST API.
- * Can be overridden via VITE_USERS_API_URL when running under Vite.
- */
 const usersApiUrl =
   import.meta.env?.VITE_USERS_API_URL ||
   "https://api.escuelajs.co/api/v1/users";
@@ -12,10 +8,6 @@ const defaultTimeoutMs = 10000;
 const validUserRoles = ["admin", "customer"];
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-/**
- * Custom error type for user service operations.
- * Exposes a stable `code` and an optional HTTP `status`.
- */
 export class UserServiceError extends Error {
   constructor(message, { status = null, code = "USER_SERVICE_ERROR", cause } = {}) {
     super(message);
@@ -29,12 +21,6 @@ export class UserServiceError extends Error {
 const isNonEmptyString = (value) =>
   typeof value === "string" && value.trim().length > 0;
 
-/**
- * Validates that the provided user id is a positive integer.
- * @param {number|string} id - The user id to update.
- * @returns {number} The normalized numeric id.
- * @throws {UserServiceError} If the id is missing or invalid.
- */
 const validateUserId = (id) => {
   if (id === undefined || id === null || String(id).trim() === "") {
     throw new UserServiceError("A valid user ID is required.", {
@@ -53,13 +39,6 @@ const validateUserId = (id) => {
   return numericId;
 };
 
-/**
- * Validates the update payload and returns a clean object with only
- * the supported fields that pass validation.
- * @param {object} payload - The fields to update.
- * @returns {object} A clean object with only the validated fields.
- * @throws {UserServiceError} If any field is invalid.
- */
 const validatePayload = (payload) => {
   if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
     throw new UserServiceError("The update payload must be a valid object.", {
@@ -126,13 +105,7 @@ const validatePayload = (payload) => {
   return fields;
 };
 
-/**
- * Maps any thrown value to a stable UserServiceError.
- * @param {unknown} error
- * @returns {UserServiceError}
- */
 const normalizeError = (error) => {
-  // Request cancelled by the caller (AbortController) — propagate as-is.
   if (axios.isCancel(error)) throw error;
 
   if (error instanceof UserServiceError) return error;
@@ -141,7 +114,6 @@ const normalizeError = (error) => {
     const { response, request } = error;
 
     if (response) {
-      // The server answered with a non-2xx status (validation, 404, 500...).
       const { status, data } = response;
       const serverMessage =
         data?.message ||
@@ -156,7 +128,6 @@ const normalizeError = (error) => {
     }
 
     if (request) {
-      // The request was sent but no response was received.
       const isTimeout = error.code === "ECONNABORTED";
       return new UserServiceError(
         isTimeout
@@ -178,14 +149,6 @@ const normalizeError = (error) => {
   });
 };
 
-/**
- * Updates a user via HTTP PUT.
- * @param {number|string} id - The user id to update.
- * @param {object} payload - The fields to update.
- * @param {object} [options] - { timeout, signal } axios/settings options.
- * @returns {Promise<object>} The updated user record returned by the API.
- * @throws {UserServiceError} On validation, HTTP, or network failures.
- */
 export const updateUser = async (
   id,
   payload,

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import NewSurvivorButton from "../../components/atoms/newSurvivorButton/NewSurvivorButton";
+import CreateButton from "../../components/atoms/createButton/CreateButton";
 import EditButton from "../../components/atoms/editButton/EditButton";
 import DeleteButton from "../../components/atoms/deleteButton/DeleteButton";
 import ViewButton from "../../components/atoms/viewButton/ViewButton";
 import Pagination from "../../components/molecules/pagination/Pagination";
-import { deleteUser } from "../../services/UserServicesDelete";
+import UpdateUserModal from "../../components/organisms/updateUserModal/UpdateUserModal";
+import { deleteUser } from "../../services/UserServicesDelete.js";
 import { fetchAllUsers } from "../../services/usersService";
 import "./Users.css";
 
@@ -18,6 +19,7 @@ function Users() {
   
   const [showModal, setShowModal] = useState(false);
   const [userToDelete, setUserToDelete] = useState(null);
+  const [editingUser, setEditingUser] = useState(null);
 
   const usersPerPage = 10;
   
@@ -100,7 +102,7 @@ function Users() {
           <h1>REGISTRO DE SUPERVIVIENTES</h1>
           <p>Administración del censo del páramo. Añade, modifica o purga registros de individuos conocidos en el sector.</p>
         </div>
-        <NewSurvivorButton />
+        <CreateButton />
       </div>
 
       {error && <p className="usersError">{error}</p>}
@@ -139,7 +141,10 @@ function Users() {
                 <td>
                   <div className="actionButtons">
                     <ViewButton userId={user.id} />
-                    <EditButton user={user} onUserUpdated={handleUserUpdated} />
+                    <EditButton
+                      onClick={() => setEditingUser(user)}
+                      ariaLabel={`Actualizar usuario ${user?.name ?? ""}`}
+                    />
                     <DeleteButton onClick={() => handleDeleteClick(user.id)} />
                   </div>
                 </td>
@@ -174,6 +179,17 @@ function Users() {
             </div>
           </div>
         </div>
+      )}
+
+      {editingUser && (
+        <UpdateUserModal
+          user={editingUser}
+          onClose={() => setEditingUser(null)}
+          onUserUpdated={(message, updatedUser) => {
+            setEditingUser(null);
+            handleUserUpdated(message, updatedUser);
+          }}
+        />
       )}
     </main>
   );

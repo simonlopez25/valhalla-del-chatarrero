@@ -1,4 +1,4 @@
-.btnNewRecord {
+.createButton {
   background-color: var(--primary);
   color: var(--onPrimary);
   border: 1px solid var(--primaryBorder);
@@ -15,15 +15,15 @@
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.btnNewRecord:hover {
+.createButton:hover {
   background-color: var(--primaryHover);
 }
 
-.btnNewRecord:active {
+.createButton:active {
   transform: scale(0.98);
 }
 
-.btnIcon {
+.createButtonIcon {
   flex-shrink: 0;
   stroke: var(--onPrimary);
 }

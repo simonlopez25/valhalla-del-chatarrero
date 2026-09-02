@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { updateUser } from "../../services/updateUserService";
-import { FormField } from "../molecules/formField/FormField";
-import { CustomButton } from "../atoms/customButton/CustomButton";
+import { updateUser } from "../../../services/updateUserService";
+import { FormField } from "../../molecules/formField/FormField";
+import { CustomButton } from "../../atoms/customButton/CustomButton";
 import "./UpdateUserModal.css";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
