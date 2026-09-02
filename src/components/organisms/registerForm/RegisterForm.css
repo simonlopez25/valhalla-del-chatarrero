@@ -11,17 +11,33 @@
 .registerForm h2 {
     font-size: 1.4rem;
     margin-bottom: 10px;
-    color: #fff;
+    color: var(--colorAccent);
 }
 
-/* Aplica esto para forzar que la etiqueta quede arriba y el rectángulo abajo con espacio */
 .registerForm .formField,
 .registerForm label {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    /* Separa la letra del input blanco */
     width: 100%;
+}
+
+.registerForm input,
+.registerForm .customInput {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.registerForm input:focus,
+.registerForm .customInput:focus {
+    border-color: #BD5523;
 }
 
 .feedbackMessage {

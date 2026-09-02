@@ -79,9 +79,9 @@
 
 .formField input,
 .formField select {
-  background-color: var(--input-bg, #0d1119);
+  background-color: #ffffff;
   border: 1px solid var(--border);
-  color: var(--ink-heading);
+  color: #000000;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   padding: 10px 12px;
