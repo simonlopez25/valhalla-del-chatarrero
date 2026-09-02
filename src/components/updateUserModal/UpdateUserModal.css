@@ -11,7 +11,8 @@
 
 .updateModal {
   background-color: var(--panel);
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--borderStrong);
+  border-radius: 8px;
   width: 100%;
   max-width: 460px;
   max-height: 90vh;
@@ -28,8 +29,8 @@
 }
 
 .updateModalHeader h2 {
-  font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-family: var(--fontDisplay);
+  font-size: 1.25rem;
   letter-spacing: 1.5px;
   color: var(--colorAccent);
   text-transform: uppercase;
@@ -39,7 +40,7 @@
 .closeModalButton {
   background: transparent;
   border: none;
-  color: var(--ink-faint);
+  color: var(--inkFaint);
   font-size: 1.4rem;
   line-height: 1;
   cursor: pointer;
@@ -57,65 +58,66 @@
 }
 
 .updateModal form {
-  padding: 22px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
-.formField {
+.updateModal .formField {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+  width: 100%;
 }
 
-.formField label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: var(--ink-faint);
+.updateModal .formField label {
+  color: var(--ink);
 }
 
-.formField input,
-.formField select {
+.updateModal .formField input,
+.updateModal .formField select,
+.updateModal .formField .customInput {
   background-color: #ffffff;
-  border: 1px solid var(--border);
   color: #000000;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
+  border: 1px solid #ccc;
   padding: 10px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
   outline: none;
-  transition: border-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.formField input:focus,
-.formField select:focus {
-  border-color: var(--accent);
+.updateModal .formField input:focus,
+.updateModal .formField select:focus,
+.updateModal .formField .customInput:focus {
+  border-color: #BD5523;
 }
 
-.formField input[aria-invalid="true"],
-.formField select[aria-invalid="true"] {
+.updateModal .formField input[aria-invalid="true"],
+.updateModal .formField select[aria-invalid="true"] {
   border-color: var(--danger);
 }
 
-.formField input:disabled,
-.formField select:disabled {
+.updateModal .formField input:disabled,
+.updateModal .formField select:disabled,
+.updateModal .formField .customInput:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-.fieldError {
-  font-family: var(--font-mono);
+.updateModal .fieldError {
+  font-family: var(--fontMono);
   font-size: 0.72rem;
-  color: var(--danger-soft);
+  color: var(--dangerSoft);
 }
 
-.submitError {
-  font-family: var(--font-mono);
+.updateModal .submitError {
+  font-family: var(--fontMono);
   font-size: 0.78rem;
-  color: var(--danger-soft);
-  border: 1px dashed var(--danger-soft);
+  color: var(--dangerSoft);
+  border: 1px dashed var(--dangerSoft);
   padding: 10px;
   margin: 0;
 }
@@ -127,44 +129,46 @@
   margin-top: 4px;
 }
 
-.cancelButton,
-.submitButton {
-  font-family: var(--font-display);
-  font-size: 0.78rem;
+.updateModal .cancelButton,
+.updateModal .customButton {
+  font-family: var(--fontDisplay);
+  font-size: 0.9rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 10px 16px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.cancelButton {
+.updateModal .cancelButton {
   background-color: transparent;
-  border: 1px solid var(--border-strong);
-  color: var(--ink-muted);
+  border: 1px solid var(--borderStrong);
+  color: var(--inkMuted);
 }
 
-.cancelButton:hover {
+.updateModal .cancelButton:hover {
   background-color: var(--hover);
 }
 
-.submitButton {
-  background-color: var(--primary);
-  border: 1px solid var(--primary-border);
-  color: var(--on-primary);
+.updateModal .customButton {
+  background-color: #BD5523;
+  color: #ffffff;
+  border: none;
 }
 
-.submitButton:hover:not(:disabled) {
-  background-color: var(--primary-hover);
+.updateModal .customButton:hover:not(:disabled) {
+  background-color: #a4481d;
 }
 
-.cancelButton:active,
-.submitButton:active {
+.updateModal .cancelButton:active,
+.updateModal .customButton:active {
   transform: scale(0.98);
 }
 
-.cancelButton:disabled,
-.submitButton:disabled {
+.updateModal .cancelButton:disabled,
+.updateModal .customButton:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
@@ -178,8 +182,8 @@
     flex-direction: column;
   }
 
-  .cancelButton,
-  .submitButton {
+  .updateModal .cancelButton,
+  .updateModal .customButton {
     width: 100%;
   }
 }

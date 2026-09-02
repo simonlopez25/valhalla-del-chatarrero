@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { updateUser } from "../../services/updateUserService";
+import { FormField } from "../molecules/formField/FormField";
+import { CustomButton } from "../atoms/customButton/CustomButton";
 import "./UpdateUserModal.css";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const validUserRoles = ["admin", "customer"];
 const formFields = ["name", "email", "role", "avatar", "password"];
 
-/** Builds the initial form prefilled with the current user data. */
 const getInitialForm = (user) => ({
   name: user?.name || "",
   email: user?.email || "",
@@ -15,12 +16,6 @@ const getInitialForm = (user) => ({
   password: "",
 });
 
-/**
- * Validates a single field and returns an error message or "" when valid.
- * @param {string} field - Field name.
- * @param {string} value - Entered value.
- * @returns {string} Error message or an empty string.
- */
 const validateField = (field, value) => {
   switch (field) {
     case "name":
@@ -46,11 +41,6 @@ const validateField = (field, value) => {
   }
 };
 
-/**
- * Validates the whole form.
- * @param {object} form - Current form values.
- * @returns {object} Map of field -> error message (empty when valid).
- */
 const validateAllFields = (form) => {
   const errors = {};
   formFields.forEach((field) => {
@@ -81,12 +71,6 @@ const serviceErrorMessages = {
   UNEXPECTED_ERROR: "Ocurrió un error inesperado. Inténtalo de nuevo.",
 };
 
-/**
- * Translates a service error into a user-friendly message.
- * @param {unknown} error - Error thrown by the service or the request.
- * @returns {string} User-friendly error message.
-
- */
 const getErrorMessage = (error) => {
   if (!error) return "No se pudo actualizar el registro. Inténtalo de nuevo.";
   const messageByCode = serviceErrorMessages[error.code];
@@ -96,18 +80,12 @@ const getErrorMessage = (error) => {
 
   return error.message || "No se pudo actualizar el registro. Inténtalo de nuevo.";
 };
-/**
- * Modal used to update a user.
- * Sends PUT via Axios (updateUser service, disables the button while
- * submitting and shows validation, error or success messages.
- */
 function UpdateUserModal({ user, onClose, onUserUpdated }) {
   const [form, setForm] = useState(() => getInitialForm(user));
   const [errors, setErrors] = useState({});
   const [submitError, setSubmitError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Close with the Escape key (accessibility), never while submitting.
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape" && !isSubmitting) onClose();
@@ -116,7 +94,6 @@ function UpdateUserModal({ user, onClose, onUserUpdated }) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isSubmitting, onClose]);
 
-  /** Checks whether the form differs from the original values. */
   const hasChanges = () => {
     const initial = getInitialForm(user);
     return (
@@ -131,7 +108,6 @@ function UpdateUserModal({ user, onClose, onUserUpdated }) {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-    // Live validation: clears the field error as soon as it is fixed.
     setErrors((prev) => {
       const next = { ...prev };
       const message = validateField(name, value);
@@ -144,7 +120,6 @@ function UpdateUserModal({ user, onClose, onUserUpdated }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Validate all fields before sending.
     const validationErrors = validateAllFields(form);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -152,7 +127,6 @@ function UpdateUserModal({ user, onClose, onUserUpdated }) {
       return;
     }
 
-    // Avoid unnecessary calls when there are no real changes.
     if (!hasChanges()) {
       setSubmitError("No hay cambios que guardar.");
       return;
@@ -161,7 +135,6 @@ function UpdateUserModal({ user, onClose, onUserUpdated }) {
     setIsSubmitting(true);
     setSubmitError("");
 
-    // Only send the fields supported by the API; password is optional.
     const payload = {
       name: form.name.trim(),
       email: form.email.trim(),
@@ -206,83 +179,62 @@ function UpdateUserModal({ user, onClose, onUserUpdated }) {
         </header>
 
         <form onSubmit={handleSubmit} noValidate>
-          <div className="formField">
-            <label htmlFor="name">Nombre</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              value={form.name}
-              onChange={handleChange}
-              disabled={isSubmitting}
-              aria-invalid={Boolean(errors.name)}
-            />
-            {errors.name && <span className="fieldError">{errors.name}</span>}
-          </div>
+          <FormField
+            id="updateName"
+            labelText="Nombre"
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            disabled={isSubmitting}
+            error={errors.name}
+          />
 
-          <div className="formField">
-            <label htmlFor="email">Email</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              value={form.email}
-              onChange={handleChange}
-              disabled={isSubmitting}
-              aria-invalid={Boolean(errors.email)}
-            />
-            {errors.email && <span className="fieldError">{errors.email}</span>}
-          </div>
+          <FormField
+            id="updateEmail"
+            labelText="Correo Electrónico"
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            disabled={isSubmitting}
+            error={errors.email}
+          />
 
-          <div className="formField">
-            <label htmlFor="role">Clasificación</label>
-            <select
-              id="role"
-              name="role"
-              value={form.role}
-              onChange={handleChange}
-              disabled={isSubmitting}
-              aria-invalid={Boolean(errors.role)}
-            >
-              {validUserRoles.map((role) => (
-                <option key={role} value={role}>
-                  {role}
-                </option>
-              ))}
-            </select>
-            {errors.role && <span className="fieldError">{errors.role}</span>}
-          </div>
+          <FormField
+            id="updateRole"
+            labelText="Clasificación"
+            type="select"
+            name="role"
+            value={form.role}
+            options={validUserRoles}
+            onChange={handleChange}
+            disabled={isSubmitting}
+            error={errors.role}
+          />
 
-          <div className="formField">
-            <label htmlFor="avatar">Avatar (URL)</label>
-            <input
-              id="avatar"
-              name="avatar"
-              type="url"
-              value={form.avatar}
-              onChange={handleChange}
-              disabled={isSubmitting}
-              aria-invalid={Boolean(errors.avatar)}
-            />
-            {errors.avatar && <span className="fieldError">{errors.avatar}</span>}
-          </div>
+          <FormField
+            id="updateAvatar"
+            labelText="Avatar (URL)"
+            type="url"
+            name="avatar"
+            value={form.avatar}
+            onChange={handleChange}
+            disabled={isSubmitting}
+            error={errors.avatar}
+          />
 
-          <div className="formField">
-            <label htmlFor="password">Nueva contraseña (opcional)</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              value={form.password}
-              onChange={handleChange}
-              placeholder="Dejar vacío si no se cambia"
-              disabled={isSubmitting}
-              aria-invalid={Boolean(errors.password)}
-            />
-            {errors.password && (
-              <span className="fieldError">{errors.password}</span>
-            )}
-          </div>
+          <FormField
+            id="updatePassword"
+            labelText="Nueva contraseña (opcional)"
+            type="password"
+            name="password"
+            value={form.password}
+            placeholder="Dejar vacío si no se cambia"
+            onChange={handleChange}
+            disabled={isSubmitting}
+            error={errors.password}
+          />
 
           {submitError && <p className="submitError">{submitError}</p>}
 
@@ -295,9 +247,11 @@ function UpdateUserModal({ user, onClose, onUserUpdated }) {
             >
               CANCELAR
             </button>
-            <button type="submit" className="submitButton" disabled={isSubmitting}>
-              {isSubmitting ? "ACTUALIZANDO..." : "ACTUALIZAR"}
-            </button>
+            <CustomButton
+              label={isSubmitting ? "ACTUALIZANDO..." : "ACTUALIZAR"}
+              type="submit"
+              disabled={isSubmitting}
+            />
           </div>
         </form>
       </section>

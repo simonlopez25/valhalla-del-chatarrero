@@ -37,7 +37,7 @@ export const RegisterForm = () => {
                 password: "",
                 avatar: "https://picsum.photos/800",
             });
-        } catch (error) {
+        } catch {
             setFeedbackMessage("Hubo un error al registrar el usuario. Revisa los datos.");
         } finally {
             setIsLoading(false);
