@@ -1,7 +1,7 @@
 // src/components/editProductForm/EditProductForm.jsx
 import React, { useState, useEffect } from "react";
-import { getProduct, updateProduct } from '@/services/productsService';
-import './EditProductForm.css';
+import { getProduct, updateProduct } from '../../services/productsService';
+import './FormProductsEdit.css';
 
 export const EditProductForm = ({ productId, onProductUpdated }) => {
   const [form, setForm] = useState({
