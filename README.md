@@ -350,7 +350,9 @@ valhalla-del-chatarrero/
 
 
 </div>
+## Accesibilidad y Visibilidad
 
+> **Diseñado para todos los supervivientes:** Interfaz 100% accesible y adaptada a la normativa web vigente. Máximo contraste visual, adaptabilidad a cualquier dispositivo y lectura clara bajo cualquier tormenta digital.
 ---
 
 <p align="center">
