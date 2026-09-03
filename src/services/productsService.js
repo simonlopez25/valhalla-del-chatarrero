@@ -15,6 +15,9 @@ const capsKebabPattern = /^[\p{Lu}0-9]+(?:-[\p{Lu}0-9]+){1,}$/u;
 const pageSize = 100;
 const maxProducts = 400;
 
+export const minTitleLength =1;
+export const minDescriptionLength =1;
+
 const hasGeneratedIdToken = (title) =>
   String(title)
     .split(/[^A-Za-z0-9]+/)
@@ -82,8 +85,8 @@ export const isJunkProduct = (product) => {
   ];
 
   if (productPrice(product) === 0) return true;
-  if (title.length < 6) return true;
-  if (description.length < 40) return true;
+  if (title.length < minTitleLength) return true;
+  if (description.length < minDescriptionLength) return true;
   if (!categoryName || generatedCategoryPattern.test(categoryName)) return true;
   if (capsKebabPattern.test(categoryName)) return true;
   if (patterns.some((pattern) => pattern.test(title))) return true;
@@ -139,3 +142,9 @@ export const getVisibleProducts = async () => {
 export const deleteProduct = async (id) => {
   await axios.delete(`https://api.escuelajs.co/api/v1/products/${id}`);
 };
+
+export const createProduct = (productData) =>
+  request("/products", { method: "POST", data: productData });
+
+export const updateProduct = (id, productData) =>
+  request(`/products/${id}`, { method: "PUT", data: productData });

@@ -26,7 +26,7 @@
 
 @media (max-width: 420px) {
   .weatherCondition {
-    display: none; /* Oculta la descripción del clima para dejar solo temperatura e icono */
+    display: none;
   }
 
   .weatherWidget {

@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./HeroSection.css";
 import apocalypseImage from "../../../assets/img/apocalypse.jpg";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       className="heroWrapper"
@@ -22,7 +25,7 @@ const HeroSection = () => {
         que los saqueadores se lo lleven todo.
       </p>
       <div className="actionGroup">
-        <button type="button" className="primaryButton">EXPLORAR INVENTARIO <b>→</b></button>
+        <button type="button" className="primaryButton" onClick={() => navigate('/showcase')}>EXPLORAR INVENTARIO <b>→</b></button>
         <button type="button" className="secondaryButton">VER MAPA SECTORIAL <b>↗</b></button>
       </div>
       </div>

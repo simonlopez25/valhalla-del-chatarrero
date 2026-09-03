@@ -19,6 +19,14 @@ export default function ShowcasePage() {
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const handleProductUpdated = (updatedProduct) => {
+    setItems((currentItems) =>
+      currentItems.map((item) =>
+        String(item.id) === String(updatedProduct.id) ? updatedProduct : item
+      )
+    );
+  };
+
   const handleDeleteProduct = (productId) => {
     setItems((currentItems) =>
       currentItems.filter((item) => String(item.id) !== String(productId))
@@ -130,7 +138,12 @@ export default function ShowcasePage() {
 
       <div className="showcaseGrid">
         {pageItems.map((item) => (
-          <ShowcaseCard key={item.id} item={item} onDeleteProduct={handleDeleteProduct} />
+          <ShowcaseCard
+            key={item.id}
+            item={item}
+            onDeleteProduct={handleDeleteProduct}
+            onEditProduct={handleProductUpdated}
+          />
         ))}
       </div>
 

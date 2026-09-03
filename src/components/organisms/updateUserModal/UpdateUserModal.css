@@ -1,0 +1,189 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.updateModal {
+  background-color: var(--panel);
+  border: 1px solid var(--borderStrong);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.updateModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border);
+}
+
+.updateModalHeader h2 {
+  font-family: var(--fontDisplay);
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  color: var(--colorAccent);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.closeModalButton {
+  background: transparent;
+  border: none;
+  color: var(--inkFaint);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+  transition: color 0.2s ease;
+}
+
+.closeModalButton:hover {
+  color: var(--danger);
+}
+
+.closeModalButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.updateModal form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.updateModal .formField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.updateModal .formField label {
+  color: var(--ink);
+}
+
+.updateModal .formField input,
+.updateModal .formField select,
+.updateModal .formField .customInput {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.updateModal .formField input:focus,
+.updateModal .formField select:focus,
+.updateModal .formField .customInput:focus {
+  border-color: #BD5523;
+}
+
+.updateModal .formField input[aria-invalid="true"],
+.updateModal .formField select[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
+.updateModal .formField input:disabled,
+.updateModal .formField select:disabled,
+.updateModal .formField .customInput:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.updateModal .fieldError {
+  font-family: var(--fontMono);
+  font-size: 0.72rem;
+  color: var(--dangerSoft);
+}
+
+.updateModal .submitError {
+  font-family: var(--fontMono);
+  font-size: 0.78rem;
+  color: var(--dangerSoft);
+  border: 1px dashed var(--dangerSoft);
+  padding: 10px;
+  margin: 0;
+}
+
+.updateModalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.updateModal .cancelButton,
+.updateModal .customButton {
+  font-family: var(--fontDisplay);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.updateModal .cancelButton {
+  background-color: transparent;
+  border: 1px solid var(--borderStrong);
+  color: var(--inkMuted);
+}
+
+.updateModal .cancelButton:hover {
+  background-color: var(--hover);
+}
+
+.updateModal .customButton {
+  background-color: #BD5523;
+  color: #ffffff;
+  border: none;
+}
+
+.updateModal .customButton:hover:not(:disabled) {
+  background-color: #a4481d;
+}
+
+.updateModal .cancelButton:active,
+.updateModal .customButton:active {
+  transform: scale(0.98);
+}
+
+.updateModal .cancelButton:disabled,
+.updateModal .customButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 560px) {
+  .updateModal form {
+    padding: 16px;
+  }
+
+  .updateModalActions {
+    flex-direction: column;
+  }
+
+  .updateModal .cancelButton,
+  .updateModal .customButton {
+    width: 100%;
+  }
+}

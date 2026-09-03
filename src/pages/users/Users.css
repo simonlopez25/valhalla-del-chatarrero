@@ -138,6 +138,15 @@ tbody tr:hover {
   margin-bottom: 20px;
 }
 
+.usersSuccess {
+  background-color: var(--panel);
+  border: 1px dashed var(--green-soft);
+  color: var(--green-soft);
+  font-family: var(--font-mono);
+  padding: 12px;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 700px) {
   .usersMainContainer {
     padding: 20px;

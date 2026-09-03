@@ -112,6 +112,17 @@
   border-color: var(--dangerSoft);
 }
 
+.showcaseEditButton {
+  width: 32px;
+  height: 32px;
+  border-color: var(--borderStrong);
+  background: transparent;
+}
+
+.showcaseEditButton:hover {
+  border-color: var(--accent);
+}
+
 .showcaseAddButton {
   background: transparent;
   color: var(--accent);

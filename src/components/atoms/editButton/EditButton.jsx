@@ -1,12 +1,13 @@
 import "./EditButton.css";
 
-function EditButton({ onClick }) {
+function EditButton({ onClick, ariaLabel = "Editar", className = "" }) {
   return (
     <button
-      className="actionButton editButton"
+      className={`actionButton editButton ${className}`.trim()}
       onClick={onClick}
       title="Editar"
       type="button"
+      aria-label={ariaLabel}
     >
       <svg
         className="actionIcon"

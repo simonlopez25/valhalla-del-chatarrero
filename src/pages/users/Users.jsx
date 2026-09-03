@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import NewSurvivorButton from "../../components/atoms/newSurvivorButton/NewSurvivorButton";
+import CreateButton from "../../components/atoms/createButton/CreateButton";
 import EditButton from "../../components/atoms/editButton/EditButton";
 import DeleteButton from "../../components/atoms/deleteButton/DeleteButton";
 import ViewButton from "../../components/atoms/viewButton/ViewButton";
 import Pagination from "../../components/molecules/pagination/Pagination";
-import { deleteUser } from "../../services/UserServicesDelete";
+import UpdateUserModal from "../../components/organisms/updateUserModal/UpdateUserModal";
+import { deleteUser } from "../../services/UserServicesDelete.js";
 import { fetchAllUsers } from "../../services/usersService";
 import "./Users.css";
 
@@ -12,11 +13,13 @@ function Users() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   
   
   const [showModal, setShowModal] = useState(false);
   const [userToDelete, setUserToDelete] = useState(null);
+  const [editingUser, setEditingUser] = useState(null);
 
   const usersPerPage = 10;
   
@@ -84,6 +87,14 @@ function Users() {
     setUserToDelete(null);
   };
 
+  const handleUserUpdated = (message, updatedUser) => {
+    setUsers((prevUsers) =>
+      prevUsers.map((user) => (user.id === updatedUser.id ? updatedUser : user))
+    );
+    setSuccessMessage(message);
+    setTimeout(() => setSuccessMessage(""), 4000);
+  };
+
   return (
     <main className="usersMainContainer">
       <div className="usersHeaderSection">
@@ -91,10 +102,12 @@ function Users() {
           <h1>REGISTRO DE SUPERVIVIENTES</h1>
           <p>Administración del censo del páramo. Añade, modifica o purga registros de individuos conocidos en el sector.</p>
         </div>
-        <NewSurvivorButton />
+        <CreateButton />
       </div>
 
       {error && <p className="usersError">{error}</p>}
+
+      {successMessage && <p className="usersSuccess">{successMessage}</p>}
 
       <div className="tableContainer">
         <table>
@@ -128,7 +141,10 @@ function Users() {
                 <td>
                   <div className="actionButtons">
                     <ViewButton userId={user.id} />
-                    <EditButton userId={user.id} />
+                    <EditButton
+                      onClick={() => setEditingUser(user)}
+                      ariaLabel={`Actualizar usuario ${user?.name ?? ""}`}
+                    />
                     <DeleteButton onClick={() => handleDeleteClick(user.id)} />
                   </div>
                 </td>
@@ -163,6 +179,17 @@ function Users() {
             </div>
           </div>
         </div>
+      )}
+
+      {editingUser && (
+        <UpdateUserModal
+          user={editingUser}
+          onClose={() => setEditingUser(null)}
+          onUserUpdated={(message, updatedUser) => {
+            setEditingUser(null);
+            handleUserUpdated(message, updatedUser);
+          }}
+        />
       )}
     </main>
   );
