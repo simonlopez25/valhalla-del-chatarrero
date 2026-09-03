@@ -213,6 +213,43 @@ El sistema implementa una arquitectura basada en componentes para la gestión in
 
 
 
+## 🧪 Testing y Control de Calidad Post-Apocalíptico
+
+Para asegurar que la supervivencia del sistema sea un éxito y que los componentes de la interfaz de chatarreros resistan las condiciones más adversas, el proyecto cuenta con una suite de pruebas automatizadas desarrollada con **Vitest**.
+
+### Protocolo de Ejecución de Pruebas
+
+Para activar los diagnósticos del sistema de forma local y verificar que los circuitos y la lógica funcionan correctamente entre los escombros, introduce el siguiente comando en tu terminal:
+
+```bash
+npm run test
+````
+Nota técnica: Este comando ejecuta el script estipulado en el package.json para realizar un análisis completo con Vitest en modo de ejecución única (run), mostrando el informe de estado de todos los módulos y cerrando el proceso de forma limpia.
+
+Registro de Diagnóstico (Evidencia del Sistema)
+A continuación se adjunta la captura de pantalla oficial que certifica la superación de las pruebas de los componentes del refugio:
+<img width="940" height="118" alt="testing 2" src="https://github.com/user-attachments/assets/314f9d90-8f19-46ec-8667-65adb9d9bb70" />
+## 📁 Carpeteo y Estructura
+
+Se ha implementado una estructura limpia y escalable para facilitar el mantenimiento y la colaboración en el refugio:
+
+* **valhalla-del-chatarrero/**
+  * **`public/`** — Archivos estáticos (imágenes, favicon, etc.)
+  * **`src/`** — Código fuente principal de la aplicación
+    * **`assets/`** — Imágenes, iconos y recursos visuales del páramo
+    * **`components/`** — Componentes reutilizables (Navbar, Card, Table, etc.)
+    * **`pages/`** — Páginas principales (Home, Equipo, Historia, Productos, Usuarios)
+    * **`services/`** — Servicios y lógica de comunicación con la API (CRUD)
+    * **`style/`** — Hojas de estilo global y módulos CSS
+    * **`App.jsx`** — Componente raíz del sistema
+    * **`main.jsx`** — Punto de entrada principal de la aplicación
+  * **`.gitignore`** — Archivos y carpetas ignorados por Git
+  * **`package.json`** — Dependencias y scripts de ejecución del proyecto
+  * **`README.md`** — Documentación oficial del refugio
+  * **`vite.config.js`** — Archivo de configuración de Vite
+
+
+
 <div align="center">
 
 ## 👥 Supervivientes del Clan (Equipo de Desarrollo)
@@ -287,7 +324,10 @@ El sistema implementa una arquitectura basada en componentes para la gestión in
         <img src="https://github.com/Willfredy742.png" width="90" height="90" style="border-radius: 50%; border: 4px solid #BD5523; box-shadow: 0 0 15px #BD5523, inset 0 0 10px #1A1614; background-color: #2B2622;" alt="Wilfredy Salcedo"/><br/>
         <b>Wilfredy Salcedo</b>
       </a><br/>
-      <sub>Frontend Developer</sub>
+      <sub>Frontend Developer</sub><br/><br/>
+      <a href="https://willfredy742.github.io/Portafolio/">
+        <img src="https://img.shields.io/badge/Portafolio-FF5722?style=flat-square&logo=icloud&logoColor=white" alt="Portafolio"/>
+      </a>
     </td>
     <td align="center" width="25%">
       <a href="https://github.com/mjrr39sevilla">
@@ -305,26 +345,8 @@ El sistema implementa una arquitectura basada en componentes para la gestión in
 </div>
 
 
-## 📁 Carpeteo y Estructura
 
-Se ha implementado una estructura de carpetas limpia y escalable para facilitar el mantenimiento y la colaboración:
-````
-valhalla-del-chatarrero/
-├── public/           # Archivos estáticos (imágenes, favicon, etc.)
-├── src/              # Código fuente de la aplicación
-│   ├── assets/       # Imágenes, iconos y recursos visuales
-│   ├── components/   # Componentes reutilizables (Navbar, Card, Table, etc.)
-│   ├── pages/        # Páginas principales de la aplicación (Home, Equipo, Historia, Productos, Usuarios)
-│   ├── services/     # Servicios y lógica de comunicación con la API (CRUD)
-│   ├── style/        # Hojas de estilo global y módulos CSS
-│   ├── App.jsx       # Componente raíz
-│   └── main.jsx      # Punto de entrada de la aplicación
-├── .gitignore        # Archivos a ignorar por Git
-├── package.json      # Dependencias y scripts del proyecto
-├── README.md         # Documentación del proyecto
-└── vite.config.js    # Configuración de Vite
 
-````
 > *“En el páramo digital, cada componente cuenta una historia y cada línea de código es una chispa de supervivencia. ¡El búnker sigue abierto!”*
 ---
 
