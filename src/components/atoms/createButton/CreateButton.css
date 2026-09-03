@@ -1,0 +1,29 @@
+.createButton {
+  background-color: var(--primary);
+  color: var(--onPrimary);
+  border: 1px solid var(--primaryBorder);
+  padding: 10px 16px;
+  font-family: var(--fontDisplay);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.createButton:hover {
+  background-color: var(--primaryHover);
+}
+
+.createButton:active {
+  transform: scale(0.98);
+}
+
+.createButtonIcon {
+  flex-shrink: 0;
+  stroke: var(--onPrimary);
+}

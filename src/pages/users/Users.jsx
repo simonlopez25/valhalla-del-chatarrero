@@ -1,23 +1,32 @@
 import { useEffect, useState } from "react";
-import NewSurvivorButton from "../../components/newSurvivorButton/NewSurvivorButton";
-import EditButton from "../../components/editButton/EditButton";
-import DeleteButton from "../../components/deleteButton/DeleteButton";
-import ViewButton from "../../components/viewButton/ViewButton";
-import Pagination from "../../components/pagination/Pagination";
-import { fetchUsers } from "../../services/userService";
+import CreateButton from "../../components/atoms/createButton/CreateButton";
+import EditButton from "../../components/atoms/editButton/EditButton";
+import DeleteButton from "../../components/atoms/deleteButton/DeleteButton";
+import Pagination from "../../components/molecules/pagination/Pagination";
+import UpdateUserModal from "../../components/organisms/updateUserModal/UpdateUserModal";
+import { deleteUser } from "../../services/UserServicesDelete.js";
+import { fetchAllUsers } from "../../services/usersService";
 import "./Users.css";
 
 function Users() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  
+  
+  const [showModal, setShowModal] = useState(false);
+  const [userToDelete, setUserToDelete] = useState(null);
+  const [editingUser, setEditingUser] = useState(null);
+
   const usersPerPage = 10;
+  
 
   useEffect(() => {
     const loadUsers = async () => {
       try {
-        setUsers(await fetchUsers());
+        setUsers(await fetchAllUsers());
       } catch {
         setError("No se pudieron cargar los registros de usuarios.");
       } finally {
@@ -49,17 +58,55 @@ function Users() {
     }
   };
 
+  
+  const handleDeleteClick = (id) => {
+    setUserToDelete(id);
+    setShowModal(true);
+  };
+
+  
+  const confirmDelete = async () => {
+    if (!userToDelete) return;
+
+    try {
+      await deleteUser(userToDelete);
+      setUsers(users.filter((user) => user.id !== userToDelete));
+      setShowModal(false);
+      setUserToDelete(null);
+    } catch (err) {
+      console.error("Error al eliminar el usuario:", err);
+      setError("No se pudo eliminar el registro.");
+      setShowModal(false);
+    }
+  };
+
+  
+  const cancelDelete = () => {
+    setShowModal(false);
+    setUserToDelete(null);
+  };
+
+  const handleUserUpdated = (message, updatedUser) => {
+    setUsers((prevUsers) =>
+      prevUsers.map((user) => (user.id === updatedUser.id ? updatedUser : user))
+    );
+    setSuccessMessage(message);
+    setTimeout(() => setSuccessMessage(""), 4000);
+  };
+
   return (
     <main className="usersMainContainer">
       <div className="usersHeaderSection">
         <div>
-          <h1>REGISTRO DE SOBREVIVIENTES</h1>
+          <h1>REGISTRO DE SUPERVIVIENTES</h1>
           <p>Administración del censo del páramo. Añade, modifica o purga registros de individuos conocidos en el sector.</p>
         </div>
-        <NewSurvivorButton />
+        <CreateButton />
       </div>
 
       {error && <p className="usersError">{error}</p>}
+
+      {successMessage && <p className="usersSuccess">{successMessage}</p>}
 
       <div className="tableContainer">
         <table>
@@ -92,9 +139,11 @@ function Users() {
                 </td>
                 <td>
                   <div className="actionButtons">
-                    <ViewButton userId={user.id} />
-                    <EditButton userId={user.id} />
-                    <DeleteButton userId={user.id} />
+                    <EditButton
+                      onClick={() => setEditingUser(user)}
+                      ariaLabel={`Actualizar usuario ${user?.name ?? ""}`}
+                    />
+                    <DeleteButton onClick={() => handleDeleteClick(user.id)} />
                   </div>
                 </td>
               </tr>
@@ -102,7 +151,7 @@ function Users() {
           </tbody>
         </table>
 
-        <Pagination 
+        <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
           currentCount={currentUsers.length}
@@ -111,6 +160,35 @@ function Users() {
           onNext={handleNext}
         />
       </div>
+
+      
+      {showModal && (
+        <div className="modalOverlay">
+          <div className="modalCard">
+            <h2>⚠️ ELIMINAR REGISTRO</h2>
+            <p>¿Estás seguro de que deseas eliminar este superviviente del censo del páramo?</p>
+            <div className="modalButtons">
+              <button className="modalBtnCancel" onClick={cancelDelete}>
+                Cancelar
+              </button>
+              <button className="modalBtnConfirm" onClick={confirmDelete}>
+                Confirmar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {editingUser && (
+        <UpdateUserModal
+          user={editingUser}
+          onClose={() => setEditingUser(null)}
+          onUserUpdated={(message, updatedUser) => {
+            setEditingUser(null);
+            handleUserUpdated(message, updatedUser);
+          }}
+        />
+      )}
     </main>
   );
 }

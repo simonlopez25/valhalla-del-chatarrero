@@ -1,8 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getVisibleProducts, productPrice } from '../../services/productsService';
-import VitrinaFilter from '../../components/vitrinaFilter/VitrinaFilter';
-import VitrinaCard from '../../components/vitrinaCard/VitrinaCard';
-import VitrinaPagination from '../../components/vitrinaPagination/VitrinaPagination';
+import ShowcaseFilter from '../../components/molecules/showcaseFilter/ShowcaseFilter';
+import ShowcaseCard from '../../components/molecules/showcaseCard/ShowcaseCard';
+import ShowcasePagination from '../../components/molecules/showcasePagination/ShowcasePagination';
+import ProductModal from '../../components/organisms/product-modal/index.js';
 import './ShowcasePage.css';
 
 const itemsPerPage = 20;
@@ -12,12 +13,27 @@ export default function ShowcasePage() {
   const [items, setItems] = useState([]);
   const [activeCategoryId, setActiveCategoryId] = useState(allCategories);
   const [lastCategoryId, setLastCategoryId] = useState(allCategories);
-  const [sort, setSort] = useState('price-asc');
+  const [sort, setSort] = useState('priceAsc');
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  if (lastCategoryId !== activeCategoryId) {
+  const handleProductUpdated = (updatedProduct) => {
+    setItems((currentItems) =>
+      currentItems.map((item) =>
+        String(item.id) === String(updatedProduct.id) ? updatedProduct : item
+      )
+    );
+  };
+
+  const handleDeleteProduct = (productId) => {
+    setItems((currentItems) =>
+      currentItems.filter((item) => String(item.id) !== String(productId))
+    );
+  };
+
+ if (lastCategoryId !== activeCategoryId) {
     setLastCategoryId(activeCategoryId);
     setPage(1);
   }
@@ -67,7 +83,7 @@ export default function ShowcasePage() {
   const sortedItems = useMemo(() => {
     const arr = [...filteredItems];
     arr.sort((a, b) =>
-      sort === 'price-desc'
+      sort === 'priceDesc'
         ? productPrice(b) - productPrice(a)
         : productPrice(a) - productPrice(b)
     );
@@ -82,32 +98,37 @@ export default function ShowcasePage() {
   );
 
   if (loading && !items.length) {
-    return <div className="vitrinaState">Cargando vitrina...</div>;
+    return <div className="showcaseState">Cargando vitrina...</div>;
   }
 
   if (error && !items.length) {
     return (
-      <div className="vitrinaState vitrinaState--error">
+      <div className="showcaseState showcaseStateError">
         Error al cargar: {error.message}
       </div>
     );
   }
 
   return (
-    <div className="vitrinaPage">
-      <header className="vitrinaHeader">
+    <div className="showcasePage">
+      <header className="showcaseHeader">
         <div>
-          <p className="vitrinaKicker">MERCADO SCAVENGER // TRANSMISIÓN 07</p>
+          <p className="showcaseKicker">MERCADO SCAVENGER // TRANSMISIÓN 07</p>
           <h1>VITRINA DEL CHATARRERO</h1>
           <p>
             Componentes vitales recuperados de la ruina del viejo mundo. Chips fritos, cables
             pelados y pantallas rajadas. Todo se vende &quot;tal cual&quot;.
           </p>
         </div>
-        <span className="vitrinaCount">{sortedItems.length} ARTEFACTOS</span>
+        <div className="showcaseHeaderActions">
+          <button type="button" className="showcaseCreateButton" onClick={() => setIsModalOpen(true)}>
+            NUEVO PRODUCTO
+          </button>
+          <span className="showcaseCount">{sortedItems.length} ARTEFACTOS</span>
+        </div>
       </header>
 
-      <VitrinaFilter
+      <ShowcaseFilter
         categories={categories}
         activeCategoryId={activeCategoryId}
         sort={sort}
@@ -115,13 +136,20 @@ export default function ShowcasePage() {
         onSortChange={setSort}
       />
 
-      <div className="vitrinaGrid">
+      <div className="showcaseGrid">
         {pageItems.map((item) => (
-          <VitrinaCard key={item.id} item={item} />
+          <ShowcaseCard
+            key={item.id}
+            item={item}
+            onDeleteProduct={handleDeleteProduct}
+            onEditProduct={handleProductUpdated}
+          />
         ))}
       </div>
 
-      <VitrinaPagination page={currentPage} totalPages={totalPages} onPageChange={setPage} />
+      <ShowcasePagination page={currentPage} totalPages={totalPages} onPageChange={setPage} />
+
+      <ProductModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

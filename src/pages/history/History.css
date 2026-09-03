@@ -1,10 +1,26 @@
 .historyPage {
-  background-color: rgba(23, 19, 15, 0.8);
+  background-image: 
+    linear-gradient(rgba(22, 19, 17, 0.8), rgba(22, 19, 17, 0.8)),
+    url('../../assets/img/background-history.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 3rem 1rem;
+  
+
+  margin: -32px;
+  width: calc(100% + 64px);
+}
+
+@media (max-width: 600px) {
+  .historyPage {
+    margin: -20px;
+    width: calc(100% + 40px);
+  }
 }
 
 @media (max-width: 480px) {
@@ -12,3 +28,5 @@
     padding: 1.5rem 0.5rem;
   }
 }
+
+ 

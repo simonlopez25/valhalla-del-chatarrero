@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500&family=Work+Sans:wght@400;500&display=swap');
+
+:root {
+  --historyColorCardBg: #1F1B19;
+  --historyColorCardBorder: #57423A;
+  --historyColorTitle: #FFB597;
+  --historyColorDate: #FFB965;
+  --historyColorImageBg: #1F1B19;
+  --historyColorImageBorder: #57423A;
+  --historyColorText: #DDC0B6;
+  --historyColorQuoteBg: rgba(46, 41, 39, 0.8);
+  --historyColorQuoteBorder: #93000A;
+}
+
+.historyComp {
+  box-sizing: border-box;
+  position: relative;
+  background-color: var(--historyColorCardBg);
+  border: 1px solid var(--historyColorCardBorder);
+  color: var(--historyColorText);
+  padding: 3rem 2rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: 'Work Sans', sans-serif;
+  border-radius: 2px;
+}
+
+.historyComp h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  color: var(--historyColorTitle);
+  font-size: 64px;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.historyDate {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: var(--historyColorDate);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--historyColorCardBorder);
+}
+
+.historyText {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 1rem; 
+  color: var(--historyColorText);
+  text-align: left;
+}
+
+.archiveImage {
+  position: relative;
+  margin: 3.5rem 0;
+  border: 2px solid var(--historyColorCardBorder);
+  border-radius: 4px;
+  padding: 1.25rem;
+  background-color: var(--historyColorImageBg);
+}
+
+.archiveCorner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--historyColorCardBorder);
+  z-index: 2;
+}
+
+.archiveCornerTopLeft { top: -6px; left: -6px; }
+.archiveCornerTopRight { top: -6px; right: -6px; }
+.archiveCornerBottomLeft { bottom: -6px; left: -6px; }
+.archiveCornerBottomRight { bottom: -6px; right: -6px; }
+
+.archiveImage img {
+  width: 100%;
+  aspect-ratio: 766 / 470;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(40%) contrast(100%);
+}
+
+.archiveImageLabel {
+  background-color: #14100D;
+  color: var(--historyColorText);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  border: 1px solid var(--historyColorImageBorder);
+}
+
+.archiveImage figcaption {
+  font-family: 'JetBrains Mono', monospace;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--historyColorTitle);
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+}
+.historyQuote {
+  border-left: 3px solid var(--historyColorQuoteBorder);
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  font-family: 'Work Sans', sans-serif;
+  font-style: italic;
+  background-color: #14100D;
+  color: var(--historyColorText);
+}
+
+.historyQuote p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.historyQuoteAuthor {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--historyColorDate);
+  text-transform: uppercase;
+}
+.historyFooter {
+  position: relative;
+  min-height: 190px;
+}
+
+.approvalSeal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 128px;
+  height: 128px;
+  opacity: 1; 
+  transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+  .historyFooter {
+    min-height: 120px;
+  }
+
+  .historyComp h1 {
+    font-size: 36px;
+  }
+
+  .historyDate {
+    font-size: 12px;
+  }
+
+  .historyText {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .historyQuote {
+    padding: 1rem 1.25rem;
+  }
+
+  .historyQuote p {
+    font-size: 1rem;
+  }
+
+ .approvalSeal {
+  width: 70px; 
+  height: 70px;
+  bottom: 0;
+  right: 0;
+}
+}
+
+@media (max-width: 480px) {
+  .historyComp h1 {
+    font-size: 28px;
+    letter-spacing: 0.5px;
+  }
+
+  .historyDate {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .historyText {
+    font-size: 13px;
+  }
+}

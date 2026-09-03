@@ -1,21 +1,30 @@
 import request from './apiClient';
+import axios from 'axios';
 
 const fakeProductPatterns = [/^title-[a-f0-9-]+$/i, /^desc-[a-f0-9-]+$/i];
 const machineTitlePattern =
   /^(title|titulo|desc|descripcion|name|nombre|test|prueba|producto|catalog[-_ ]?item|item|sku|node)(?:[-_ ]|$)/i;
-const uuidTailPattern = /[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
+const uuidTailPattern =
+  /[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 const spamCharsPattern = /(.)\1{3,}/u;
 const slugTitlePattern = /^\S{40,}$/;
 const hexFragmentPattern = /[a-f0-9]{8,}/i;
 const generatedCategoryPattern = /^(catalog|test|fake|demo)[-_ ]/i;
 const capsKebabPattern = /^[\p{Lu}0-9]+(?:-[\p{Lu}0-9]+){1,}$/u;
 
+const pageSize = 100;
+const maxProducts = 400;
+
+export const minTitleLength =1;
+export const minDescriptionLength =1;
+
 const hasGeneratedIdToken = (title) =>
   String(title)
     .split(/[^A-Za-z0-9]+/)
     .filter(Boolean)
     .some(
-      (token) => token.length >= 8 && /[0-9]/.test(token) && !/[aeiou]/i.test(token)
+      (token) =>
+        token.length >= 8 && /[0-9]/.test(token) && !/[aeiou]/i.test(token),
     );
 
 const invalidImagePatterns = [
@@ -47,7 +56,9 @@ const normalizeImages = (rawImages) => {
 };
 
 export const resolveProductImage = (product) => {
-  const usable = normalizeImages(product?.images).find((url) => isValidImageUrl(url));
+  const usable = normalizeImages(product?.images).find((url) =>
+    isValidImageUrl(url),
+  );
   if (usable) return usable;
   return `https://picsum.photos/seed/${Number(product?.id) || 'desconocido'}/600/600`;
 };
@@ -74,8 +85,8 @@ export const isJunkProduct = (product) => {
   ];
 
   if (productPrice(product) === 0) return true;
-  if (title.length < 6) return true;
-  if (description.length < 40) return true;
+  if (title.length < minTitleLength) return true;
+  if (description.length < minDescriptionLength) return true;
   if (!categoryName || generatedCategoryPattern.test(categoryName)) return true;
   if (capsKebabPattern.test(categoryName)) return true;
   if (patterns.some((pattern) => pattern.test(title))) return true;
@@ -86,7 +97,12 @@ export const isJunkProduct = (product) => {
 
 export const getCategories = () => request('/categories');
 
-export const getProducts = ({ limit = 50, offset = 0, signal, ...filters } = {}) => {
+export const getProducts = ({
+  limit = 50,
+  offset = 0,
+  signal,
+  ...filters
+} = {}) => {
   const params = new URLSearchParams();
 
   params.set('limit', String(limit));
@@ -102,9 +118,6 @@ export const getProducts = ({ limit = 50, offset = 0, signal, ...filters } = {})
 };
 
 export const getProduct = (id) => request(`/products/${id}`);
-
-const pageSize = 100;
-const maxProducts = 400;
 
 const fetchAllProducts = async () => {
   const collected = [];
@@ -126,3 +139,12 @@ export const getVisibleProducts = async () => {
   return products.filter((product) => !isJunkProduct(product));
 };
 
+export const deleteProduct = async (id) => {
+  await axios.delete(`https://api.escuelajs.co/api/v1/products/${id}`);
+};
+
+export const createProduct = (productData) =>
+  request("/products", { method: "POST", data: productData });
+
+export const updateProduct = (id, productData) =>
+  request(`/products/${id}`, { method: "PUT", data: productData });

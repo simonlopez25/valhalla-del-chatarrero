@@ -1,4 +1,4 @@
-import HistorySection from '../../components/historySection/HistorySection';
+import HistorySection from '../../components/organisms/historySection/HistorySection';
 import './History.css';
 
 function History() {

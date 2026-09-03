@@ -1,11 +1,11 @@
-.vitrinaPage {
+.showcasePage {
   padding: 2rem 2rem 3rem;
   max-width: 1400px;
   margin: 0 auto;
   color: var(--ink);
 }
 
-.vitrinaHeader {
+.showcaseHeader {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -15,67 +15,101 @@
   margin-bottom: 1.5rem;
 }
 
-.vitrinaKicker {
+.showcaseKicker {
   color: var(--primary);
-  font: 0.68rem/1 var(--font-mono);
+  font: 0.68rem/1 var(--fontMono);
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
 
-.vitrinaHeader h1 {
-  font-family: var(--font-display);
+.showcaseHeader h1 {
+  font-family: var(--fontDisplay);
   text-transform: uppercase;
   letter-spacing: 0.12rem;
-  color: var(--ink-heading);
+  color: var(--colorAccent);
   font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
-.vitrinaHeader p {
-  color: var(--ink-muted);
-  font-family: var(--font-mono);
+.showcaseHeader p {
+  color: var(--inkMuted);
+  font-family: var(--fontMono);
   font-size: 0.8rem;
   line-height: 1.6;
   margin-top: 0.6rem;
   max-width: 760px;
 }
 
-.vitrinaCount {
+.showcaseHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.showcaseCreateButton {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--fontDisplay);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.55rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.showcaseCreateButton:hover {
+  background: var(--colorAccentSoft);
+}
+
+.showcaseCount {
   flex-shrink: 0;
   color: var(--green);
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   font-size: 0.72rem;
   letter-spacing: 1px;
   white-space: nowrap;
 }
 
-.vitrinaGrid {
+.showcaseHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.showcaseGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.25rem;
 }
 
-.vitrinaState {
+.showcaseState {
   color: var(--accent);
   background: var(--panel);
   border: 1px dashed var(--accent);
-  font-family: var(--font-mono);
+  font-family: var(--fontMono);
   letter-spacing: 0.5px;
   padding: 1rem;
   margin: 1rem 0;
 }
 
-.vitrinaState--error {
-  color: var(--danger-soft);
-  border-color: var(--danger-soft);
+.showcaseStateError {
+  color: var(--dangerSoft);
+  border-color: var(--dangerSoft);
 }
 
 @media (max-width: 720px) {
-  .vitrinaPage {
+  .showcasePage {
     padding: 1rem 1rem 2rem;
   }
 
-  .vitrinaHeader {
+  .showcaseHeader {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .showcaseHeaderActions {
+    width: 100%;
+    justify-content: space-between;
   }
 }
