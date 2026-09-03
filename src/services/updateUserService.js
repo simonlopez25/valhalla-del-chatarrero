@@ -9,7 +9,7 @@ const validUserRoles = ["admin", "customer"];
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export class UserServiceError extends Error {
-  constructor(message, { status = null, code = "USER_SERVICE_ERROR", cause } = {}) {
+  constructor(message, { status = null, code = "userServiceError", cause } = {}) {
     super(message);
     this.name = "UserServiceError";
     this.status = status;
@@ -23,16 +23,16 @@ const isNonEmptyString = (value) =>
 
 const validateUserId = (id) => {
   if (id === undefined || id === null || String(id).trim() === "") {
-    throw new UserServiceError("A valid user ID is required.", {
-      code: "MISSING_USER_ID",
+    throw new UserServiceError("Se requiere un ID de usuario válido.", {
+      code: "missingUserId",
     });
   }
 
   const numericId = Number(id);
 
   if (!Number.isInteger(numericId) || numericId <= 0) {
-    throw new UserServiceError("The user ID must be a positive integer.", {
-      code: "INVALID_USER_ID",
+    throw new UserServiceError("El ID de usuario debe ser un número entero positivo.", {
+      code: "invalidUserId",
     });
   }
 
@@ -41,8 +41,8 @@ const validateUserId = (id) => {
 
 const validatePayload = (payload) => {
   if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
-    throw new UserServiceError("The update payload must be a valid object.", {
-      code: "INVALID_PAYLOAD",
+    throw new UserServiceError("Los datos de actualización deben ser un objeto válido.", {
+      code: "invalidPayload",
     });
   }
 
@@ -50,8 +50,8 @@ const validatePayload = (payload) => {
 
   if (payload.name !== undefined) {
     if (!isNonEmptyString(payload.name)) {
-      throw new UserServiceError("The user name must be a non-empty string.", {
-        code: "INVALID_NAME",
+      throw new UserServiceError("El nombre de usuario debe ser un texto que no esté vacío.", {
+        code: "invalidName",
       });
     }
     fields.name = payload.name.trim();
@@ -60,8 +60,8 @@ const validatePayload = (payload) => {
   if (payload.email !== undefined) {
     const email = String(payload.email).trim();
     if (!emailPattern.test(email)) {
-      throw new UserServiceError("The email address is not valid.", {
-        code: "INVALID_EMAIL",
+      throw new UserServiceError("La dirección de correo electrónico no es válida.", {
+        code: "invalidEmail",
       });
     }
     fields.email = email;
@@ -70,8 +70,8 @@ const validatePayload = (payload) => {
   if (payload.role !== undefined) {
     if (!validUserRoles.includes(payload.role)) {
       throw new UserServiceError(
-        `The role must be one of: ${validUserRoles.join(", ")}.`,
-        { code: "INVALID_ROLE" }
+        `El rol debe ser uno de los siguientes: ${validUserRoles.join(", ")}.`,
+        { code: "invalidRole" }
       );
     }
     fields.role = payload.role;
@@ -79,8 +79,8 @@ const validatePayload = (payload) => {
 
   if (payload.avatar !== undefined) {
     if (!isNonEmptyString(payload.avatar)) {
-      throw new UserServiceError("The avatar must be a non-empty URL string.", {
-        code: "INVALID_AVATAR",
+      throw new UserServiceError("El avatar debe ser una URL de texto válida y no vacía.", {
+        code: "invalidAvatar",
       });
     }
     fields.avatar = payload.avatar.trim();
@@ -89,16 +89,16 @@ const validatePayload = (payload) => {
   if (payload.password !== undefined) {
     if (typeof payload.password !== "string" || payload.password.length < 6) {
       throw new UserServiceError(
-        "The password must be at least 6 characters long.",
-        { code: "INVALID_PASSWORD" }
+        "La contraseña debe tener al menos 6 caracteres.",
+        { code: "invalidPassword" }
       );
     }
     fields.password = payload.password;
   }
 
   if (Object.keys(fields).length === 0) {
-    throw new UserServiceError("At least one updatable field must be provided.", {
-      code: "EMPTY_PAYLOAD",
+    throw new UserServiceError("Se debe proporcionar al menos un campo actualizable.", {
+      code: "emptyPayload",
     });
   }
 
@@ -118,11 +118,11 @@ const normalizeError = (error) => {
       const serverMessage =
         data?.message ||
         data?.error ||
-        `The server rejected the request (status ${status}).`;
+        `El servidor rechazó la solicitud (estado ${status}).`;
 
       return new UserServiceError(serverMessage, {
         status,
-        code: "HTTP_ERROR",
+        code: "httpError",
         cause: error,
       });
     }
@@ -131,20 +131,20 @@ const normalizeError = (error) => {
       const isTimeout = error.code === "ECONNABORTED";
       return new UserServiceError(
         isTimeout
-          ? "The request timed out. Please try again."
-          : "Network error: the server could not be reached. Check your connection.",
-        { code: isTimeout ? "TIMEOUT" : "NETWORK_ERROR", cause: error }
+          ? "La solicitud ha expirado (tiempo de espera agotado). Por favor, inténtalo de nuevo."
+          : "Error de red: no se pudo contactar con el servidor. Comprueba tu conexión.",
+        { code: isTimeout ? "timeout" : "networkError", cause: error }
       );
     }
 
-    return new UserServiceError("The request could not be sent.", {
-      code: "REQUEST_SETUP_ERROR",
+    return new UserServiceError("No se pudo enviar la solicitud.", {
+      code: "requestSetupError",
       cause: error,
     });
   }
 
-  return new UserServiceError("Unexpected error while updating the user.", {
-    code: "UNEXPECTED_ERROR",
+  return new UserServiceError("Error inesperado al actualizar el usuario.", {
+    code: "unexpectedError",
     cause: error,
   });
 };
@@ -161,7 +161,7 @@ export const updateUser = async (
     const response = await axios.put(`${usersApiUrl}/${userId}`, data, {
       timeout,
       signal,
-      headers: { "Content-Type": "application/json" },
+      headers: { contentType: "application/json" },
     });
 
     return response.data;

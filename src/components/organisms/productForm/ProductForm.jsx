@@ -3,14 +3,14 @@ import { FormField } from "../../molecules/formField/FormField";
 import { CustomButton } from "../../atoms/customButton/CustomButton";
 import { createProduct, getCategories } from "../../../services/productsService";
 import {
-  EMPTY_PRODUCT_FORM,
+  emptyProductForm,
   getProductFieldErrors,
   getCategoryOptions,
 } from "./productFormHelpers";
 import "./ProductForm.css";
 
 export function ProductForm({ onProductCreated }) {
-  const [form, setForm] = useState(EMPTY_PRODUCT_FORM);
+  const [form, setForm] = useState(emptyProductForm);
   const [categories, setCategories] = useState([]);
   const [fieldErrors, setFieldErrors] = useState({});
   const [feedbackMessage, setFeedbackMessage] = useState("");
@@ -57,7 +57,7 @@ export function ProductForm({ onProductCreated }) {
         images: [form.image.trim()],
       });
 
-      setForm(EMPTY_PRODUCT_FORM);
+      setForm(emptyProductForm);
       setFieldErrors({});
       onProductCreated?.(createdProduct);
     } catch (error) {

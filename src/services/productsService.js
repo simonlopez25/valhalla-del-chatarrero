@@ -14,8 +14,8 @@ const capsKebabPattern = /^[\p{Lu}0-9]+(?:-[\p{Lu}0-9]+){1,}$/u;
 const pageSize = 100;
 const maxProducts = 400;
 
-export const MIN_TITLE_LENGTH = 6;
-export const MIN_DESCRIPTION_LENGTH = 40;
+export const minTitleLength =1;
+export const minDescriptionLength =1;
 
 const hasGeneratedIdToken = (title) =>
   String(title)
@@ -84,8 +84,8 @@ export const isJunkProduct = (product) => {
   ];
 
   if (productPrice(product) === 0) return true;
-  if (title.length < MIN_TITLE_LENGTH) return true;
-  if (description.length < MIN_DESCRIPTION_LENGTH) return true;
+  if (title.length < minTitleLength) return true;
+  if (description.length < minDescriptionLength) return true;
   if (!categoryName || generatedCategoryPattern.test(categoryName)) return true;
   if (capsKebabPattern.test(categoryName)) return true;
   if (patterns.some((pattern) => pattern.test(title))) return true;

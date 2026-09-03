@@ -1,9 +1,9 @@
 import {
-  MIN_TITLE_LENGTH,
-  MIN_DESCRIPTION_LENGTH,
+  minTitleLength,
+  minDescriptionLength,
 } from "../../../services/productsService";
 
-export const EMPTY_PRODUCT_FORM = {
+export const emptyProductForm = {
   title: "",
   price: "",
   description: "",
@@ -11,7 +11,7 @@ export const EMPTY_PRODUCT_FORM = {
   image: "",
 };
 
-const IMAGE_URL_PATTERN = /^https?:\/\/.+/i;
+const imageUrlPattern = /^https?:\/\/.+/i;
 
 export const getCategoryOptions = (categories) => [
   { value: "", label: "Selecciona una categoría" },
@@ -24,8 +24,8 @@ export const getCategoryOptions = (categories) => [
 export const getProductFieldErrors = (form) => {
   const errors = {};
 
-  if (form.title.trim().length < MIN_TITLE_LENGTH) {
-    errors.title = `El título debe tener al menos ${MIN_TITLE_LENGTH} caracteres.`;
+  if (form.title.trim().length < minTitleLength) {
+    errors.title = `El título debe tener al menos ${minTitleLength} caracteres.`;
   }
 
   const price = Number(form.price);
@@ -33,15 +33,15 @@ export const getProductFieldErrors = (form) => {
     errors.price = "El precio debe ser un número mayor que 0.";
   }
 
-  if (form.description.trim().length < MIN_DESCRIPTION_LENGTH) {
-    errors.description = `La descripción debe tener al menos ${MIN_DESCRIPTION_LENGTH} caracteres.`;
+  if (form.description.trim().length < minDescriptionLength) {
+    errors.description = `La descripción debe tener al menos ${minDescriptionLength} caracteres.`;
   }
 
   if (!form.categoryId) {
     errors.categoryId = "Selecciona una categoría.";
   }
 
-  if (!IMAGE_URL_PATTERN.test(form.image.trim())) {
+  if (!imageUrlPattern.test(form.image.trim())) {
     errors.image = "Ingresa una URL de imagen válida (https://...).";
   }
 
