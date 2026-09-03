@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import CreateButton from "../../components/atoms/createButton/CreateButton";
 import EditButton from "../../components/atoms/editButton/EditButton";
 import DeleteButton from "../../components/atoms/deleteButton/DeleteButton";
-import ViewButton from "../../components/atoms/viewButton/ViewButton";
 import Pagination from "../../components/molecules/pagination/Pagination";
 import UpdateUserModal from "../../components/organisms/updateUserModal/UpdateUserModal";
 import { deleteUser } from "../../services/UserServicesDelete.js";
@@ -140,7 +139,6 @@ function Users() {
                 </td>
                 <td>
                   <div className="actionButtons">
-                    <ViewButton userId={user.id} />
                     <EditButton
                       onClick={() => setEditingUser(user)}
                       ariaLabel={`Actualizar usuario ${user?.name ?? ""}`}

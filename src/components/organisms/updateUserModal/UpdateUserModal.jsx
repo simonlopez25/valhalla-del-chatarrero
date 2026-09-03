@@ -80,11 +80,13 @@ const getErrorMessage = (error) => {
 
   return error.message || "No se pudo actualizar el registro. Inténtalo de nuevo.";
 };
-function UpdateUserModal({ user, onClose, onUserUpdated }) {
+function UpdateUserModal({ user, isOpen = true, onClose, onUserUpdated }) {
   const [form, setForm] = useState(() => getInitialForm(user));
   const [errors, setErrors] = useState({});
   const [submitError, setSubmitError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  if (isOpen === false) return null;
 
   useEffect(() => {
     const handleKeyDown = (event) => {

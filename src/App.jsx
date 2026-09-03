@@ -10,25 +10,31 @@ import RegisterPage from './pages/registerPage/RegisterPage';
 import { GlobalRegisterModal } from './components/organisms/globalRegisterModal/GlobalRegisterModal';
 import './styles/App.css';
 
+export function AppContent() {
+  return (
+    <div className="appLayout">
+      <Header />
+
+      <main className="mainContent">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/sellersPage" element={<SellersPage />} />
+          <Route path="/showcase" element={<ShowcasePage />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/registerPage" element={<RegisterPage />} />
+        </Routes>
+      </main>
+      <GlobalRegisterModal />
+      <Footer />
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
-      <div className="appLayout">
-        <Header />
-
-        <main className="mainContent">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/history" element={<History />} />
-            <Route path="/sellersPage" element={<SellersPage />} />
-            <Route path="/showcase" element={<ShowcasePage />} />
-            <Route path="/users" element={<Users />} />
-            <Route path="/registerPage" element={<RegisterPage />} />
-          </Routes>
-        </main>
-        <GlobalRegisterModal />
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
   );
 }

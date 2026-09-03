@@ -7,7 +7,7 @@ export function WeatherWidget() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (!("geolocation" in navigator)) {
+    if (!navigator?.geolocation) {
       const timer = setTimeout(() => setIsLoading(false), 0);
       return () => clearTimeout(timer);
     }

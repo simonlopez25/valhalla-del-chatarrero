@@ -100,7 +100,7 @@ function EditProductModal({ product, onClose, onProductUpdated }) {
         onClick={(event) => event.stopPropagation()}
       >
         <header className="updateModalHeader">
-          <h2 id="editProductTitle">EDITAR ARTEFACTO #{product.id}</h2>
+          <h2 id="editProductTitle">EDITAR ARTEFACTO #{product?.id}</h2>
           <button
             type="button"
             className="closeModalButton"
@@ -114,7 +114,7 @@ function EditProductModal({ product, onClose, onProductUpdated }) {
 
         <form onSubmit={handleSubmit} noValidate>
           <FormField
-            id="editProductTitle"
+            id="editProductTitleInput"
             labelText="Título"
             type="text"
             name="title"
