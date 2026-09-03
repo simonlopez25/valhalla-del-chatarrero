@@ -1,8 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
 import { getVisibleProducts, productPrice } from '../../services/productsService';
-import CreateButton from '../../components/atoms/createButton/CreateButton';
-import { CustomModal } from '../../components/molecules/customModal/CustomModal';
-import { ProductForm } from '../../components/organisms/productForm/ProductForm';
 import ShowcaseFilter from '../../components/molecules/showcaseFilter/ShowcaseFilter';
 import ShowcaseCard from '../../components/molecules/showcaseCard/ShowcaseCard';
 import ShowcasePagination from '../../components/molecules/showcasePagination/ShowcasePagination';
@@ -19,12 +16,6 @@ export default function ShowcasePage() {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
-
-  const handleProductCreated = (createdProduct) => {
-    setItems((currentItems) => [createdProduct, ...currentItems]);
-    setIsCreateModalOpen(false);
-  };
 
   const handleProductUpdated = (updatedProduct) => {
     setItems((currentItems) =>
@@ -129,11 +120,6 @@ export default function ShowcasePage() {
         </div>
         <div className="showcaseHeaderActions">
           <span className="showcaseCount">{sortedItems.length} ARTEFACTOS</span>
-          <CreateButton
-            label="NUEVO PRODUCTO"
-            icon="package"
-            onClick={() => setIsCreateModalOpen(true)}
-          />
         </div>
       </header>
 
@@ -157,13 +143,6 @@ export default function ShowcasePage() {
       </div>
 
       <ShowcasePagination page={currentPage} totalPages={totalPages} onPageChange={setPage} />
-
-      <CustomModal
-        isOpen={isCreateModalOpen}
-        onClose={() => setIsCreateModalOpen(false)}
-      >
-        <ProductForm onProductCreated={handleProductCreated} />
-      </CustomModal>
     </div>
   );
 }
